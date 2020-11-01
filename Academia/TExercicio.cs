@@ -22,5 +22,15 @@ namespace Academia
         public string NivelExercicio { get => nivelExercicio; set => nivelExercicio = value; }
         public string RegiaoExercicio { get => regiaoExercicio; set => regiaoExercicio = value; }
         public byte[] ImagemExercicio { get => imagemExercicio; set => imagemExercicio = value; }
+
+        ConexaoDados dados = new ConexaoDados();
+
+        public void IncluirDados() //Sem incluir foto
+        {
+            string sql = "";
+            sql += "Insert into Exercicio (NomeExercicio, DescricaoExercicio, NivelExercicio, RegiaoExercicio) " +
+                "values ('" + NomeExercicio + "','" + DescricaoExercicio + "','" + NivelExercicio + "','" + RegiaoExercicio;
+            dados.Executar(sql);
+        }
     }
 }

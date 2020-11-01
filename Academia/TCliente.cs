@@ -27,5 +27,17 @@ namespace Academia
         public string AvaliacaoMedica { get => avaliacaoMedica; set => avaliacaoMedica = value; }
         public string NivelConhecimento { get => nivelConhecimento; set => nivelConhecimento = value; }
         public string DiaBaseVencimento { get => diaBaseVencimento; set => diaBaseVencimento = value; }
+
+
+        ConexaoDados dados = new ConexaoDados();
+
+        public void IncluirDados()
+        {
+            string sql = "";
+            sql += "Insert into Cliente (NomeCliente, Rua, Bairro, NumCasa, DataNascimento, AvaliacaoMedica, NivelConhecimento, DiaBaseVencimento) " +
+                "                       values ('" + NomeCliente + "','" + Rua + "','" + Bairro + "','" + NumCasa + "','" + DataNascimento + "','" + 
+                                        AvaliacaoMedica + "','" + NivelConhecimento + "','" + DiaBaseVencimento + "')";
+            dados.Executar(sql);
+        }
     }
 }

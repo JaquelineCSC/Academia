@@ -1,6 +1,6 @@
 ﻿namespace Academia
 {
-    partial class Form1
+    partial class FrmPrincipal
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -30,13 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // Form1
+            // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(1052, 631);
+            this.Name = "FrmPrincipal";
+            this.Text = "Principal";
             this.ResumeLayout(false);
 
         }

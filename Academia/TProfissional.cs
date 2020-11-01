@@ -16,5 +16,14 @@ namespace Academia
         public int IdProfissional { get => idProfissional; set => idProfissional = value; }
         public string NomeProfissional { get => nomeProfissional; set => nomeProfissional = value; }
         public float ValorServico { get => valorServico; set => valorServico = value; }
+
+        ConexaoDados dados = new ConexaoDados();
+
+        public void IncluirDados()
+        {
+            string sql = "";
+            sql += "Insert into Profissional (NomeProfissional, Valor) values ('" + NomeProfissional + "'," + ValorServico.ToString().Replace(",", ".");
+            dados.Executar(sql);
+        }
     }
 }
