@@ -41,5 +41,10 @@ namespace Academia
             else
                 txtDiaVencimento.Text = DateTime.Today.Day.ToString();
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
