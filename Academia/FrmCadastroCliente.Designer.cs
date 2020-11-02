@@ -47,11 +47,8 @@
             this.cmdInserir = new System.Windows.Forms.Button();
             this.Novo = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btInserir = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblNome
@@ -391,34 +388,6 @@
             this.panel1.Size = new System.Drawing.Size(993, 72);
             this.panel1.TabIndex = 20;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.panel2.Controls.Add(this.btInserir);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(20, 497);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(993, 72);
-            this.panel2.TabIndex = 23;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // btInserir
-            // 
-            this.btInserir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.btInserir.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btInserir.FlatAppearance.BorderSize = 0;
-            this.btInserir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btInserir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
-            this.btInserir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btInserir.Font = new System.Drawing.Font("Lucida Fax", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btInserir.ForeColor = System.Drawing.Color.White;
-            this.btInserir.Location = new System.Drawing.Point(408, 3);
-            this.btInserir.Name = "btInserir";
-            this.btInserir.Size = new System.Drawing.Size(147, 72);
-            this.btInserir.TabIndex = 18;
-            this.btInserir.Text = "Inserir";
-            this.btInserir.UseVisualStyleBackColor = false;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(737, 244);
@@ -434,7 +403,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1033, 661);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.metroDateTime1);
             this.Controls.Add(this.cmbConhecimento);
@@ -456,7 +424,6 @@
             this.Text = "Cadastrar Cliente";
             this.Load += new System.EventHandler(this.FrmCadastroCliente_Load);
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -483,8 +450,6 @@
         private System.Windows.Forms.Button cmdInserir;
         private System.Windows.Forms.Button Novo;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btInserir;
         private System.Windows.Forms.Button button1;
     }
 }
