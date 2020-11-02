@@ -24,5 +24,10 @@ namespace Academia
             profissional.NomeProfissional = txtNome.Text;
             profissional.ValorServico = float.Parse(txtValor.Text);
         }
+
+        private void cmdVoltarMenu_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

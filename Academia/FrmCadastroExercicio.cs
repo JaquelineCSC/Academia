@@ -28,5 +28,10 @@ namespace Academia
 
             exercicio.IncluirDados();
         }
+
+        private void cmdVoltarMenu_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

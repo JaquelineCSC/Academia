@@ -46,5 +46,10 @@ namespace Academia
         {
 
         }
+
+        private void cmdVoltarMenu_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

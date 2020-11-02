@@ -48,6 +48,7 @@
             this.Novo = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.cmdVoltarMenu = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -380,6 +381,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.panel1.Controls.Add(this.cmdVoltarMenu);
             this.panel1.Controls.Add(this.Novo);
             this.panel1.Controls.Add(this.cmdInserir);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -396,6 +398,24 @@
             this.button1.TabIndex = 24;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // cmdVoltarMenu
+            // 
+            this.cmdVoltarMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.cmdVoltarMenu.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.cmdVoltarMenu.FlatAppearance.BorderSize = 0;
+            this.cmdVoltarMenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.cmdVoltarMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
+            this.cmdVoltarMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdVoltarMenu.Font = new System.Drawing.Font("Lucida Fax", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdVoltarMenu.ForeColor = System.Drawing.Color.White;
+            this.cmdVoltarMenu.Location = new System.Drawing.Point(833, 0);
+            this.cmdVoltarMenu.Name = "cmdVoltarMenu";
+            this.cmdVoltarMenu.Size = new System.Drawing.Size(157, 72);
+            this.cmdVoltarMenu.TabIndex = 20;
+            this.cmdVoltarMenu.Text = "Voltar Menu";
+            this.cmdVoltarMenu.UseVisualStyleBackColor = false;
+            this.cmdVoltarMenu.Click += new System.EventHandler(this.cmdVoltarMenu_Click);
             // 
             // FrmCadastroCliente
             // 
@@ -451,5 +471,6 @@
         private System.Windows.Forms.Button Novo;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button cmdVoltarMenu;
     }
 }
