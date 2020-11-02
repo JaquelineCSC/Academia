@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Academia
 {
-    public partial class FrmPrincipal : Form
+    public partial class FrmPrincipal : MetroFramework.Forms.MetroForm
     {
         public FrmPrincipal()
         {
