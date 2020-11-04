@@ -20,21 +20,21 @@ namespace Academia
 
         ConexaoDados dados = new ConexaoDados();
 
-        public void IncluirDadosProfissional()
+        public void IncluirDados()
         {
             string sql = "";
             sql += "Insert into Profissional (NomeProfissional, Valor) values ('" + NomeProfissional + "'," + ValorServico.ToString().Replace(",", ".");
             dados.Executar(sql);
         }
 
-        public void AlterarDadosProfissional()
+        public void AlterarDados()
         {
             string sql = "";
             sql += "Update Profissional SET NomeProfissional = '" + NomeProfissional + "',  Valor = " + ValorServico.ToString().Replace(",", ".") + " Where idProfissional = " + IdProfissional.ToString();
             dados.Executar(sql);
         }
 
-        public void ConsultarDadosProfissional()
+        public void ConsultarDados()
         {
             string sql = "";
             sql += "Select NomeProfissional from Profissional where idProfissional = " + IdProfissional.ToString();
@@ -43,14 +43,14 @@ namespace Academia
             NomeProfissional = auxiliar[0];
         }
 
-        public DataSet ListarDadosProfissional()
+        public DataSet ListarDados()
         {
             string sql = "";
             sql = "Select * from Profissional";
             return dados.Listar(sql);
         }
 
-        public void ExcluirDadosProfissional()
+        public void ExcluirDados()
         {
             string sql = "Delete from Profissional Where idProfissional = " + IdProfissional.ToString();
             dados.Executar(sql);
