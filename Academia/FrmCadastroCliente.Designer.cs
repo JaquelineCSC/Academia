@@ -47,7 +47,6 @@
             this.cmdInserir = new System.Windows.Forms.Button();
             this.Novo = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.cmdVoltarMenu = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -159,7 +158,7 @@
             this.txtNome.SelectionStart = 0;
             this.txtNome.ShortcutsEnabled = true;
             this.txtNome.Size = new System.Drawing.Size(352, 30);
-            this.txtNome.TabIndex = 8;
+            this.txtNome.TabIndex = 1;
             this.txtNome.UseSelectable = true;
             this.txtNome.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtNome.WaterMarkFont = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -191,7 +190,7 @@
             this.txtAvaliacao.SelectionStart = 0;
             this.txtAvaliacao.ShortcutsEnabled = true;
             this.txtAvaliacao.Size = new System.Drawing.Size(352, 30);
-            this.txtAvaliacao.TabIndex = 9;
+            this.txtAvaliacao.TabIndex = 6;
             this.txtAvaliacao.UseSelectable = true;
             this.txtAvaliacao.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtAvaliacao.WaterMarkFont = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -223,7 +222,7 @@
             this.txtNumero.SelectionStart = 0;
             this.txtNumero.ShortcutsEnabled = true;
             this.txtNumero.Size = new System.Drawing.Size(352, 30);
-            this.txtNumero.TabIndex = 10;
+            this.txtNumero.TabIndex = 4;
             this.txtNumero.UseSelectable = true;
             this.txtNumero.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtNumero.WaterMarkFont = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -255,7 +254,7 @@
             this.txtBairro.SelectionStart = 0;
             this.txtBairro.ShortcutsEnabled = true;
             this.txtBairro.Size = new System.Drawing.Size(352, 30);
-            this.txtBairro.TabIndex = 11;
+            this.txtBairro.TabIndex = 3;
             this.txtBairro.UseSelectable = true;
             this.txtBairro.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtBairro.WaterMarkFont = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -287,7 +286,7 @@
             this.txtRua.SelectionStart = 0;
             this.txtRua.ShortcutsEnabled = true;
             this.txtRua.Size = new System.Drawing.Size(352, 30);
-            this.txtRua.TabIndex = 12;
+            this.txtRua.TabIndex = 2;
             this.txtRua.UseSelectable = true;
             this.txtRua.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtRua.WaterMarkFont = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -319,7 +318,7 @@
             this.txtDiaVencimento.SelectionStart = 0;
             this.txtDiaVencimento.ShortcutsEnabled = true;
             this.txtDiaVencimento.Size = new System.Drawing.Size(352, 30);
-            this.txtDiaVencimento.TabIndex = 13;
+            this.txtDiaVencimento.TabIndex = 7;
             this.txtDiaVencimento.UseSelectable = true;
             this.txtDiaVencimento.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtDiaVencimento.WaterMarkFont = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -328,10 +327,14 @@
             // 
             this.cmbConhecimento.FormattingEnabled = true;
             this.cmbConhecimento.ItemHeight = 23;
+            this.cmbConhecimento.Items.AddRange(new object[] {
+            "Iniciante",
+            "Intermediário",
+            "Avançado"});
             this.cmbConhecimento.Location = new System.Drawing.Point(302, 434);
             this.cmbConhecimento.Name = "cmbConhecimento";
             this.cmbConhecimento.Size = new System.Drawing.Size(352, 29);
-            this.cmbConhecimento.TabIndex = 14;
+            this.cmbConhecimento.TabIndex = 8;
             this.cmbConhecimento.UseSelectable = true;
             // 
             // metroDateTime1
@@ -341,7 +344,7 @@
             this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 29);
             this.metroDateTime1.Name = "metroDateTime1";
             this.metroDateTime1.Size = new System.Drawing.Size(352, 29);
-            this.metroDateTime1.TabIndex = 15;
+            this.metroDateTime1.TabIndex = 5;
             // 
             // cmdInserir
             // 
@@ -356,7 +359,7 @@
             this.cmdInserir.Location = new System.Drawing.Point(282, 0);
             this.cmdInserir.Name = "cmdInserir";
             this.cmdInserir.Size = new System.Drawing.Size(147, 72);
-            this.cmdInserir.TabIndex = 18;
+            this.cmdInserir.TabIndex = 9;
             this.cmdInserir.Text = "Inserir";
             this.cmdInserir.UseVisualStyleBackColor = false;
             this.cmdInserir.Click += new System.EventHandler(this.cmdInserir_Click);
@@ -374,7 +377,7 @@
             this.Novo.Location = new System.Drawing.Point(86, 0);
             this.Novo.Name = "Novo";
             this.Novo.Size = new System.Drawing.Size(147, 72);
-            this.Novo.TabIndex = 19;
+            this.Novo.TabIndex = 0;
             this.Novo.Text = "Novo";
             this.Novo.UseVisualStyleBackColor = false;
             // 
@@ -390,15 +393,6 @@
             this.panel1.Size = new System.Drawing.Size(993, 72);
             this.panel1.TabIndex = 20;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(737, 244);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // cmdVoltarMenu
             // 
             this.cmdVoltarMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
@@ -412,7 +406,7 @@
             this.cmdVoltarMenu.Location = new System.Drawing.Point(833, 0);
             this.cmdVoltarMenu.Name = "cmdVoltarMenu";
             this.cmdVoltarMenu.Size = new System.Drawing.Size(157, 72);
-            this.cmdVoltarMenu.TabIndex = 20;
+            this.cmdVoltarMenu.TabIndex = 10;
             this.cmdVoltarMenu.Text = "Voltar Menu";
             this.cmdVoltarMenu.UseVisualStyleBackColor = false;
             this.cmdVoltarMenu.Click += new System.EventHandler(this.cmdVoltarMenu_Click);
@@ -422,7 +416,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1033, 661);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.metroDateTime1);
             this.Controls.Add(this.cmbConhecimento);
@@ -470,7 +463,6 @@
         private System.Windows.Forms.Button cmdInserir;
         private System.Windows.Forms.Button Novo;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button cmdVoltarMenu;
     }
 }
