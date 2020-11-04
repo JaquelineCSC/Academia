@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Academia
 {
@@ -27,11 +28,37 @@ namespace Academia
             exercicio.RegiaoExercicio = cmbRegiao.Text;
 
             exercicio.IncluirDados();
+            MessageBox.Show("Incluido com Sucesso");
         }
 
         private void cmdVoltarMenu_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void cmdImagem_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string nome = openFileDialog1.FileName;
+                pictureBox1.Image = Image.FromFile(nome);
+
+                ConverteFoto();
+            }
+        }
+
+        private void ConverteFoto()
+        {
+            if (pictureBox1.Image != null)
+            {
+                MemoryStream ms = new MemoryStream();
+                pictureBox1.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+
+                byte[] foto_array = new byte[ms.Length];
+                ms.Position = 0;
+                ms.Read(foto_array, 0, foto_array.Length);
+                exercicio.ImagemExercicio = foto_array;
+            }
         }
     }
 }

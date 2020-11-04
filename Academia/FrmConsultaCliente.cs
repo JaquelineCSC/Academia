@@ -12,16 +12,16 @@ using System.Windows.Forms;
 
 namespace Academia
 {
-    public partial class FrmConsulta : MetroFramework.Forms.MetroForm
+    public partial class FrmConsultaCliente : MetroFramework.Forms.MetroForm
     {
-        public FrmConsulta()
+        public FrmConsultaCliente()
         {
             InitializeComponent();
         }
 
-        private void FrmConsulta_Load(object sender, EventArgs e)
-        {
+        TCliente cliente = new TCliente();
+        TExercicio exercicio = new TExercicio();
+        TProfissional profissional = new TProfissional();
 
-        }
     }
 }

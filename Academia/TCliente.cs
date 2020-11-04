@@ -40,12 +40,5 @@ namespace Academia
                                         AvaliacaoMedica + "','" + NivelConhecimento + "','" + DiaBaseVencimento + "')";
             dados.Executar(sql);
         }
-
-        public DataSet ListarDados()
-        {
-            string sql = "";
-            sql += "Select * from Cliente where Cliente like '" + NomeCliente + "%'";
-            return dados.Listar(sql);
-        }
     }
 }

@@ -40,6 +40,9 @@ namespace Academia
             cmdCliente.Visible = false;
             cmdExercicio.Visible = false;
             cmdProfissional.Visible = false;
+
+            FrmConsultaCliente F = new FrmConsultaCliente();
+            F.ShowDialog();
         }
 
         private void cmdCliente_Click(object sender, EventArgs e)

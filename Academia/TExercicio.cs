@@ -25,11 +25,11 @@ namespace Academia
 
         ConexaoDados dados = new ConexaoDados();
 
-        public void IncluirDados() //Sem incluir foto
+        public void IncluirDados()
         {
             string sql = "";
             sql += "Insert into Exercicio (NomeExercicio, DescricaoExercicio, NivelExercicio, RegiaoExercicio, ImagemExercicio) " +
-                "values ('" + NomeExercicio + "','" + DescricaoExercicio + "','" + NivelExercicio + "','" + RegiaoExercicio + ", @BINARIO";
+                "values ('" + NomeExercicio + "','" + DescricaoExercicio + "','" + NivelExercicio + "','" + RegiaoExercicio + "', @BINARIO)";
             dados.ExecutarFoto(sql,ImagemExercicio);
         }
 
@@ -39,6 +39,13 @@ namespace Academia
             sql += "Update Exercicio SET NomeExercicio = '" + NomeExercicio + "', DescricaoExercicio = '" + DescricaoExercicio + "', NivelExercicio = '" 
                 + NivelExercicio + "', RegiaoExercicio = '" + RegiaoExercicio + "', ImagemExercicio = @Binario Where idExercicio = " + IdExercicio.ToString();
             dados.ExecutarFoto(sql,ImagemExercicio);
+        }
+
+        public void ExcluirDados()
+        {
+            string sql = "";
+            sql += "Delete from Exercicio where idExercicio = " + idExercicio.ToString();
+            dados.Executar(sql);
         }
     }
 }
