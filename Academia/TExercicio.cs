@@ -25,7 +25,7 @@ namespace Academia
 
         ConexaoDados dados = new ConexaoDados();
 
-        public void IncluirDadosExercicio() //Sem incluir foto
+        public void IncluirDados() //Sem incluir foto
         {
             string sql = "";
             sql += "Insert into Exercicio (NomeExercicio, DescricaoExercicio, NivelExercicio, RegiaoExercicio, ImagemExercicio) " +
@@ -33,33 +33,11 @@ namespace Academia
             dados.ExecutarFoto(sql,ImagemExercicio);
         }
 
-        public void AlterarDadosExercicio()
+        public void AlterarDados()
         {
             string sql = "";
             sql += "Update Exercicio SET NomeExercicio = '" + NomeExercicio + "', DescricaoExercicio = '" + DescricaoExercicio + "', NivelExercicio = '" + NivelExercicio + "', RegiaoExercicio = '" + RegiaoExercicio + "', ImagemExercicio = @Binario Where idExercicio = " + IdExercicio.ToString();
             dados.ExecutarFoto(sql,ImagemExercicio);
         }
-
-        //public void ConsultarDadosProfissional()
-        //{
-        //    string sql = "";
-        //    sql += "Select NomeProfissional from Profissional where idProfissional = " + IdProfissional.ToString();
-        //    dados.Consultar(sql);
-        //    string[] auxiliar = dados.Campos.Split(';');
-        //    NomeProfissional = auxiliar[0];
-        //}
-
-        //public DataSet ListarDadosProfissional()
-        //{
-        //    string sql = "";
-        //    sql = "Select * from Profissional";
-        //    return dados.Listar(sql);
-        //}
-
-        //public void ExcluirDadosProfissional()
-        //{
-        //    string sql = "Delete from Profissional Where idProfissional = " + IdProfissional.ToString();
-        //    dados.Executar(sql);
-        //}
     }
 }

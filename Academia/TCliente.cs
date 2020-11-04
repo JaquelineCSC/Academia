@@ -36,7 +36,7 @@ namespace Academia
         {
             string sql = "";
             sql += "Insert into Cliente (NomeCliente, Rua, Bairro, NumCasa, DataNascimento, AvaliacaoMedica, NivelConhecimento, DiaBaseVencimento) " +
-                "                       values ('" + NomeCliente + "','" + Rua + "','" + Bairro + "','" + NumCasa + "','" + DataNascimento + "','" + 
+                                "values ('" + NomeCliente + "','" + Rua + "','" + Bairro + "','" + NumCasa + "','" + DataNascimento + "','" + 
                                         AvaliacaoMedica + "','" + NivelConhecimento + "','" + DiaBaseVencimento + "')";
             dados.Executar(sql);
         }
