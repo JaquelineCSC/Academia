@@ -20,6 +20,15 @@ namespace Academia
 
         TExercicio exercicio = new TExercicio();
 
+        private void LimpaControle()
+        {
+            txtNome.Text = "";
+            txtDescricao.Text = "";
+            cmbNivel.Text = "";
+            cmbRegiao.Text = "";
+            pictureBox1.Image = null;
+        }
+
         private void cmdInserir_Click(object sender, EventArgs e)
         {
             exercicio.NomeExercicio = txtNome.Text;
@@ -27,8 +36,45 @@ namespace Academia
             exercicio.NivelExercicio = cmbNivel.Text;
             exercicio.RegiaoExercicio = cmbRegiao.Text;
 
-            exercicio.IncluirDados();
+            if (pictureBox1.Image != null)
+                exercicio.IncluirDados();
+            else
+                exercicio.IncluirDadosSemFoto();
             MessageBox.Show("Incluido com Sucesso");
+            LimpaControle();
+        }
+
+        private void cmdAlterar_Click(object sender, EventArgs e)
+        {
+            exercicio.NomeExercicio = txtNome.Text;
+            exercicio.DescricaoExercicio = txtDescricao.Text;
+            exercicio.NivelExercicio = cmbNivel.Text;
+            exercicio.RegiaoExercicio = cmbRegiao.Text;
+
+            if (pictureBox1.Image != null)
+                exercicio.AlterarDados();
+            else
+                exercicio.AlterarDadosSemFoto();
+            MessageBox.Show("Alterado com Sucesso");
+            LimpaControle();
+        }
+
+        private void cmdExcluir_Click(object sender, EventArgs e)
+        {
+            if (DialogResult.Yes == MessageBox.Show("Deseja realmente excluir ?", "Alerta", MessageBoxButtons.YesNo))
+            {
+                exercicio.ExcluirDados();
+            }
+            LimpaControle();
+        }
+
+        private void Novo_Click(object sender, EventArgs e)
+        {
+            LimpaControle();
+            cmdInserir.Enabled = true;
+
+            cmdAlterar.Enabled = false;
+            cmdExcluir.Enabled = false;
         }
 
         private void cmdVoltarMenu_Click(object sender, EventArgs e)
@@ -63,6 +109,10 @@ namespace Academia
 
         private void cmdLocalizar_Click(object sender, EventArgs e)
         {
+            cmdInserir.Enabled = false;
+            cmdAlterar.Enabled = true;
+            cmdExcluir.Enabled = true;
+
             FrmLocalizarExercicio F = new FrmLocalizarExercicio();
             F.ShowDialog();
 
@@ -86,9 +136,6 @@ namespace Academia
             }
         }
 
-        private void FrmCadastroExercicio_Load(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

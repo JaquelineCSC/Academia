@@ -34,12 +34,28 @@ namespace Academia
             dados.ExecutarFoto(sql,ImagemExercicio);
         }
 
+        public void IncluirDadosSemFoto()
+        {
+            string sql = "";
+            sql += "Insert into Exercicio (NomeExercicio, DescricaoExercicio, NivelExercicio, RegiaoExercicio) " +
+                "values ('" + NomeExercicio + "','" + DescricaoExercicio + "','" + NivelExercicio + "','" + RegiaoExercicio + "')";
+            dados.Executar(sql);
+        }
+
         public void AlterarDados()
         {
             string sql = "";
             sql += "Update Exercicio SET NomeExercicio = '" + NomeExercicio + "', DescricaoExercicio = '" + DescricaoExercicio + "', NivelExercicio = '" 
                 + NivelExercicio + "', RegiaoExercicio = '" + RegiaoExercicio + "', ImagemExercicio = @Binario Where idExercicio = " + IdExercicio.ToString();
             dados.ExecutarFoto(sql,ImagemExercicio);
+        }
+
+        public void AlterarDadosSemFoto()
+        {
+            string sql = "";
+            sql += "Update Exercicio SET NomeExercicio = '" + NomeExercicio + "', DescricaoExercicio = '" + DescricaoExercicio + "', NivelExercicio = '"
+                + NivelExercicio + "', RegiaoExercicio = '" + RegiaoExercicio + "' Where idExercicio = " + IdExercicio.ToString();
+            dados.Executar(sql);
         }
 
         public void ExcluirDados()
@@ -67,6 +83,13 @@ namespace Academia
         {
             string sql = "";
             sql = "Select * from Exercicio";
+            return dados.Listar(sql);
+        }
+
+        public DataSet ListarDadosNome()
+        {
+            string sql = "";
+            sql = "Select * from Exercicio Where NomeExercicio LIKE '" + NomeExercicio + "%'";
             return dados.Listar(sql);
         }
     }

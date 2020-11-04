@@ -44,12 +44,21 @@ namespace Academia
 
         private void grid1_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
-            Id = int.Parse(grid1.Rows[e.RowIndex].Cells[0].Value.ToString());
+            if (grid1.Rows[e.RowIndex].Cells[0].Value.ToString() != "")
+            {
+                Id = int.Parse(grid1.Rows[e.RowIndex].Cells[0].Value.ToString());
+            }
         }
 
         private void grid1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             Close();
+        }
+
+        private void cmdPesquisar_Click(object sender, EventArgs e)
+        {
+            exercicio.NomeExercicio = txtNome.Text;
+            grid1.DataSource = exercicio.ListarDadosNome().Tables[0];
         }
     }
 }
