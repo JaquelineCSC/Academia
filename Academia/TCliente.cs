@@ -40,5 +40,30 @@ namespace Academia
                                         AvaliacaoMedica + "','" + NivelConhecimento + "','" + DiaBaseVencimento + "')";
             dados.Executar(sql);
         }
+
+        public void ConsultarDados()
+        {
+            string sql = "";
+            sql += "Select * from Cliente where idCliente = " + idCliente.ToString();
+
+            dados.Consultar(sql);
+
+            string[] aux = dados.Campos.Split(';');
+            NomeCliente = aux[1];
+            Rua = aux[2];
+            Bairro = aux[3];
+            NumCasa = aux[4];
+            DataNascimento = aux[5];
+            AvaliacaoMedica = aux[6];
+            NivelConhecimento = aux[7];
+            DiaBaseVencimento = aux[8];
+        }
+
+        public DataSet ListarDados()
+        {
+            string sql = "";
+            sql = "Select * from Cliente";
+            return dados.Listar(sql);
+        }
     }
 }

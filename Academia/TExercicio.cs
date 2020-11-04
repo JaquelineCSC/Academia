@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace Academia
 {
@@ -46,6 +47,27 @@ namespace Academia
             string sql = "";
             sql += "Delete from Exercicio where idExercicio = " + idExercicio.ToString();
             dados.Executar(sql);
+        }
+
+        public void ConsultarDados()
+        {
+            string sql = "";
+            sql += "Select * from Exercicio where idExercicio = " + idExercicio.ToString();
+
+            dados.ConsultarFoto(sql, ref imagemExercicio);
+
+            string[] aux = dados.Campos.Split(';');
+            NomeExercicio = aux[1];
+            DescricaoExercicio = aux[2];
+            NivelExercicio = aux[3];
+            RegiaoExercicio = aux[4];
+        }
+
+        public DataSet ListarDados()
+        {
+            string sql = "";
+            sql = "Select * from Exercicio";
+            return dados.Listar(sql);
         }
     }
 }

@@ -60,5 +60,35 @@ namespace Academia
                 exercicio.ImagemExercicio = foto_array;
             }
         }
+
+        private void cmdLocalizar_Click(object sender, EventArgs e)
+        {
+            FrmLocalizarExercicio F = new FrmLocalizarExercicio();
+            F.ShowDialog();
+
+            exercicio.IdExercicio = F.Id;
+            exercicio.ConsultarDados();
+
+            txtNome.Text = exercicio.NomeExercicio;
+            txtDescricao.Text = exercicio.DescricaoExercicio;
+            string nivel = exercicio.NivelExercicio;
+            string regiao = exercicio.RegiaoExercicio;
+
+            cmbNivel.Text = nivel;
+            cmbRegiao.Text = regiao;
+
+            if (!(exercicio.ImagemExercicio is null))
+            {
+                MemoryStream ms = new MemoryStream();
+                ms.Write(exercicio.ImagemExercicio, 0, exercicio.ImagemExercicio.Length);
+
+                pictureBox1.Image = Image.FromStream(ms);
+            }
+        }
+
+        private void FrmCadastroExercicio_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -79,6 +79,12 @@
     <Compile Include="FrmConsultaCliente.Designer.cs">
       <DependentUpon>FrmConsultaCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmLocalizarExercicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLocalizarExercicio.Designer.cs">
+      <DependentUpon>FrmLocalizarExercicio.cs</DependentUpon>
+    </Compile>
     <Compile Include="TAlimento.cs" />
     <Compile Include="TCardapio.cs" />
     <Compile Include="TCliente.cs" />
@@ -107,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmConsultaCliente.resx">
       <DependentUpon>FrmConsultaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLocalizarExercicio.resx">
+      <DependentUpon>FrmLocalizarExercicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>

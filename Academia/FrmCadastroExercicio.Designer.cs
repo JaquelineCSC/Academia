@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.cmdVoltarMenu = new System.Windows.Forms.Button();
             this.Novo = new System.Windows.Forms.Button();
             this.cmdInserir = new System.Windows.Forms.Button();
@@ -40,9 +42,10 @@
             this.lblDescricao = new MetroFramework.Controls.MetroLabel();
             this.lblNome = new MetroFramework.Controls.MetroLabel();
             this.cmbNivel = new MetroFramework.Controls.MetroComboBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cmdImagem = new MetroFramework.Controls.MetroButton();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cmdLocalizar = new MetroFramework.Controls.MetroButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -50,6 +53,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.cmdVoltarMenu);
             this.panel1.Controls.Add(this.Novo);
             this.panel1.Controls.Add(this.cmdInserir);
@@ -58,6 +63,40 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1238, 72);
             this.panel1.TabIndex = 22;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Lucida Fax", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(772, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(147, 72);
+            this.button2.TabIndex = 23;
+            this.button2.Text = "Excluir";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Lucida Fax", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(524, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(147, 72);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "Alterar";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // cmdVoltarMenu
             // 
@@ -87,7 +126,7 @@
             this.Novo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Novo.Font = new System.Drawing.Font("Lucida Fax", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Novo.ForeColor = System.Drawing.Color.White;
-            this.Novo.Location = new System.Drawing.Point(86, 0);
+            this.Novo.Location = new System.Drawing.Point(79, 0);
             this.Novo.Name = "Novo";
             this.Novo.Size = new System.Drawing.Size(147, 72);
             this.Novo.TabIndex = 19;
@@ -104,7 +143,7 @@
             this.cmdInserir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdInserir.Font = new System.Drawing.Font("Lucida Fax", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdInserir.ForeColor = System.Drawing.Color.White;
-            this.cmdInserir.Location = new System.Drawing.Point(282, 0);
+            this.cmdInserir.Location = new System.Drawing.Point(294, 0);
             this.cmdInserir.Name = "cmdInserir";
             this.cmdInserir.Size = new System.Drawing.Size(147, 72);
             this.cmdInserir.TabIndex = 18;
@@ -122,7 +161,7 @@
             "Biceps",
             "Triceps",
             "Abdominal"});
-            this.cmbRegiao.Location = new System.Drawing.Point(364, 336);
+            this.cmbRegiao.Location = new System.Drawing.Point(314, 397);
             this.cmbRegiao.Name = "cmbRegiao";
             this.cmbRegiao.Size = new System.Drawing.Size(430, 29);
             this.cmbRegiao.TabIndex = 37;
@@ -145,7 +184,7 @@
             this.txtDescricao.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.txtDescricao.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
             this.txtDescricao.Lines = new string[0];
-            this.txtDescricao.Location = new System.Drawing.Point(364, 158);
+            this.txtDescricao.Location = new System.Drawing.Point(314, 219);
             this.txtDescricao.MaxLength = 32767;
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.PasswordChar = '\0';
@@ -177,7 +216,7 @@
             this.txtNome.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.txtNome.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
             this.txtNome.Lines = new string[0];
-            this.txtNome.Location = new System.Drawing.Point(364, 102);
+            this.txtNome.Location = new System.Drawing.Point(314, 163);
             this.txtNome.MaxLength = 32767;
             this.txtNome.Name = "txtNome";
             this.txtNome.PasswordChar = '\0';
@@ -196,7 +235,7 @@
             // 
             this.lblRegiao.AutoSize = true;
             this.lblRegiao.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblRegiao.Location = new System.Drawing.Point(157, 336);
+            this.lblRegiao.Location = new System.Drawing.Point(107, 397);
             this.lblRegiao.Name = "lblRegiao";
             this.lblRegiao.Size = new System.Drawing.Size(139, 25);
             this.lblRegiao.TabIndex = 26;
@@ -206,7 +245,7 @@
             // 
             this.lblNivel.AutoSize = true;
             this.lblNivel.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblNivel.Location = new System.Drawing.Point(157, 283);
+            this.lblNivel.Location = new System.Drawing.Point(107, 344);
             this.lblNivel.Name = "lblNivel";
             this.lblNivel.Size = new System.Drawing.Size(125, 25);
             this.lblNivel.TabIndex = 25;
@@ -216,7 +255,7 @@
             // 
             this.lblDescricao.AutoSize = true;
             this.lblDescricao.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblDescricao.Location = new System.Drawing.Point(157, 158);
+            this.lblDescricao.Location = new System.Drawing.Point(107, 219);
             this.lblDescricao.Name = "lblDescricao";
             this.lblDescricao.Size = new System.Drawing.Size(156, 25);
             this.lblDescricao.TabIndex = 24;
@@ -226,7 +265,7 @@
             // 
             this.lblNome.AutoSize = true;
             this.lblNome.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblNome.Location = new System.Drawing.Point(157, 102);
+            this.lblNome.Location = new System.Drawing.Point(107, 163);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(134, 25);
             this.lblNome.TabIndex = 23;
@@ -240,25 +279,15 @@
             "Iniciante",
             "Intermediário",
             "Avançado"});
-            this.cmbNivel.Location = new System.Drawing.Point(364, 283);
+            this.cmbNivel.Location = new System.Drawing.Point(314, 344);
             this.cmbNivel.Name = "cmbNivel";
             this.cmbNivel.Size = new System.Drawing.Size(430, 29);
             this.cmbNivel.TabIndex = 38;
             this.cmbNivel.UseSelectable = true;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(871, 63);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(373, 298);
-            this.pictureBox1.TabIndex = 39;
-            this.pictureBox1.TabStop = false;
-            // 
             // cmdImagem
             // 
-            this.cmdImagem.Location = new System.Drawing.Point(984, 378);
+            this.cmdImagem.Location = new System.Drawing.Point(934, 439);
             this.cmdImagem.Name = "cmdImagem";
             this.cmdImagem.Size = new System.Drawing.Size(161, 51);
             this.cmdImagem.TabIndex = 40;
@@ -270,11 +299,32 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(821, 124);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(373, 298);
+            this.pictureBox1.TabIndex = 39;
+            this.pictureBox1.TabStop = false;
+            // 
+            // cmdLocalizar
+            // 
+            this.cmdLocalizar.Location = new System.Drawing.Point(592, 74);
+            this.cmdLocalizar.Name = "cmdLocalizar";
+            this.cmdLocalizar.Size = new System.Drawing.Size(161, 51);
+            this.cmdLocalizar.TabIndex = 41;
+            this.cmdLocalizar.Text = "Localizar Exercicio";
+            this.cmdLocalizar.UseSelectable = true;
+            this.cmdLocalizar.Click += new System.EventHandler(this.cmdLocalizar_Click);
+            // 
             // FrmCadastroExercicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1278, 641);
+            this.Controls.Add(this.cmdLocalizar);
             this.Controls.Add(this.cmdImagem);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.cmbNivel);
@@ -288,6 +338,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FrmCadastroExercicio";
             this.Text = "Cadastro Exercicio";
+            this.Load += new System.EventHandler(this.FrmCadastroExercicio_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -312,5 +363,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private MetroFramework.Controls.MetroButton cmdImagem;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private MetroFramework.Controls.MetroButton cmdLocalizar;
     }
 }
