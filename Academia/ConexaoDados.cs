@@ -33,21 +33,20 @@ namespace Academia
             cn.Close();
         }
 
-        //public void ExecutarFoto(string sql, byte[] ParametroFoto)
-        //{
-        //    Conectar();
-        //    cd.Connection = cn;
-        //    cd.CommandText = sql;
+        public void ExecutarFoto(string sql, byte[] ParametroFoto)
+        {
+            Conectar();
+            cd.Connection = cn;
+            cd.CommandText = sql;
 
-        //    //A commandText faz a conversao para o tipo SqlDbType - Assim se passa como parametro
-        //    //parametro do tipo SQL @BINARIO
-        //    //e tambem é o ParametroFoto
-        //    cd.Parameters.Add("@BINARIO", SqlDbType.Image);
-        //    cd.Parameters["@BINARIO"].Value = ParametroFoto;
+            cd.Parameters.Clear();
+            
+            cd.Parameters.Add("@BINARIO", SqlDbType.Image);
+            cd.Parameters["@BINARIO"].Value = ParametroFoto;
 
-        //    cd.ExecuteNonQuery();
-        //    cn.Close();
-        //}
+            cd.ExecuteNonQuery();
+            cn.Close();
+        }
 
         public void Consultar(string sql)
         {
@@ -63,6 +62,30 @@ namespace Academia
                 for (int i = 0; i < dr.FieldCount; i++)
                 {
                     Campos += dr[i].ToString() + ";";
+                }
+            }
+
+            cn.Close();
+        }
+
+        public void ConsultarFoto(string sql, ref byte[] ParametroFoto)
+        {
+            Conectar();
+            cd.Connection = cn;
+            cd.CommandText = sql;
+
+            SqlDataReader dr = cd.ExecuteReader();
+            Campos = "";
+
+            if (dr.Read())
+            { 
+                for (int i = 0; i < dr.FieldCount - 1; i++)
+                {
+                    Campos += dr[i].ToString() + ";";
+                }
+                if (!(dr["ImagemExercicio"] is System.DBNull))
+                {
+                    ParametroFoto = (byte[])dr["ImagemExercicio"];
                 }
             }
 

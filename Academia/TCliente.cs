@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,6 +39,13 @@ namespace Academia
                 "                       values ('" + NomeCliente + "','" + Rua + "','" + Bairro + "','" + NumCasa + "','" + DataNascimento + "','" + 
                                         AvaliacaoMedica + "','" + NivelConhecimento + "','" + DiaBaseVencimento + "')";
             dados.Executar(sql);
+        }
+
+        public DataSet ListarDados()
+        {
+            string sql = "";
+            sql += "Select * from Cliente where Cliente like '" + NomeCliente + "%'";
+            return dados.Listar(sql);
         }
     }
 }
