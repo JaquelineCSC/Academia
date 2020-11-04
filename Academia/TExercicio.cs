@@ -25,12 +25,41 @@ namespace Academia
 
         ConexaoDados dados = new ConexaoDados();
 
-        public void IncluirDados() //Sem incluir foto
+        public void IncluirDadosExercicio() //Sem incluir foto
         {
             string sql = "";
-            sql += "Insert into Exercicio (NomeExercicio, DescricaoExercicio, NivelExercicio, RegiaoExercicio) " +
-                "values ('" + NomeExercicio + "','" + DescricaoExercicio + "','" + NivelExercicio + "','" + RegiaoExercicio;
-            dados.Executar(sql);
+            sql += "Insert into Exercicio (NomeExercicio, DescricaoExercicio, NivelExercicio, RegiaoExercicio, ImagemExercicio) " +
+                "values ('" + NomeExercicio + "','" + DescricaoExercicio + "','" + NivelExercicio + "','" + RegiaoExercicio + ",@BINARIO";
+            dados.ExecutarFoto(sql,ImagemExercicio);
         }
+
+        public void AlterarDadosExercicio()
+        {
+            string sql = "";
+            sql += "Update Exercicio SET NomeExercicio = '" + NomeExercicio + "', DescricaoExercicio = '" + DescricaoExercicio + "', NivelExercicio = '" + NivelExercicio + "', RegiaoExercicio = '" + RegiaoExercicio + "', ImagemExercicio = @Binario Where idExercicio = " + IdExercicio.ToString();
+            dados.ExecutarFoto(sql,ImagemExercicio);
+        }
+
+        //public void ConsultarDadosProfissional()
+        //{
+        //    string sql = "";
+        //    sql += "Select NomeProfissional from Profissional where idProfissional = " + IdProfissional.ToString();
+        //    dados.Consultar(sql);
+        //    string[] auxiliar = dados.Campos.Split(';');
+        //    NomeProfissional = auxiliar[0];
+        //}
+
+        //public DataSet ListarDadosProfissional()
+        //{
+        //    string sql = "";
+        //    sql = "Select * from Profissional";
+        //    return dados.Listar(sql);
+        //}
+
+        //public void ExcluirDadosProfissional()
+        //{
+        //    string sql = "Delete from Profissional Where idProfissional = " + IdProfissional.ToString();
+        //    dados.Executar(sql);
+        //}
     }
 }
