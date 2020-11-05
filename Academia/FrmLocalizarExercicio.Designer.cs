@@ -64,7 +64,7 @@
             this.grid1.EnableHeadersVisualStyles = false;
             this.grid1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.grid1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.grid1.Location = new System.Drawing.Point(60, 169);
+            this.grid1.Location = new System.Drawing.Point(50, 179);
             this.grid1.Name = "grid1";
             this.grid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -78,7 +78,7 @@
             this.grid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.grid1.RowTemplate.Height = 30;
             this.grid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grid1.Size = new System.Drawing.Size(1288, 439);
+            this.grid1.Size = new System.Drawing.Size(899, 327);
             this.grid1.TabIndex = 0;
             this.grid1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid1_CellDoubleClick);
             this.grid1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid1_CellEnter);
@@ -100,7 +100,7 @@
             this.txtNome.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.txtNome.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
             this.txtNome.Lines = new string[0];
-            this.txtNome.Location = new System.Drawing.Point(432, 97);
+            this.txtNome.Location = new System.Drawing.Point(292, 96);
             this.txtNome.MaxLength = 32767;
             this.txtNome.Name = "txtNome";
             this.txtNome.PasswordChar = '\0';
@@ -117,7 +117,7 @@
             // 
             // cmdPesquisar
             // 
-            this.cmdPesquisar.Location = new System.Drawing.Point(902, 86);
+            this.cmdPesquisar.Location = new System.Drawing.Point(744, 84);
             this.cmdPesquisar.Name = "cmdPesquisar";
             this.cmdPesquisar.Size = new System.Drawing.Size(161, 51);
             this.cmdPesquisar.TabIndex = 42;
@@ -129,7 +129,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1426, 650);
+            this.ClientSize = new System.Drawing.Size(972, 529);
             this.Controls.Add(this.cmdPesquisar);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.grid1);
