@@ -53,7 +53,7 @@ namespace Academia
             Alimento.IdAlimento = f.id;
             Alimento.ConsultarDados();
             txtNome.Text = Alimento.NomeAlimento;
-            txtCalorias.Text = Alimento.Calorias.ToString();
+            txtCalorias.Text = Convert.ToString(Alimento.Calorias);
             status = "Editando";
             HabilitaControle();
         }
@@ -101,14 +101,12 @@ namespace Academia
                 }
             }
         }
-        private int codigo;
         private void cmdExcluir_Click(object sender, EventArgs e)
         {
             if (DialogResult.Yes == MessageBox.Show("Deseja excluir esse registro?", "Alerta", MessageBoxButtons.YesNo))
             {
                 if (status == "Editando")
                 {
-                    Alimento.IdAlimento = codigo;
                     Alimento.ExcluirDados();
                     MessageBox.Show("Excluido com sucesso!!!");
                     LimpaControle();

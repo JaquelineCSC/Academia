@@ -131,14 +131,12 @@ namespace Academia
             HabilitaControle();
         }
 
-        private int codigo;
         private void cmdExcluir_Click(object sender, EventArgs e)
         {
             if (DialogResult.Yes == MessageBox.Show("Deseja excluir esse registro?", "Alerta", MessageBoxButtons.YesNo))
             {
                 if (status == "Editando")
                 {
-                    cliente.IdCliente = codigo;
                     cliente.ExcluirDados();
                     MessageBox.Show("Excluido com sucesso!!!");
                     LimpaControle();

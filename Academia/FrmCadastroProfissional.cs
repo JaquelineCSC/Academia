@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Academia
 {
@@ -27,7 +28,7 @@ namespace Academia
             if (status == "Inserindo")
             {
                 profissional.IncluirDados();
-                MessageBox.Show("Alimento Adicionado com Sucesso!");
+                MessageBox.Show("Profissional Adicionado com Sucesso!");
             }
             if (status == "Editando")
             {
@@ -102,14 +103,12 @@ namespace Academia
             status = "Editando";
             HabilitaControle();
         }
-        private int codigo;
         private void cmdExcluir_Click(object sender, EventArgs e)
         {
             if (DialogResult.Yes == MessageBox.Show("Deseja excluir esse registro?", "Alerta", MessageBoxButtons.YesNo))
             {
                 if (status == "Editando")
                 {
-                    profissional.IdProfissional = codigo;
                     profissional.ExcluirDados();
                     MessageBox.Show("Excluido com sucesso!!!");
                     LimpaControle();
@@ -121,7 +120,7 @@ namespace Academia
 
         private void FrmCadastroProfissional_Load(object sender, EventArgs e)
         {
-
+            HabilitaControle();
         }
     }
 }

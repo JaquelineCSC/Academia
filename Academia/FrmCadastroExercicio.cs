@@ -19,14 +19,52 @@ namespace Academia
         }
 
         TExercicio exercicio = new TExercicio();
-
+        private string status = "Navegando";
         private void LimpaControle()
         {
-            txtNome.Text = "";
-            txtDescricao.Text = "";
-            cmbNivel.Text = "";
-            cmbRegiao.Text = "";
-            pictureBox1.Image = null;
+            foreach (Control ctr in this.Controls)
+            {
+                if (ctr is TextBox)
+                {
+                    ctr.Text = "";
+                }
+            }
+            pictureBox1 = null;
+        }
+
+        private void HabilitaControle()
+        {
+            cmdNovo.Enabled = (status == "Navegando");
+            cmdLocalizar.Enabled = (status == "Navegando");
+            cmdSalvar.Enabled = (status == "Editando" || status == "Inserindo");
+            cmdExcluir.Enabled = (status == "Editando");
+
+            if (status == "Inserindo" || status == "Editando")
+            {
+                foreach (Control ctr in this.Controls)
+                {
+                    if (ctr is TextBox)
+                        ctr.Enabled = true;
+
+                    if (ctr is ComboBox)
+                        ctr.Enabled = true;
+
+                    if (ctr is DateTimePicker)
+                        ctr.Enabled = true;
+                }
+            }
+            else
+            {
+                foreach (Control ctr in this.Controls)
+                {
+                    if (ctr is TextBox)
+                        ctr.Enabled = false;
+                    if (ctr is ComboBox)
+                        ctr.Enabled = false;
+                    if (ctr is DateTimePicker)
+                        ctr.Enabled = false;
+                }
+            }
         }
 
         private void cmdInserir_Click(object sender, EventArgs e)
@@ -37,10 +75,15 @@ namespace Academia
             exercicio.RegiaoExercicio = cmbRegiao.Text;
 
             if (pictureBox1.Image != null)
+            {
                 exercicio.IncluirDados();
+                MessageBox.Show("Exercicio Adicionado com Sucesso!");
+            }
             else
+            {
                 exercicio.IncluirDadosSemFoto();
-            MessageBox.Show("Incluido com Sucesso");
+                MessageBox.Show("Incluido com Sucesso");
+            }
             LimpaControle();
         }
 
@@ -61,20 +104,24 @@ namespace Academia
 
         private void cmdExcluir_Click(object sender, EventArgs e)
         {
-            if (DialogResult.Yes == MessageBox.Show("Deseja realmente excluir ?", "Alerta", MessageBoxButtons.YesNo))
+            if (DialogResult.Yes == MessageBox.Show("Deseja excluir esse registro?", "Alerta", MessageBoxButtons.YesNo))
             {
-                exercicio.ExcluirDados();
+                if (status == "Editando")
+                {
+                    exercicio.ExcluirDados();
+                    MessageBox.Show("Excluido com sucesso!!!");
+                    LimpaControle();
+                    status = "Navegando";
+                    HabilitaControle();
+                }
             }
-            LimpaControle();
         }
 
         private void Novo_Click(object sender, EventArgs e)
         {
             LimpaControle();
-            cmdInserir.Enabled = true;
-
-            cmdAlterar.Enabled = false;
-            cmdExcluir.Enabled = false;
+            status = "Inserindo";
+            HabilitaControle();
         }
 
         private void cmdVoltarMenu_Click(object sender, EventArgs e)
@@ -90,6 +137,7 @@ namespace Academia
                 pictureBox1.Image = Image.FromFile(nome);
 
                 ConverteFoto();
+                status = "Inserindo";
             }
         }
 
@@ -109,7 +157,7 @@ namespace Academia
 
         private void cmdLocalizar_Click(object sender, EventArgs e)
         {
-            cmdInserir.Enabled = false;
+            cmdSalvar.Enabled = false;
             cmdAlterar.Enabled = true;
             cmdExcluir.Enabled = true;
 
@@ -134,8 +182,13 @@ namespace Academia
 
                 pictureBox1.Image = Image.FromStream(ms);
             }
+            status = "Editando";
+            HabilitaControle();
         }
 
-        
+        private void FrmCadastroExercicio_Load(object sender, EventArgs e)
+        {
+            HabilitaControle();
+        }
     }
 }
