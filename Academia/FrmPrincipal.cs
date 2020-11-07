@@ -68,5 +68,12 @@ namespace Academia
             FrmCadastroProfissional profissional = new FrmCadastroProfissional();
             profissional.ShowDialog();
         }
+
+        private void cmdAlimento_Click(object sender, EventArgs e)
+        {
+            FrmAlimento alimento = new FrmAlimento();
+            alimento.ShowDialog();
+        }
+
     }
 }

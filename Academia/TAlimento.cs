@@ -23,21 +23,21 @@ namespace Academia
         public void IncluirDados()
         {
             string sql = "";
-            sql += "Insert into Alimento (NomeAlimento, Calorias) " + "values ('" + NomeAlimento + "','" + Calorias + "')";
+            sql += "Insert into Alimentos (NomeAlimento, Calorias) " + "values ('" + NomeAlimento + "','" + Calorias + "')";
             dados.Executar(sql);
         }
 
         public void AlterarDados()
         {
             string sql = "";
-            sql += "Update Alimento SET NomeAlimento = '" + NomeAlimento + "',  Calorias = '" + Calorias + "' Where idAlimento = " + IdAlimento.ToString();
+            sql += "Update Alimentos SET NomeAlimento = '" + NomeAlimento + "',  Calorias = '" + Calorias + "' Where idAlimento = " + IdAlimento.ToString();
             dados.Executar(sql);
         }
 
         public void ConsultarDados()
         {
             string sql = "";
-            sql += "Select NomeAlimento from Alimento where idAlimento = " + IdAlimento.ToString();
+            sql += "Select NomeAlimento from Alimentos where idAlimento = " + IdAlimento.ToString();
             dados.Consultar(sql);
             string[] auxiliar = dados.Campos.Split(';');
             NomeAlimento = auxiliar[0];
@@ -46,13 +46,13 @@ namespace Academia
         public DataSet ListarDados()
         {
             string sql = "";
-            sql = "Select * from Alimento";
+            sql = "Select * from Alimentos";
             return dados.Listar(sql);
         }
 
         public void ExcluirDados()
         {
-            string sql = "Delete from Alimento Where idAlimento = " + IdAlimento.ToString();
+            string sql = "Delete from Alimentos Where idAlimento = " + IdAlimento.ToString();
             dados.Executar(sql);
         }
     }

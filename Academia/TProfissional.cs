@@ -23,14 +23,14 @@ namespace Academia
         public void IncluirDados()
         {
             string sql = "";
-            sql += "Insert into Profissional (NomeProfissional, Valor) values ('" + NomeProfissional + "'," + ValorServico.ToString().Replace(",", ".");
+            sql += "Insert into Profissional (NomeProfissional, ValorServico) " + "values ('" + NomeProfissional + "','" + ValorServico + "')";
             dados.Executar(sql);
         }
 
         public void AlterarDados()
         {
             string sql = "";
-            sql += "Update Profissional SET NomeProfissional = '" + NomeProfissional + "',  Valor = " + ValorServico.ToString().Replace(",", ".") + " Where idProfissional = " + IdProfissional.ToString();
+            sql += "Update Profissional SET NomeProfissional = '" + NomeProfissional + "',  ValorServico = " + ValorServico.ToString().Replace(",", ".") + " Where idProfissional = " + IdProfissional.ToString();
             dados.Executar(sql);
         }
 

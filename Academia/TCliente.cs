@@ -78,7 +78,7 @@ namespace Academia
         public void ExcluirDados()
         {
             string sql = "";
-            sql += "Delete from Exercicio where idCliente = " + IdCliente.ToString();
+            sql += "Delete from Cliente where idCliente = " + IdCliente.ToString();
             dados.Executar(sql);
         }
     }

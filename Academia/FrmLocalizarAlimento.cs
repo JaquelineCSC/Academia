@@ -22,11 +22,11 @@ namespace Academia
         {
             Alimento.NomeAlimento = "";
             grid1.DataSource = Alimento.ListarDados().Tables[0];
-            grid1.Columns[5].Visible = false;
+            grid1.Columns[0].Visible = false;
             grid1.Columns[0].Visible = false;
             grid1.RowHeadersVisible = false;
             grid1.Rows[0].Selected = true;
-            grid1.MultiSelect = false;
+            grid1.MultiSelect = true;
             grid1.ReadOnly = true;
             grid1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
