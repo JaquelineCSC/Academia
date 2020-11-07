@@ -99,5 +99,12 @@ namespace Academia
             sql = "Select * from Exercicio Where RegiaoExercicio LIKE '" + RegiaoExercicio + "%'";
             return dados.Listar(sql);
         }
+
+        public DataSet ListarDadosNivel()
+        {
+            string sql = "";
+            sql = "Select * from Exercicio Where NivelExercicio LIKE '" + NivelExercicio + "%'";
+            return dados.Listar(sql);
+        }
     }
 }

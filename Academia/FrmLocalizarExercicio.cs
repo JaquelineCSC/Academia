@@ -66,6 +66,11 @@ namespace Academia
                 exercicio.RegiaoExercicio = txtNome.Text;
                 grid1.DataSource = exercicio.ListarDadosRegiao().Tables[0];
             }
+            else if (rbNivel.Checked == true)
+            {
+                exercicio.NivelExercicio = txtNome.Text;
+                grid1.DataSource = exercicio.ListarDadosNivel().Tables[0];
+            }
 
         }
 
@@ -75,6 +80,11 @@ namespace Academia
         }
 
         private void rbNomeExercicio_CheckedChanged(object sender, EventArgs e)
+        {
+            txtNome.Enabled = true;
+        }
+
+        private void rbNivel_CheckedChanged(object sender, EventArgs e)
         {
             txtNome.Enabled = true;
         }

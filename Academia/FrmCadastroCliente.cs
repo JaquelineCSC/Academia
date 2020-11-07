@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Academia
 {
-    public partial class FrmCliente : MetroFramework.Forms.MetroForm
+    public partial class FrmCadastroCliente : MetroFramework.Forms.MetroForm
     {
-        public FrmCliente()
+        public FrmCadastroCliente()
         {
             InitializeComponent();
         }
@@ -31,24 +31,40 @@ namespace Academia
             cmbNivel.Text = "";
         }
 
+        private void ON()
+        {
+            txtNome.Enabled = true;
+            txtRua.Enabled = true;
+            txtBairro.Enabled = true;
+            txtNumCasa.Enabled = true;
+            metroDateTime1.Enabled = true;
+            txtAvaliacao.Enabled = true;
+            cmbNivel.Enabled = true;
+        }
+
         private void cmdInserir_Click(object sender, EventArgs e)
         {
             cliente.NomeCliente = txtNome.Text;
             cliente.Rua = txtRua.Text;
             cliente.Bairro = txtBairro.Text;
             cliente.NumCasa = txtNumCasa.Text;
-            cliente.DataNascimento = metroDateTime1.Text;
+            cliente.DataNascimento = metroDateTime1.Value.ToString("yyyy/MM/dd");
             cliente.AvaliacaoMedica = txtAvaliacao.Text;
             cliente.NivelConhecimento = cmbNivel.Text;
             cliente.DiaBaseVencimento = txtDiaVencimento.Text;
 
+            cliente.IncluirDados();
             MessageBox.Show("Incluido com Sucesso");
             LimpaControle();
         }
 
         private void FrmCliente_Load(object sender, EventArgs e)
         {
-            txtDiaVencimento.Text = DateTime.Today.Day.ToString();
+            int x = int.Parse(DateTime.Today.Day.ToString());
+            if (x < 10)
+                txtDiaVencimento.Text = "0" + x.ToString();
+            else
+                txtDiaVencimento.Text = x.ToString();
         }
 
         private void cmdAlterar_Click(object sender, EventArgs e)
@@ -82,10 +98,12 @@ namespace Academia
 
             cmdAlterar.Enabled = false;
             cmdExcluir.Enabled = false;
+            ON();
         }
 
         private void cmdPesquisar_Click(object sender, EventArgs e)
         {
+            ON();
             cmdInserir.Enabled = false;
             cmdAlterar.Enabled = true;
             cmdExcluir.Enabled = true;
@@ -103,6 +121,11 @@ namespace Academia
             metroDateTime1.Text = cliente.DataNascimento;
             txtAvaliacao.Text = cliente.AvaliacaoMedica;
             cmbNivel.Text = cliente.NivelConhecimento;
+        }
+
+        private void cmdVoltarMenu_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

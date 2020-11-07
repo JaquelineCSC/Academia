@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using MetroFramework.Controls;
+using MetroFramework.Interfaces;
 
 namespace Academia
 {
@@ -19,52 +21,21 @@ namespace Academia
         }
 
         TExercicio exercicio = new TExercicio();
-        private string status = "Navegando";
+
         private void LimpaControle()
         {
-            foreach (Control ctr in this.Controls)
-            {
-                if (ctr is TextBox)
-                {
-                    ctr.Text = "";
-                }
-            }
-            pictureBox1 = null;
+            txtNome.Text = "";
+            txtDescricao.Text = "";
+            cmbNivel.Text = "";
+            cmbRegiao.Text = "";
         }
 
-        private void HabilitaControle()
+        private void ON()
         {
-            cmdNovo.Enabled = (status == "Navegando");
-            cmdLocalizar.Enabled = (status == "Navegando");
-            cmdSalvar.Enabled = (status == "Editando" || status == "Inserindo");
-            cmdExcluir.Enabled = (status == "Editando");
-
-            if (status == "Inserindo" || status == "Editando")
-            {
-                foreach (Control ctr in this.Controls)
-                {
-                    if (ctr is TextBox)
-                        ctr.Enabled = true;
-
-                    if (ctr is ComboBox)
-                        ctr.Enabled = true;
-
-                    if (ctr is DateTimePicker)
-                        ctr.Enabled = true;
-                }
-            }
-            else
-            {
-                foreach (Control ctr in this.Controls)
-                {
-                    if (ctr is TextBox)
-                        ctr.Enabled = false;
-                    if (ctr is ComboBox)
-                        ctr.Enabled = false;
-                    if (ctr is DateTimePicker)
-                        ctr.Enabled = false;
-                }
-            }
+            txtNome.Enabled = true;
+            txtDescricao.Enabled = true;
+            cmbNivel.Enabled = true;
+            cmbRegiao.Enabled = true;
         }
 
         private void cmdInserir_Click(object sender, EventArgs e)
@@ -74,17 +45,15 @@ namespace Academia
             exercicio.NivelExercicio = cmbNivel.Text;
             exercicio.RegiaoExercicio = cmbRegiao.Text;
 
-
-            //if (pictureBox1.Image != null)
-            //{
-            //exercicio.IncluirDados();
-            //MessageBox.Show("Exercicio Adicionado com Sucesso!");
-            //}
-            //else
-            //{
-            exercicio.IncluirDadosSemFoto();
-            MessageBox.Show("Incluido com Sucesso");
-            //}
+            if (pictureBox1.Image != null)
+            {
+                exercicio.IncluirDados();
+            }
+            else
+            {
+                exercicio.IncluirDadosSemFoto();
+            }
+            MessageBox.Show("Exercicio Adicionado com Sucesso!");
             LimpaControle();
         }
 
@@ -107,22 +76,17 @@ namespace Academia
         {
             if (DialogResult.Yes == MessageBox.Show("Deseja excluir esse registro?", "Alerta", MessageBoxButtons.YesNo))
             {
-                if (status == "Editando")
-                {
-                    exercicio.ExcluirDados();
-                    MessageBox.Show("Excluido com sucesso!!!");
-                    LimpaControle();
-                    status = "Navegando";
-                    HabilitaControle();
-                }
+                exercicio.ExcluirDados();
+                MessageBox.Show("Excluido com sucesso!!!");
+                LimpaControle();
             }
         }
 
         private void Novo_Click(object sender, EventArgs e)
         {
-            LimpaControle();
-            status = "Inserindo";
-            HabilitaControle();
+            cmdNovo.Enabled = false;
+            cmdSalvar.Enabled = true;
+            ON();
         }
 
         private void cmdVoltarMenu_Click(object sender, EventArgs e)
@@ -138,7 +102,6 @@ namespace Academia
                 pictureBox1.Image = Image.FromFile(nome);
 
                 ConverteFoto();
-                status = "Inserindo";
             }
         }
 
@@ -158,6 +121,7 @@ namespace Academia
 
         private void cmdLocalizar_Click(object sender, EventArgs e)
         {
+            ON();
             cmdSalvar.Enabled = false;
             cmdAlterar.Enabled = true;
             cmdExcluir.Enabled = true;
@@ -183,13 +147,6 @@ namespace Academia
 
                 pictureBox1.Image = Image.FromStream(ms);
             }
-            status = "Editando";
-            HabilitaControle();
-        }
-
-        private void FrmCadastroExercicio_Load(object sender, EventArgs e)
-        {
-            HabilitaControle();
         }
     }
 }

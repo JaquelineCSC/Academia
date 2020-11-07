@@ -37,6 +37,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rbRegiao = new MetroFramework.Controls.MetroRadioButton();
             this.rbNomeExercicio = new MetroFramework.Controls.MetroRadioButton();
+            this.rbNivel = new MetroFramework.Controls.MetroRadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.grid1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -50,7 +51,7 @@
             this.grid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
@@ -68,7 +69,7 @@
             this.grid1.EnableHeadersVisualStyles = false;
             this.grid1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.grid1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.grid1.Location = new System.Drawing.Point(50, 179);
+            this.grid1.Location = new System.Drawing.Point(50, 225);
             this.grid1.Name = "grid1";
             this.grid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -82,7 +83,7 @@
             this.grid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.grid1.RowTemplate.Height = 30;
             this.grid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grid1.Size = new System.Drawing.Size(1090, 418);
+            this.grid1.Size = new System.Drawing.Size(1257, 493);
             this.grid1.TabIndex = 0;
             this.grid1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid1_CellDoubleClick);
             this.grid1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid1_CellEnter);
@@ -105,7 +106,7 @@
             this.txtNome.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.txtNome.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
             this.txtNome.Lines = new string[0];
-            this.txtNome.Location = new System.Drawing.Point(444, 98);
+            this.txtNome.Location = new System.Drawing.Point(650, 121);
             this.txtNome.MaxLength = 32767;
             this.txtNome.Name = "txtNome";
             this.txtNome.PasswordChar = '\0';
@@ -122,7 +123,7 @@
             // 
             // cmdPesquisar
             // 
-            this.cmdPesquisar.Location = new System.Drawing.Point(932, 75);
+            this.cmdPesquisar.Location = new System.Drawing.Point(1138, 98);
             this.cmdPesquisar.Name = "cmdPesquisar";
             this.cmdPesquisar.Size = new System.Drawing.Size(169, 68);
             this.cmdPesquisar.TabIndex = 42;
@@ -132,12 +133,13 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.rbNivel);
             this.groupBox1.Controls.Add(this.rbRegiao);
             this.groupBox1.Controls.Add(this.rbNomeExercicio);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(50, 63);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(358, 100);
+            this.groupBox1.Size = new System.Drawing.Size(485, 145);
             this.groupBox1.TabIndex = 43;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pesquisar por:";
@@ -166,11 +168,23 @@
             this.rbNomeExercicio.UseSelectable = true;
             this.rbNomeExercicio.CheckedChanged += new System.EventHandler(this.rbNomeExercicio_CheckedChanged);
             // 
+            // rbNivel
+            // 
+            this.rbNivel.AutoSize = true;
+            this.rbNivel.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
+            this.rbNivel.Location = new System.Drawing.Point(26, 97);
+            this.rbNivel.Name = "rbNivel";
+            this.rbNivel.Size = new System.Drawing.Size(212, 25);
+            this.rbNivel.TabIndex = 46;
+            this.rbNivel.Text = "Nivel de Conhecimento";
+            this.rbNivel.UseSelectable = true;
+            this.rbNivel.CheckedChanged += new System.EventHandler(this.rbNivel_CheckedChanged);
+            // 
             // FrmLocalizarExercicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1182, 620);
+            this.ClientSize = new System.Drawing.Size(1350, 741);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.cmdPesquisar);
             this.Controls.Add(this.txtNome);
@@ -193,5 +207,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private MetroFramework.Controls.MetroRadioButton rbRegiao;
         private MetroFramework.Controls.MetroRadioButton rbNomeExercicio;
+        private MetroFramework.Controls.MetroRadioButton rbNivel;
     }
 }

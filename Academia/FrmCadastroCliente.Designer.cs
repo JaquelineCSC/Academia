@@ -1,6 +1,6 @@
 ﻿namespace Academia
 {
-    partial class FrmCliente
+    partial class FrmCadastroCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -422,6 +422,7 @@
             this.cmdVoltarMenu.TabIndex = 21;
             this.cmdVoltarMenu.Text = "Voltar Menu";
             this.cmdVoltarMenu.UseVisualStyleBackColor = false;
+            this.cmdVoltarMenu.Click += new System.EventHandler(this.cmdVoltarMenu_Click);
             // 
             // cmdNovo
             // 
@@ -470,7 +471,7 @@
             this.cmdPesquisar.UseSelectable = true;
             this.cmdPesquisar.Click += new System.EventHandler(this.cmdPesquisar_Click);
             // 
-            // FrmCliente
+            // FrmCadastroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -493,7 +494,7 @@
             this.Controls.Add(this.txtBairro);
             this.Controls.Add(this.txtRua);
             this.Controls.Add(this.txtNome);
-            this.Name = "FrmCliente";
+            this.Name = "FrmCadastroCliente";
             this.Text = "Cliente";
             this.Load += new System.EventHandler(this.FrmCliente_Load);
             this.panel1.ResumeLayout(false);

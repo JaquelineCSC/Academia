@@ -53,8 +53,8 @@ namespace Academia
 
         private void cmdCliente_Click(object sender, EventArgs e)
         {
-            //FrmCadastroCliente cliente = new FrmCadastroCliente();
-            //cliente.ShowDialog();
+            FrmCadastroCliente cliente = new FrmCadastroCliente();
+            cliente.ShowDialog();
         }
 
         private void cmdExercicio_Click(object sender, EventArgs e)

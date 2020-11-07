@@ -44,6 +44,10 @@ namespace Academia
             grid1.MultiSelect = false;
             grid1.ReadOnly = true;
             grid1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+            grid1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            grid1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            grid1.AutoResizeRows();
         }
 
         private void grid1_CellEnter(object sender, DataGridViewCellEventArgs e)

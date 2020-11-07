@@ -159,6 +159,7 @@
             // 
             // cmbRegiao
             // 
+            this.cmbRegiao.Enabled = false;
             this.cmbRegiao.FormattingEnabled = true;
             this.cmbRegiao.ItemHeight = 23;
             this.cmbRegiao.Items.AddRange(new object[] {
@@ -187,6 +188,7 @@
             this.txtDescricao.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtDescricao.CustomButton.UseSelectable = true;
             this.txtDescricao.CustomButton.Visible = false;
+            this.txtDescricao.Enabled = false;
             this.txtDescricao.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.txtDescricao.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
             this.txtDescricao.Lines = new string[0];
@@ -219,6 +221,7 @@
             this.txtNome.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtNome.CustomButton.UseSelectable = true;
             this.txtNome.CustomButton.Visible = false;
+            this.txtNome.Enabled = false;
             this.txtNome.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.txtNome.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
             this.txtNome.Lines = new string[0];
@@ -279,6 +282,7 @@
             // 
             // cmbNivel
             // 
+            this.cmbNivel.Enabled = false;
             this.cmbNivel.FormattingEnabled = true;
             this.cmbNivel.ItemHeight = 23;
             this.cmbNivel.Items.AddRange(new object[] {
@@ -344,7 +348,6 @@
             this.Controls.Add(this.panel1);
             this.Name = "FrmCadastroExercicio";
             this.Text = "Cadastro Exercicio";
-            this.Load += new System.EventHandler(this.FrmCadastroExercicio_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
