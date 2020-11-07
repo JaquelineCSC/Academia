@@ -16,8 +16,11 @@ namespace Academia
         {
             InitializeComponent();
         }
-        public int id;
+        private int id;
         TAlimento Alimento = new TAlimento();
+
+        public int Id { get => id; set => id = value; }
+
         private void FrmLocalizarAlimento_Load(object sender, EventArgs e)
         {
             Alimento.NomeAlimento = "";
@@ -29,11 +32,15 @@ namespace Academia
             grid1.MultiSelect = true;
             grid1.ReadOnly = true;
             grid1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+            grid1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            grid1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            grid1.AutoResizeRows();
         }
 
         private void grid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            id = int.Parse(grid1.Rows[e.RowIndex].Cells[0].Value.ToString());
+            Id = int.Parse(grid1.Rows[e.RowIndex].Cells[0].Value.ToString());
         }
 
         private void grid1_DoubleClick(object sender, EventArgs e)

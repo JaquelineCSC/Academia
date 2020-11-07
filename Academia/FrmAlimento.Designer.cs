@@ -30,7 +30,6 @@
         {
             this.txtNome = new MetroFramework.Controls.MetroTextBox();
             this.lblNome = new MetroFramework.Controls.MetroLabel();
-            this.txtCalorias = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cmdExcluir = new System.Windows.Forms.Button();
@@ -38,6 +37,7 @@
             this.cmdNovo = new System.Windows.Forms.Button();
             this.cmdInserir = new System.Windows.Forms.Button();
             this.cmdPesquisar = new MetroFramework.Controls.MetroButton();
+            this.txtCaloriasx = new MetroFramework.Controls.MetroTextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -82,38 +82,6 @@
             this.lblNome.Size = new System.Drawing.Size(63, 25);
             this.lblNome.TabIndex = 39;
             this.lblNome.Text = "Nome:";
-            // 
-            // txtCalorias
-            // 
-            // 
-            // 
-            // 
-            this.txtCalorias.CustomButton.Image = null;
-            this.txtCalorias.CustomButton.Location = new System.Drawing.Point(402, 2);
-            this.txtCalorias.CustomButton.Name = "";
-            this.txtCalorias.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.txtCalorias.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtCalorias.CustomButton.TabIndex = 1;
-            this.txtCalorias.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtCalorias.CustomButton.UseSelectable = true;
-            this.txtCalorias.CustomButton.Visible = false;
-            this.txtCalorias.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtCalorias.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
-            this.txtCalorias.Lines = new string[0];
-            this.txtCalorias.Location = new System.Drawing.Point(232, 256);
-            this.txtCalorias.MaxLength = 32767;
-            this.txtCalorias.Name = "txtCalorias";
-            this.txtCalorias.PasswordChar = '\0';
-            this.txtCalorias.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtCalorias.SelectedText = "";
-            this.txtCalorias.SelectionLength = 0;
-            this.txtCalorias.SelectionStart = 0;
-            this.txtCalorias.ShortcutsEnabled = true;
-            this.txtCalorias.Size = new System.Drawing.Size(430, 30);
-            this.txtCalorias.TabIndex = 45;
-            this.txtCalorias.UseSelectable = true;
-            this.txtCalorias.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtCalorias.WaterMarkFont = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // metroLabel1
             // 
@@ -221,6 +189,38 @@
             this.cmdPesquisar.UseSelectable = true;
             this.cmdPesquisar.Click += new System.EventHandler(this.cmdPesquisar_Click);
             // 
+            // txtCaloriasx
+            // 
+            // 
+            // 
+            // 
+            this.txtCaloriasx.CustomButton.Image = null;
+            this.txtCaloriasx.CustomButton.Location = new System.Drawing.Point(402, 2);
+            this.txtCaloriasx.CustomButton.Name = "";
+            this.txtCaloriasx.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.txtCaloriasx.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtCaloriasx.CustomButton.TabIndex = 1;
+            this.txtCaloriasx.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtCaloriasx.CustomButton.UseSelectable = true;
+            this.txtCaloriasx.CustomButton.Visible = false;
+            this.txtCaloriasx.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtCaloriasx.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
+            this.txtCaloriasx.Lines = new string[0];
+            this.txtCaloriasx.Location = new System.Drawing.Point(232, 256);
+            this.txtCaloriasx.MaxLength = 32767;
+            this.txtCaloriasx.Name = "txtCaloriasx";
+            this.txtCaloriasx.PasswordChar = '\0';
+            this.txtCaloriasx.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtCaloriasx.SelectedText = "";
+            this.txtCaloriasx.SelectionLength = 0;
+            this.txtCaloriasx.SelectionStart = 0;
+            this.txtCaloriasx.ShortcutsEnabled = true;
+            this.txtCaloriasx.Size = new System.Drawing.Size(430, 30);
+            this.txtCaloriasx.TabIndex = 45;
+            this.txtCaloriasx.UseSelectable = true;
+            this.txtCaloriasx.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtCaloriasx.WaterMarkFont = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
             // FrmAlimento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -228,7 +228,7 @@
             this.ClientSize = new System.Drawing.Size(823, 550);
             this.Controls.Add(this.cmdPesquisar);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.txtCalorias);
+            this.Controls.Add(this.txtCaloriasx);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblNome);
@@ -245,7 +245,6 @@
 
         private MetroFramework.Controls.MetroTextBox txtNome;
         private MetroFramework.Controls.MetroLabel lblNome;
-        private MetroFramework.Controls.MetroTextBox txtCalorias;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button cmdExcluir;
@@ -253,5 +252,6 @@
         private System.Windows.Forms.Button cmdNovo;
         private System.Windows.Forms.Button cmdInserir;
         private MetroFramework.Controls.MetroButton cmdPesquisar;
+        private MetroFramework.Controls.MetroTextBox txtCaloriasx;
     }
 }

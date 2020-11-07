@@ -26,6 +26,11 @@ namespace Academia
         {
             switch (cmbPesquisa.Text)
             {
+                case "Alimento":
+                    FrmLocalizarAlimento FA = new FrmLocalizarAlimento();
+                    FA.ShowDialog();
+                    break;
+
                 case "Cliente":
                     FrmLocalizarCliente FC = new FrmLocalizarCliente();
                     FC.ShowDialog();

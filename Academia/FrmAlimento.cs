@@ -34,7 +34,7 @@ namespace Academia
         private void cmdInserir_Click(object sender, EventArgs e)
         {
             Alimento.NomeAlimento = txtNome.Text;
-            Alimento.Calorias = Convert.ToInt32(txtCalorias.Text);
+            Alimento.Calorias = Convert.ToInt32(txtCaloriasx.Text);
             if(status == "Inserindo" )
             {
                 Alimento.IncluirDados();
@@ -50,10 +50,11 @@ namespace Academia
         {
             FrmLocalizarAlimento f = new FrmLocalizarAlimento();
             f.ShowDialog();
-            Alimento.IdAlimento = f.id;
+            Alimento.IdAlimento = f.Id;
             Alimento.ConsultarDados();
             txtNome.Text = Alimento.NomeAlimento;
-            txtCalorias.Text = Convert.ToString(Alimento.Calorias);
+            int aux = Alimento.Calorias;
+            txtCaloriasx.Text = Convert.ToString(aux);
             status = "Editando";
             HabilitaControle();
         }

@@ -37,6 +37,7 @@
             this.cmbPesquisa.FormattingEnabled = true;
             this.cmbPesquisa.ItemHeight = 23;
             this.cmbPesquisa.Items.AddRange(new object[] {
+            "Alimento",
             "Cliente",
             "Exercicio",
             "Profissional"});

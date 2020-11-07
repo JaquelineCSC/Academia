@@ -37,10 +37,11 @@ namespace Academia
         public void ConsultarDados()
         {
             string sql = "";
-            sql += "Select NomeAlimento from Alimentos where idAlimento = " + IdAlimento.ToString();
+            sql += "Select * from Alimentos where idAlimento = " + IdAlimento.ToString();
             dados.Consultar(sql);
             string[] auxiliar = dados.Campos.Split(';');
-            NomeAlimento = auxiliar[0];
+            NomeAlimento = auxiliar[1];
+            Calorias = int.Parse(auxiliar[2]);
         }
 
         public DataSet ListarDados()
