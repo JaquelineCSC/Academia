@@ -19,7 +19,7 @@ namespace Academia
         private void Conectar()
         {
             string s = "";
-            s = @"Server=LAPTOP-PIS5CB3U;Database=Academia;UID=sa;PWD=123;";
+            s = @"Server=.\SQLEXPRESS;Database=Academia;UID=sa;PWD=123;";
             cn.ConnectionString = s;
             cn.Open();
         }

@@ -74,16 +74,17 @@ namespace Academia
             exercicio.NivelExercicio = cmbNivel.Text;
             exercicio.RegiaoExercicio = cmbRegiao.Text;
 
-            if (pictureBox1.Image != null)
-            {
-                exercicio.IncluirDados();
-                MessageBox.Show("Exercicio Adicionado com Sucesso!");
-            }
-            else
-            {
-                exercicio.IncluirDadosSemFoto();
-                MessageBox.Show("Incluido com Sucesso");
-            }
+
+            //if (pictureBox1.Image != null)
+            //{
+            //exercicio.IncluirDados();
+            //MessageBox.Show("Exercicio Adicionado com Sucesso!");
+            //}
+            //else
+            //{
+            exercicio.IncluirDadosSemFoto();
+            MessageBox.Show("Incluido com Sucesso");
+            //}
             LimpaControle();
         }
 
