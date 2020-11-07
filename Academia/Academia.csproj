@@ -61,11 +61,11 @@
     <Compile Include="FrmAlimento.Designer.cs">
       <DependentUpon>FrmAlimento.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmCadastroCliente.cs">
+    <Compile Include="FrmCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmCadastroCliente.Designer.cs">
-      <DependentUpon>FrmCadastroCliente.cs</DependentUpon>
+    <Compile Include="FrmCliente.Designer.cs">
+      <DependentUpon>FrmCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmCadastroExercicio.cs">
       <SubType>Form</SubType>
@@ -78,12 +78,6 @@
     </Compile>
     <Compile Include="FrmCadastroProfissional.Designer.cs">
       <DependentUpon>FrmCadastroProfissional.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmConsultaCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmConsultaCliente.Designer.cs">
-      <DependentUpon>FrmConsultaCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmLocalizarAlimento.cs">
       <SubType>Form</SubType>
@@ -109,6 +103,12 @@
     <Compile Include="FrmLocalizarProfissional.Designer.cs">
       <DependentUpon>FrmLocalizarProfissional.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmSeleçãoConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSeleçãoConsulta.Designer.cs">
+      <DependentUpon>FrmSeleçãoConsulta.cs</DependentUpon>
+    </Compile>
     <Compile Include="TAlimento.cs" />
     <Compile Include="TCardapio.cs" />
     <Compile Include="TCliente.cs" />
@@ -129,17 +129,14 @@
     <EmbeddedResource Include="FrmAlimento.resx">
       <DependentUpon>FrmAlimento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmCadastroCliente.resx">
-      <DependentUpon>FrmCadastroCliente.cs</DependentUpon>
+    <EmbeddedResource Include="FrmCliente.resx">
+      <DependentUpon>FrmCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCadastroExercicio.resx">
       <DependentUpon>FrmCadastroExercicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCadastroProfissional.resx">
       <DependentUpon>FrmCadastroProfissional.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmConsultaCliente.resx">
-      <DependentUpon>FrmConsultaCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLocalizarAlimento.resx">
       <DependentUpon>FrmLocalizarAlimento.cs</DependentUpon>
@@ -155,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSeleçãoConsulta.resx">
+      <DependentUpon>FrmSeleçãoConsulta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

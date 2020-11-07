@@ -47,14 +47,14 @@ namespace Academia
             cmdCardapio.Visible = false;
             cmdListaExercicio.Visible = false;
 
-            FrmConsultaCliente F = new FrmConsultaCliente();
+            FrmSeleçãoConsulta F = new FrmSeleçãoConsulta();
             F.ShowDialog();
         }
 
         private void cmdCliente_Click(object sender, EventArgs e)
         {
-            FrmCadastroCliente cliente = new FrmCadastroCliente();
-            cliente.ShowDialog();
+            //FrmCadastroCliente cliente = new FrmCadastroCliente();
+            //cliente.ShowDialog();
         }
 
         private void cmdExercicio_Click(object sender, EventArgs e)

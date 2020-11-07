@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Academia
 {
-    public partial class FrmLocalizarCliente : Form
+    public partial class FrmLocalizarCliente : MetroFramework.Forms.MetroForm
     {
         public FrmLocalizarCliente()
         {
@@ -18,7 +18,10 @@ namespace Academia
         }
 
         TCliente Cliente = new TCliente();
-        public int id;
+        private int id;
+
+        public int Id { get => id; set => id = value; }
+
         private void grid1_DoubleClick(object sender, EventArgs e)
         {
             Close();
@@ -43,9 +46,12 @@ namespace Academia
             grid1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
-        private void grid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void grid1_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
-            id = int.Parse(grid1.Rows[e.RowIndex].Cells[0].Value.ToString());
+            if (grid1.Rows[e.RowIndex].Cells[0].Value.ToString() != "")
+            {
+                Id = int.Parse(grid1.Rows[e.RowIndex].Cells[0].Value.ToString());
+            }
         }
     }
 }

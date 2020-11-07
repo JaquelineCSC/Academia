@@ -39,7 +39,6 @@ namespace Academia
             grid1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             grid1.AutoResizeRows();
 
-            //cmdPesquisar.FontSize = MetroFramework.MetroButtonSize.Tall;
         }
 
         private void grid1_CellEnter(object sender, DataGridViewCellEventArgs e)
@@ -57,8 +56,27 @@ namespace Academia
 
         private void cmdPesquisar_Click(object sender, EventArgs e)
         {
-            exercicio.NomeExercicio = txtNome.Text;
-            grid1.DataSource = exercicio.ListarDadosNome().Tables[0];
+            if (rbNomeExercicio.Checked == true)
+            {
+                exercicio.NomeExercicio = txtNome.Text;
+                grid1.DataSource = exercicio.ListarDadosNome().Tables[0];
+            }
+            else if (rbRegiao.Checked == true)
+            {
+                exercicio.RegiaoExercicio = txtNome.Text;
+                grid1.DataSource = exercicio.ListarDadosRegiao().Tables[0];
+            }
+
+        }
+
+        private void rbRegiao_CheckedChanged(object sender, EventArgs e)
+        {
+            txtNome.Enabled = true;
+        }
+
+        private void rbNomeExercicio_CheckedChanged(object sender, EventArgs e)
+        {
+            txtNome.Enabled = true;
         }
     }
 }
