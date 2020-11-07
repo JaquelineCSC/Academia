@@ -61,14 +61,14 @@ namespace Academia
         public void ExcluirDados()
         {
             string sql = "";
-            sql += "Delete from Exercicio where idExercicio = " + idExercicio.ToString();
+            sql += "Delete from Exercicio where idExercicio = " + IdExercicio.ToString();
             dados.Executar(sql);
         }
 
         public void ConsultarDados()
         {
             string sql = "";
-            sql += "Select * from Exercicio where idExercicio = " + idExercicio.ToString();
+            sql += "Select * from Exercicio where idExercicio = " + IdExercicio.ToString();
 
             dados.ConsultarFoto(sql, ref imagemExercicio);
 

@@ -91,6 +91,12 @@
     <Compile Include="FrmLocalizarAlimento.Designer.cs">
       <DependentUpon>FrmLocalizarAlimento.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmLocalizarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLocalizarCliente.Designer.cs">
+      <DependentUpon>FrmLocalizarCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLocalizarExercicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLocalizarAlimento.resx">
       <DependentUpon>FrmLocalizarAlimento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLocalizarCliente.resx">
+      <DependentUpon>FrmLocalizarCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLocalizarExercicio.resx">
       <DependentUpon>FrmLocalizarExercicio.cs</DependentUpon>

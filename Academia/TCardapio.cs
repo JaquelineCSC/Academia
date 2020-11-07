@@ -36,7 +36,7 @@ namespace Academia
         public void AlterarDados()
         {
             string sql = "";
-            sql += "Update Cardapio SET idCliente = '" + IdCliente + "',  idProfissional = '" + idProfissional + "', DataHora'"+ DataHora + "' Where idAlimento = " + IdAlimento.ToString();
+            sql += "Update Cardapio SET idCliente = '" + IdCliente + "', idAlimento ='" + IdAlimento + "',  idProfissional = '" + idProfissional + "', DataHora'"+ DataHora + "' Where idCardapio = " + IdCardapio.ToString();
             dados.Executar(sql);
         }
 

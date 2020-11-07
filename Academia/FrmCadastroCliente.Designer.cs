@@ -47,8 +47,9 @@
             this.cmdSalvar = new System.Windows.Forms.Button();
             this.cmdNovo = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cmdVoltarMenu = new System.Windows.Forms.Button();
             this.cmdExcluir = new System.Windows.Forms.Button();
+            this.cmdVoltarMenu = new System.Windows.Forms.Button();
+            this.cmdPesquisar = new MetroFramework.Controls.MetroButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -357,7 +358,7 @@
             this.cmdSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdSalvar.Font = new System.Drawing.Font("Lucida Fax", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdSalvar.ForeColor = System.Drawing.Color.White;
-            this.cmdSalvar.Location = new System.Drawing.Point(245, 0);
+            this.cmdSalvar.Location = new System.Drawing.Point(178, 0);
             this.cmdSalvar.Name = "cmdSalvar";
             this.cmdSalvar.Size = new System.Drawing.Size(116, 72);
             this.cmdSalvar.TabIndex = 9;
@@ -393,26 +394,8 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(20, 514);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(691, 72);
+            this.panel1.Size = new System.Drawing.Size(781, 72);
             this.panel1.TabIndex = 20;
-            // 
-            // cmdVoltarMenu
-            // 
-            this.cmdVoltarMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.cmdVoltarMenu.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.cmdVoltarMenu.FlatAppearance.BorderSize = 0;
-            this.cmdVoltarMenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.cmdVoltarMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
-            this.cmdVoltarMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdVoltarMenu.Font = new System.Drawing.Font("Lucida Fax", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdVoltarMenu.ForeColor = System.Drawing.Color.White;
-            this.cmdVoltarMenu.Location = new System.Drawing.Point(540, 0);
-            this.cmdVoltarMenu.Name = "cmdVoltarMenu";
-            this.cmdVoltarMenu.Size = new System.Drawing.Size(157, 72);
-            this.cmdVoltarMenu.TabIndex = 10;
-            this.cmdVoltarMenu.Text = "Voltar Menu";
-            this.cmdVoltarMenu.UseVisualStyleBackColor = false;
-            this.cmdVoltarMenu.Click += new System.EventHandler(this.cmdVoltarMenu_Click);
             // 
             // cmdExcluir
             // 
@@ -424,18 +407,48 @@
             this.cmdExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdExcluir.Font = new System.Drawing.Font("Lucida Fax", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdExcluir.ForeColor = System.Drawing.Color.White;
-            this.cmdExcluir.Location = new System.Drawing.Point(405, 3);
+            this.cmdExcluir.Location = new System.Drawing.Point(349, 0);
             this.cmdExcluir.Name = "cmdExcluir";
             this.cmdExcluir.Size = new System.Drawing.Size(104, 72);
             this.cmdExcluir.TabIndex = 11;
             this.cmdExcluir.Text = "Excluir";
             this.cmdExcluir.UseVisualStyleBackColor = false;
+            this.cmdExcluir.Click += new System.EventHandler(this.cmdExcluir_Click);
+            // 
+            // cmdVoltarMenu
+            // 
+            this.cmdVoltarMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.cmdVoltarMenu.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.cmdVoltarMenu.FlatAppearance.BorderSize = 0;
+            this.cmdVoltarMenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.cmdVoltarMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
+            this.cmdVoltarMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdVoltarMenu.Font = new System.Drawing.Font("Lucida Fax", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdVoltarMenu.ForeColor = System.Drawing.Color.White;
+            this.cmdVoltarMenu.Location = new System.Drawing.Point(514, 0);
+            this.cmdVoltarMenu.Name = "cmdVoltarMenu";
+            this.cmdVoltarMenu.Size = new System.Drawing.Size(157, 72);
+            this.cmdVoltarMenu.TabIndex = 10;
+            this.cmdVoltarMenu.Text = "Voltar Menu";
+            this.cmdVoltarMenu.UseVisualStyleBackColor = false;
+            this.cmdVoltarMenu.Click += new System.EventHandler(this.cmdVoltarMenu_Click);
+            // 
+            // cmdPesquisar
+            // 
+            this.cmdPesquisar.Location = new System.Drawing.Point(660, 226);
+            this.cmdPesquisar.Name = "cmdPesquisar";
+            this.cmdPesquisar.Size = new System.Drawing.Size(161, 51);
+            this.cmdPesquisar.TabIndex = 49;
+            this.cmdPesquisar.Text = "Localizar Cliente";
+            this.cmdPesquisar.UseSelectable = true;
+            this.cmdPesquisar.Click += new System.EventHandler(this.cmdPesquisar_Click);
             // 
             // FrmCadastroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(731, 606);
+            this.ClientSize = new System.Drawing.Size(821, 606);
+            this.Controls.Add(this.cmdPesquisar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.metroDateTime1);
             this.Controls.Add(this.cmbConhecimento);
@@ -485,5 +498,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button cmdVoltarMenu;
         private System.Windows.Forms.Button cmdExcluir;
+        private MetroFramework.Controls.MetroButton cmdPesquisar;
     }
 }

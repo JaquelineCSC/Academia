@@ -44,7 +44,7 @@ namespace Academia
         public void ConsultarDados()
         {
             string sql = "";
-            sql += "Select * from Cliente where idCliente = " + idCliente.ToString();
+            sql += "Select * from Cliente where idCliente = " + IdCliente.ToString();
 
             dados.Consultar(sql);
 
@@ -64,6 +64,22 @@ namespace Academia
             string sql = "";
             sql = "Select * from Cliente";
             return dados.Listar(sql);
+        }
+
+        public void AlterarDados()
+        {
+            string sql = "";
+            sql += "Update Cliente SET NomeCliente = '" + NomeCliente + "', Rua = '" + Rua + "', Bairro = '"
+                + Bairro + "', NumCasa = '" + NumCasa + "', DataNascimento = '" + DataNascimento + "', AvaliacaoMedica'" + AvaliacaoMedica +
+                "', NivelConhecimento'" + NivelConhecimento + "', DiaBaseVencimento'" + DiaBaseVencimento + "' Where idCliente = " + IdCliente.ToString();
+            dados.Executar(sql);
+        }
+
+        public void ExcluirDados()
+        {
+            string sql = "";
+            sql += "Delete from Exercicio where idCliente = " + IdCliente.ToString();
+            dados.Executar(sql);
         }
     }
 }

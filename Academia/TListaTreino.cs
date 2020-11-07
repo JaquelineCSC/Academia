@@ -53,7 +53,7 @@ namespace Academia
         public void ExcluirDados()
         {
             string sql = "";
-            sql += "Delete from ListaTreino where idLista = " + idLista.ToString();
+            sql += "Delete from ListaTreino where idLista = " + IdLista.ToString();
             dados.Executar(sql);
         }
     }
