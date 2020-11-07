@@ -29,7 +29,7 @@ namespace Academia
         {
             string sql = "";
             sql += "Insert into Alimento (idCliente, idAlimento, idProfissional, DataHora) " +
-                "values ('" + IdCliente + "','" + IdAlimento + "','" + idProfissional+ "','" + DataHora+ "')";
+                "values ('" + IdCliente + "','" + IdAlimento + "','" + idProfissional+ "','" + DataHora + "')";
             dados.Executar(sql);
         }
 

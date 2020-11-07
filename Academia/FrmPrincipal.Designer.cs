@@ -206,6 +206,7 @@
             this.cmdCardapio.Text = "Cardapio";
             this.cmdCardapio.UseVisualStyleBackColor = false;
             this.cmdCardapio.Visible = false;
+            this.cmdCardapio.Click += new System.EventHandler(this.cmdCardapio_Click);
             // 
             // cmdAlimento
             // 

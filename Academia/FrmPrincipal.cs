@@ -75,5 +75,10 @@ namespace Academia
             alimento.ShowDialog();
         }
 
+        private void cmdCardapio_Click(object sender, EventArgs e)
+        {
+            FrmCadastroCardapio cardapio = new FrmCadastroCardapio();
+            cardapio.ShowDialog();
+        }
     }
 }
