@@ -36,6 +36,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cmdAlimento = new System.Windows.Forms.Button();
+            this.cmdCardapio = new System.Windows.Forms.Button();
+            this.cmdListaExercicio = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -124,7 +127,7 @@
             this.cmdProfissional.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdProfissional.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdProfissional.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
-            this.cmdProfissional.Location = new System.Drawing.Point(369, 8);
+            this.cmdProfissional.Location = new System.Drawing.Point(363, 8);
             this.cmdProfissional.Name = "cmdProfissional";
             this.cmdProfissional.Size = new System.Drawing.Size(135, 32);
             this.cmdProfissional.TabIndex = 22;
@@ -157,6 +160,9 @@
             // 
             this.panel3.BackgroundImage = global::Academia.Properties.Resources.panel3;
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Controls.Add(this.cmdListaExercicio);
+            this.panel3.Controls.Add(this.cmdCardapio);
+            this.panel3.Controls.Add(this.cmdAlimento);
             this.panel3.Controls.Add(this.cmdProfissional);
             this.panel3.Controls.Add(this.cmdCliente);
             this.panel3.Controls.Add(this.cmdExercicio);
@@ -164,6 +170,60 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(931, 200);
             this.panel3.TabIndex = 2;
+            // 
+            // cmdAlimento
+            // 
+            this.cmdAlimento.BackColor = System.Drawing.Color.Black;
+            this.cmdAlimento.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.cmdAlimento.FlatAppearance.BorderSize = 0;
+            this.cmdAlimento.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.cmdAlimento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
+            this.cmdAlimento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdAlimento.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdAlimento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
+            this.cmdAlimento.Location = new System.Drawing.Point(98, 57);
+            this.cmdAlimento.Name = "cmdAlimento";
+            this.cmdAlimento.Size = new System.Drawing.Size(113, 32);
+            this.cmdAlimento.TabIndex = 23;
+            this.cmdAlimento.Text = "Alimento";
+            this.cmdAlimento.UseVisualStyleBackColor = false;
+            this.cmdAlimento.Visible = false;
+            // 
+            // cmdCardapio
+            // 
+            this.cmdCardapio.BackColor = System.Drawing.Color.Black;
+            this.cmdCardapio.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.cmdCardapio.FlatAppearance.BorderSize = 0;
+            this.cmdCardapio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.cmdCardapio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
+            this.cmdCardapio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdCardapio.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdCardapio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
+            this.cmdCardapio.Location = new System.Drawing.Point(98, 106);
+            this.cmdCardapio.Name = "cmdCardapio";
+            this.cmdCardapio.Size = new System.Drawing.Size(113, 32);
+            this.cmdCardapio.TabIndex = 24;
+            this.cmdCardapio.Text = "Cardapio";
+            this.cmdCardapio.UseVisualStyleBackColor = false;
+            this.cmdCardapio.Visible = false;
+            // 
+            // cmdListaExercicio
+            // 
+            this.cmdListaExercicio.BackColor = System.Drawing.Color.Black;
+            this.cmdListaExercicio.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.cmdListaExercicio.FlatAppearance.BorderSize = 0;
+            this.cmdListaExercicio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.cmdListaExercicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
+            this.cmdListaExercicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdListaExercicio.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdListaExercicio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
+            this.cmdListaExercicio.Location = new System.Drawing.Point(363, 57);
+            this.cmdListaExercicio.Name = "cmdListaExercicio";
+            this.cmdListaExercicio.Size = new System.Drawing.Size(135, 32);
+            this.cmdListaExercicio.TabIndex = 25;
+            this.cmdListaExercicio.Text = "Lista Treino";
+            this.cmdListaExercicio.UseVisualStyleBackColor = false;
+            this.cmdListaExercicio.Visible = false;
             // 
             // FrmPrincipal
             // 
@@ -192,6 +252,9 @@
         private System.Windows.Forms.Button cmdProfissional;
         private System.Windows.Forms.Button cmdConsulta;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button cmdListaExercicio;
+        private System.Windows.Forms.Button cmdCardapio;
+        private System.Windows.Forms.Button cmdAlimento;
     }
 }
 

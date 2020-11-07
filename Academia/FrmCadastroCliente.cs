@@ -51,5 +51,10 @@ namespace Academia
         {
             Close();
         }
+
+        private void Novo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

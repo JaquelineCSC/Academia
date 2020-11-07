@@ -25,21 +25,27 @@ namespace Academia
         private void cmdCadastro_Click(object sender, EventArgs e)
         {
             cmdCadastro.BackColor = Color.Gray;
-            cmdConsulta.BackColor = Color.FromArgb(0, 174, 209);
+            cmdConsulta.BackColor = Color.Black;
             cmdCadastro.Enabled = false;
             cmdCliente.Visible = true;
             cmdExercicio.Visible = true;
             cmdProfissional.Visible = true;
+            cmdAlimento.Visible = true;
+            cmdCardapio.Visible = true;
+            cmdListaExercicio.Visible = true;
         }
 
         private void cmdConsulta_Click(object sender, EventArgs e)
         {
             cmdConsulta.BackColor = Color.Gray;
-            cmdCadastro.BackColor = Color.FromArgb(0, 174, 209);
+            cmdCadastro.BackColor = Color.Black;
             cmdCadastro.Enabled = true;
             cmdCliente.Visible = false;
             cmdExercicio.Visible = false;
             cmdProfissional.Visible = false;
+            cmdAlimento.Visible = false;
+            cmdCardapio.Visible = false;
+            cmdListaExercicio.Visible = false;
 
             FrmConsultaCliente F = new FrmConsultaCliente();
             F.ShowDialog();

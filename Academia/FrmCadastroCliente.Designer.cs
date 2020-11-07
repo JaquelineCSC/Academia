@@ -44,10 +44,11 @@
             this.txtDiaVencimento = new MetroFramework.Controls.MetroTextBox();
             this.cmbConhecimento = new MetroFramework.Controls.MetroComboBox();
             this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
-            this.cmdInserir = new System.Windows.Forms.Button();
-            this.Novo = new System.Windows.Forms.Button();
+            this.cmdSalvar = new System.Windows.Forms.Button();
+            this.cmdNovo = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cmdVoltarMenu = new System.Windows.Forms.Button();
+            this.cmdExcluir = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -346,51 +347,53 @@
             this.metroDateTime1.Size = new System.Drawing.Size(352, 29);
             this.metroDateTime1.TabIndex = 5;
             // 
-            // cmdInserir
+            // cmdSalvar
             // 
-            this.cmdInserir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.cmdInserir.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.cmdInserir.FlatAppearance.BorderSize = 0;
-            this.cmdInserir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.cmdInserir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
-            this.cmdInserir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdInserir.Font = new System.Drawing.Font("Lucida Fax", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdInserir.ForeColor = System.Drawing.Color.White;
-            this.cmdInserir.Location = new System.Drawing.Point(282, 0);
-            this.cmdInserir.Name = "cmdInserir";
-            this.cmdInserir.Size = new System.Drawing.Size(147, 72);
-            this.cmdInserir.TabIndex = 9;
-            this.cmdInserir.Text = "Inserir";
-            this.cmdInserir.UseVisualStyleBackColor = false;
-            this.cmdInserir.Click += new System.EventHandler(this.cmdInserir_Click);
+            this.cmdSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.cmdSalvar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.cmdSalvar.FlatAppearance.BorderSize = 0;
+            this.cmdSalvar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.cmdSalvar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
+            this.cmdSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdSalvar.Font = new System.Drawing.Font("Lucida Fax", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdSalvar.ForeColor = System.Drawing.Color.White;
+            this.cmdSalvar.Location = new System.Drawing.Point(245, 0);
+            this.cmdSalvar.Name = "cmdSalvar";
+            this.cmdSalvar.Size = new System.Drawing.Size(116, 72);
+            this.cmdSalvar.TabIndex = 9;
+            this.cmdSalvar.Text = "Salvar";
+            this.cmdSalvar.UseVisualStyleBackColor = false;
+            this.cmdSalvar.Click += new System.EventHandler(this.cmdInserir_Click);
             // 
-            // Novo
+            // cmdNovo
             // 
-            this.Novo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.Novo.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.Novo.FlatAppearance.BorderSize = 0;
-            this.Novo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.Novo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
-            this.Novo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Novo.Font = new System.Drawing.Font("Lucida Fax", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Novo.ForeColor = System.Drawing.Color.White;
-            this.Novo.Location = new System.Drawing.Point(86, 0);
-            this.Novo.Name = "Novo";
-            this.Novo.Size = new System.Drawing.Size(147, 72);
-            this.Novo.TabIndex = 0;
-            this.Novo.Text = "Novo";
-            this.Novo.UseVisualStyleBackColor = false;
+            this.cmdNovo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.cmdNovo.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.cmdNovo.FlatAppearance.BorderSize = 0;
+            this.cmdNovo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.cmdNovo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
+            this.cmdNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdNovo.Font = new System.Drawing.Font("Lucida Fax", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdNovo.ForeColor = System.Drawing.Color.White;
+            this.cmdNovo.Location = new System.Drawing.Point(45, 0);
+            this.cmdNovo.Name = "cmdNovo";
+            this.cmdNovo.Size = new System.Drawing.Size(112, 72);
+            this.cmdNovo.TabIndex = 0;
+            this.cmdNovo.Text = "Novo";
+            this.cmdNovo.UseVisualStyleBackColor = false;
+            this.cmdNovo.Click += new System.EventHandler(this.Novo_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.panel1.Controls.Add(this.cmdExcluir);
             this.panel1.Controls.Add(this.cmdVoltarMenu);
-            this.panel1.Controls.Add(this.Novo);
-            this.panel1.Controls.Add(this.cmdInserir);
+            this.panel1.Controls.Add(this.cmdNovo);
+            this.panel1.Controls.Add(this.cmdSalvar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(20, 569);
+            this.panel1.Location = new System.Drawing.Point(20, 514);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(993, 72);
+            this.panel1.Size = new System.Drawing.Size(691, 72);
             this.panel1.TabIndex = 20;
             // 
             // cmdVoltarMenu
@@ -403,7 +406,7 @@
             this.cmdVoltarMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdVoltarMenu.Font = new System.Drawing.Font("Lucida Fax", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdVoltarMenu.ForeColor = System.Drawing.Color.White;
-            this.cmdVoltarMenu.Location = new System.Drawing.Point(833, 0);
+            this.cmdVoltarMenu.Location = new System.Drawing.Point(540, 0);
             this.cmdVoltarMenu.Name = "cmdVoltarMenu";
             this.cmdVoltarMenu.Size = new System.Drawing.Size(157, 72);
             this.cmdVoltarMenu.TabIndex = 10;
@@ -411,11 +414,28 @@
             this.cmdVoltarMenu.UseVisualStyleBackColor = false;
             this.cmdVoltarMenu.Click += new System.EventHandler(this.cmdVoltarMenu_Click);
             // 
+            // cmdExcluir
+            // 
+            this.cmdExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.cmdExcluir.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.cmdExcluir.FlatAppearance.BorderSize = 0;
+            this.cmdExcluir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.cmdExcluir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
+            this.cmdExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdExcluir.Font = new System.Drawing.Font("Lucida Fax", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdExcluir.ForeColor = System.Drawing.Color.White;
+            this.cmdExcluir.Location = new System.Drawing.Point(405, 3);
+            this.cmdExcluir.Name = "cmdExcluir";
+            this.cmdExcluir.Size = new System.Drawing.Size(104, 72);
+            this.cmdExcluir.TabIndex = 11;
+            this.cmdExcluir.Text = "Excluir";
+            this.cmdExcluir.UseVisualStyleBackColor = false;
+            // 
             // FrmCadastroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1033, 661);
+            this.ClientSize = new System.Drawing.Size(731, 606);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.metroDateTime1);
             this.Controls.Add(this.cmbConhecimento);
@@ -460,9 +480,10 @@
         private MetroFramework.Controls.MetroTextBox txtDiaVencimento;
         private MetroFramework.Controls.MetroComboBox cmbConhecimento;
         private MetroFramework.Controls.MetroDateTime metroDateTime1;
-        private System.Windows.Forms.Button cmdInserir;
-        private System.Windows.Forms.Button Novo;
+        private System.Windows.Forms.Button cmdSalvar;
+        private System.Windows.Forms.Button cmdNovo;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button cmdVoltarMenu;
+        private System.Windows.Forms.Button cmdExcluir;
     }
 }

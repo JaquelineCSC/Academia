@@ -55,6 +55,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmAlimento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAlimento.Designer.cs">
+      <DependentUpon>FrmAlimento.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCadastroCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,11 +85,23 @@
     <Compile Include="FrmConsultaCliente.Designer.cs">
       <DependentUpon>FrmConsultaCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmLocalizarAlimento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLocalizarAlimento.Designer.cs">
+      <DependentUpon>FrmLocalizarAlimento.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLocalizarExercicio.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmLocalizarExercicio.Designer.cs">
       <DependentUpon>FrmLocalizarExercicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLocalizarProfissional.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLocalizarProfissional.Designer.cs">
+      <DependentUpon>FrmLocalizarProfissional.cs</DependentUpon>
     </Compile>
     <Compile Include="TAlimento.cs" />
     <Compile Include="TCardapio.cs" />
@@ -102,6 +120,9 @@
     <Compile Include="TListaTreino.cs" />
     <Compile Include="TMensalidade.cs" />
     <Compile Include="TProfissional.cs" />
+    <EmbeddedResource Include="FrmAlimento.resx">
+      <DependentUpon>FrmAlimento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmCadastroCliente.resx">
       <DependentUpon>FrmCadastroCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -114,8 +135,14 @@
     <EmbeddedResource Include="FrmConsultaCliente.resx">
       <DependentUpon>FrmConsultaCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmLocalizarAlimento.resx">
+      <DependentUpon>FrmLocalizarAlimento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLocalizarExercicio.resx">
       <DependentUpon>FrmLocalizarExercicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLocalizarProfissional.resx">
+      <DependentUpon>FrmLocalizarProfissional.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
