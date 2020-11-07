@@ -71,7 +71,7 @@ namespace Academia
 
         private void cmdAlimento_Click(object sender, EventArgs e)
         {
-            FrmAlimento alimento = new FrmAlimento();
+            FrmCadastroAlimento alimento = new FrmCadastroAlimento();
             alimento.ShowDialog();
         }
 

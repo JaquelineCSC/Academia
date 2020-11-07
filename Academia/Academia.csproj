@@ -55,11 +55,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmAlimento.cs">
+    <Compile Include="FrmCadastroAlimento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAlimento.Designer.cs">
-      <DependentUpon>FrmAlimento.cs</DependentUpon>
+    <Compile Include="FrmCadastroAlimento.Designer.cs">
+      <DependentUpon>FrmCadastroAlimento.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmCadastroCliente.cs">
       <SubType>Form</SubType>
@@ -126,8 +126,8 @@
     <Compile Include="TListaTreino.cs" />
     <Compile Include="TMensalidade.cs" />
     <Compile Include="TProfissional.cs" />
-    <EmbeddedResource Include="FrmAlimento.resx">
-      <DependentUpon>FrmAlimento.cs</DependentUpon>
+    <EmbeddedResource Include="FrmCadastroAlimento.resx">
+      <DependentUpon>FrmCadastroAlimento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCadastroCliente.resx">
       <DependentUpon>FrmCadastroCliente.cs</DependentUpon>

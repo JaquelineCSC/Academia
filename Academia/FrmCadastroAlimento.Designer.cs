@@ -1,6 +1,6 @@
 ﻿namespace Academia
 {
-    partial class FrmAlimento
+    partial class FrmCadastroAlimento
     {
         /// <summary>
         /// Required designer variable.

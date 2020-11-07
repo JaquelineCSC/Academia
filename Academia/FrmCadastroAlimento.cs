@@ -11,9 +11,9 @@ using System.IO;
 
 namespace Academia
 {
-    public partial class FrmAlimento : MetroFramework.Forms.MetroForm
+    public partial class FrmCadastroAlimento : MetroFramework.Forms.MetroForm
     {
-        public FrmAlimento()
+        public FrmCadastroAlimento()
         {
             InitializeComponent();
         }
