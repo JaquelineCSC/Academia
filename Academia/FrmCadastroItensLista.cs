@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Academia
 {
-    public partial class FrmItensLista : MetroFramework.Forms.MetroForm
+    public partial class FrmCadastroItensLista : MetroFramework.Forms.MetroForm
     {
-        public FrmItensLista()
+        public FrmCadastroItensLista()
         {
             InitializeComponent();
         }

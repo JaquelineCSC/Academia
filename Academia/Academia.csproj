@@ -91,11 +91,11 @@
     <Compile Include="FrmCadastroListaTreino.Designer.cs">
       <DependentUpon>FrmCadastroListaTreino.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmItensLista.cs">
+    <Compile Include="FrmCadastroItensLista.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmItensLista.Designer.cs">
-      <DependentUpon>FrmItensLista.cs</DependentUpon>
+    <Compile Include="FrmCadastroItensLista.Designer.cs">
+      <DependentUpon>FrmCadastroItensLista.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmLocalizarAlimento.cs">
       <SubType>Form</SubType>
@@ -162,8 +162,8 @@
     <EmbeddedResource Include="FrmCadastroListaTreino.resx">
       <DependentUpon>FrmCadastroListaTreino.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmItensLista.resx">
-      <DependentUpon>FrmItensLista.cs</DependentUpon>
+    <EmbeddedResource Include="FrmCadastroItensLista.resx">
+      <DependentUpon>FrmCadastroItensLista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLocalizarAlimento.resx">
       <DependentUpon>FrmLocalizarAlimento.cs</DependentUpon>
