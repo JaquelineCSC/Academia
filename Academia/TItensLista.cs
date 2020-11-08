@@ -25,7 +25,7 @@ namespace Academia
         public void IncluirDados()
         {
             string sql = "";
-            sql += "Insert into ItensLista (idLista, idExercicio,) " + "values ('" + IdLista + "','" + IdExercicio + "')";
+            sql += "Insert into ItensLista (idLista, idExercicio) " + "values ('" + IdLista + "','" + IdExercicio + "')";
             dados.Executar(sql);
         }
 

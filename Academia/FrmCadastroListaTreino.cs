@@ -31,14 +31,13 @@ namespace Academia
                 cmbProfissional.ValueMember = "idProfissional";
                 cmbProfissional.DataSource = profissional.ListarDados().Tables[0];
 
-                cmbExercicios.DisplayMember = "NomeExercicio";
-                cmbExercicios.ValueMember = "idExercicio";
-                cmbExercicios.DataSource = exercicio.ListarDados().Tables[0];
         }
 
         private void mbAdicionar_Click(object sender, EventArgs e)
         {
-            listBox1.Items.Add(cmbExercicios.Text);
+            treinos.DataTreino = txtDataHora.Text;
+            treinos.IncluirDados();
+            MessageBox.Show("Treinos Cadastrados com Sucesso !");
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -56,14 +55,5 @@ namespace Academia
             treinos.IdProfissional = int.Parse(cmbProfissional.SelectedValue.ToString());
         }
 
-        private void txtDataHora_Click(object sender, EventArgs e)
-        {
-            treinos.DataTreino = txtDataHora.Text;
-        }
-
-        private void cmbExercicios_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           //treinos
-        }
     }
 }

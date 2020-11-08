@@ -33,6 +33,7 @@ namespace Academia
             cmdAlimento.Visible = true;
             cmdCardapio.Visible = true;
             cmdListaExercicio.Visible = true;
+            cmdItensLista.Visible = true;
         }
 
         private void cmdConsulta_Click(object sender, EventArgs e)
@@ -85,6 +86,12 @@ namespace Academia
         {
             FrmCadastroListaTreino treino = new FrmCadastroListaTreino();
             treino.ShowDialog();
+        }
+
+        private void cmdItensLista_Click(object sender, EventArgs e)
+        {
+            FrmItensLista f1 = new FrmItensLista();
+            f1.ShowDialog();
         }
     }
 }

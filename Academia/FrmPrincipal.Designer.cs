@@ -39,6 +39,7 @@
             this.cmdListaExercicio = new System.Windows.Forms.Button();
             this.cmdCardapio = new System.Windows.Forms.Button();
             this.cmdAlimento = new System.Windows.Forms.Button();
+            this.cmdItensLista = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -160,6 +161,7 @@
             // 
             this.panel3.BackgroundImage = global::Academia.Properties.Resources.panel3;
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Controls.Add(this.cmdItensLista);
             this.panel3.Controls.Add(this.cmdListaExercicio);
             this.panel3.Controls.Add(this.cmdCardapio);
             this.panel3.Controls.Add(this.cmdAlimento);
@@ -181,7 +183,7 @@
             this.cmdListaExercicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdListaExercicio.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdListaExercicio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
-            this.cmdListaExercicio.Location = new System.Drawing.Point(746, 17);
+            this.cmdListaExercicio.Location = new System.Drawing.Point(756, 63);
             this.cmdListaExercicio.Name = "cmdListaExercicio";
             this.cmdListaExercicio.Size = new System.Drawing.Size(135, 32);
             this.cmdListaExercicio.TabIndex = 25;
@@ -228,6 +230,25 @@
             this.cmdAlimento.Visible = false;
             this.cmdAlimento.Click += new System.EventHandler(this.cmdAlimento_Click);
             // 
+            // cmdItensLista
+            // 
+            this.cmdItensLista.BackColor = System.Drawing.Color.Black;
+            this.cmdItensLista.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.cmdItensLista.FlatAppearance.BorderSize = 0;
+            this.cmdItensLista.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.cmdItensLista.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
+            this.cmdItensLista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdItensLista.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdItensLista.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
+            this.cmdItensLista.Location = new System.Drawing.Point(756, 17);
+            this.cmdItensLista.Name = "cmdItensLista";
+            this.cmdItensLista.Size = new System.Drawing.Size(135, 32);
+            this.cmdItensLista.TabIndex = 26;
+            this.cmdItensLista.Text = "Itens Lista";
+            this.cmdItensLista.UseVisualStyleBackColor = false;
+            this.cmdItensLista.Visible = false;
+            this.cmdItensLista.Click += new System.EventHandler(this.cmdItensLista_Click);
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -258,6 +279,7 @@
         private System.Windows.Forms.Button cmdListaExercicio;
         private System.Windows.Forms.Button cmdCardapio;
         private System.Windows.Forms.Button cmdAlimento;
+        private System.Windows.Forms.Button cmdItensLista;
     }
 }
 
