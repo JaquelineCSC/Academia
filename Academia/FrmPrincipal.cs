@@ -80,5 +80,11 @@ namespace Academia
             FrmCadastroCardapio cardapio = new FrmCadastroCardapio();
             cardapio.ShowDialog();
         }
+
+        private void cmdListaExercicio_Click(object sender, EventArgs e)
+        {
+            FrmCadastroListaTreino treino = new FrmCadastroListaTreino();
+            treino.ShowDialog();
+        }
     }
 }

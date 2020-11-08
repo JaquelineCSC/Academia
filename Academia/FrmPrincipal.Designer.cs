@@ -188,6 +188,7 @@
             this.cmdListaExercicio.Text = "Lista Treino";
             this.cmdListaExercicio.UseVisualStyleBackColor = false;
             this.cmdListaExercicio.Visible = false;
+            this.cmdListaExercicio.Click += new System.EventHandler(this.cmdListaExercicio_Click);
             // 
             // cmdCardapio
             // 
