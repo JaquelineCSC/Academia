@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,7 +23,8 @@ namespace Academia
         TProfissional profissional = new TProfissional();
         TAlimento alimento = new TAlimento();
         List<TAlimento> listaAlimento = new List<TAlimento>();
-
+        public int contaralimentos = 0;
+        public int[] vetoralimentos = new int[20];
         private void FrmCadastroCardapio_Load(object sender, EventArgs e)
         {
             cmbNome.DisplayMember = "NomeCliente";
@@ -44,9 +46,41 @@ namespace Academia
         {
             txtDataHora.Text = DateTime.Now.ToString();
         }
+
+
+        
+
         private void mbAdicionar_Click(object sender, EventArgs e)
         {
+            
             listBox1.Items.Add(cmbAlimento.Text);
+            vetoralimentos[contaralimentos] = cardapio.IdAlimento;
+            contaralimentos++;
+        }
+
+        private void cmdSalvarCadsCardapio_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < contaralimentos; i++) { 
+            cardapio.DataHora = txtDataHora.Text;
+                cardapio.IdAlimento = vetoralimentos[i];
+            cardapio.IncluirDados();
+            }
+            MessageBox.Show(" Cardapio Realizado com Sucesso !");
+        }
+
+        private void cmbNome_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cardapio.IdCliente = int.Parse(cmbNome.SelectedValue.ToString());
+        }
+
+        private void cmbAlimento_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cardapio.IdAlimento = int.Parse(cmbAlimento.SelectedValue.ToString());
+        }
+
+        private void cmbProfissional_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cardapio.IdProfissional = int.Parse(cmbProfissional.SelectedValue.ToString());
         }
     }
 }

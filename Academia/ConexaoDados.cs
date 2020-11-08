@@ -20,7 +20,8 @@ namespace Academia
         {
             string s = "";
             //s = @"Server=.\SQLEXPRESS;Database=Academia;UID=sa;PWD=123;";         // Conectar Dos Outros Brodis
-            s = @"Server=LAPTOP-PIS5CB3U;Database=Academia;UID=sa;PWD=123;";        //Conectar Leônidas 
+            // s = @"Server=LAPTOP-PIS5CB3U;Database=Academia;UID=sa;PWD=123;";        //Conectar Leônidas 
+            s = @"Server=.\SQLEXPRESS;Database=Academia;UID=sa;PWD=edmar;"; // bd edmar
             cn.ConnectionString = s;
             cn.Open();
         }

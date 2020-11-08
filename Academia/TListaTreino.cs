@@ -15,6 +15,7 @@ namespace Academia
         private string dataTreino;
 
 
+
         public int IdLista { get => idLista; set => idLista = value; }
         public int IdCliente { get => idCliente; set => idCliente = value; }
         public int IdProfissional { get => idProfissional; set => idProfissional = value; }

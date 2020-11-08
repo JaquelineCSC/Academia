@@ -91,6 +91,12 @@
     <Compile Include="FrmCadastroListaTreino.Designer.cs">
       <DependentUpon>FrmCadastroListaTreino.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmItensLista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmItensLista.Designer.cs">
+      <DependentUpon>FrmItensLista.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLocalizarAlimento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +162,9 @@
     <EmbeddedResource Include="FrmCadastroListaTreino.resx">
       <DependentUpon>FrmCadastroListaTreino.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmItensLista.resx">
+      <DependentUpon>FrmItensLista.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLocalizarAlimento.resx">
       <DependentUpon>FrmLocalizarAlimento.cs</DependentUpon>
     </EmbeddedResource>
@@ -199,7 +208,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="MetroFramework.txt" />
     <None Include="Resources\panel3.png" />
     <None Include="Resources\panel2.png" />
     <None Include="Resources\03_cadastrar_profissional.png" />
@@ -207,6 +215,9 @@
     <None Include="Resources\01_cadastrar_cliente.png" />
     <None Include="Resources\0002.png" />
     <None Include="Resources\0001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MetroFramework.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

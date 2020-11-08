@@ -89,7 +89,7 @@
             this.cmdCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdCliente.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
-            this.cmdCliente.Location = new System.Drawing.Point(98, 8);
+            this.cmdCliente.Location = new System.Drawing.Point(34, 17);
             this.cmdCliente.Name = "cmdCliente";
             this.cmdCliente.Size = new System.Drawing.Size(113, 32);
             this.cmdCliente.TabIndex = 20;
@@ -108,7 +108,7 @@
             this.cmdExercicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdExercicio.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdExercicio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
-            this.cmdExercicio.Location = new System.Drawing.Point(230, 8);
+            this.cmdExercicio.Location = new System.Drawing.Point(167, 17);
             this.cmdExercicio.Name = "cmdExercicio";
             this.cmdExercicio.Size = new System.Drawing.Size(113, 32);
             this.cmdExercicio.TabIndex = 21;
@@ -127,7 +127,7 @@
             this.cmdProfissional.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdProfissional.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdProfissional.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
-            this.cmdProfissional.Location = new System.Drawing.Point(363, 8);
+            this.cmdProfissional.Location = new System.Drawing.Point(308, 17);
             this.cmdProfissional.Name = "cmdProfissional";
             this.cmdProfissional.Size = new System.Drawing.Size(135, 32);
             this.cmdProfissional.TabIndex = 22;
@@ -181,7 +181,7 @@
             this.cmdListaExercicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdListaExercicio.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdListaExercicio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
-            this.cmdListaExercicio.Location = new System.Drawing.Point(363, 57);
+            this.cmdListaExercicio.Location = new System.Drawing.Point(746, 17);
             this.cmdListaExercicio.Name = "cmdListaExercicio";
             this.cmdListaExercicio.Size = new System.Drawing.Size(135, 32);
             this.cmdListaExercicio.TabIndex = 25;
@@ -200,7 +200,7 @@
             this.cmdCardapio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdCardapio.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdCardapio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
-            this.cmdCardapio.Location = new System.Drawing.Point(98, 106);
+            this.cmdCardapio.Location = new System.Drawing.Point(611, 17);
             this.cmdCardapio.Name = "cmdCardapio";
             this.cmdCardapio.Size = new System.Drawing.Size(113, 32);
             this.cmdCardapio.TabIndex = 24;
@@ -219,7 +219,7 @@
             this.cmdAlimento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdAlimento.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdAlimento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
-            this.cmdAlimento.Location = new System.Drawing.Point(98, 57);
+            this.cmdAlimento.Location = new System.Drawing.Point(473, 17);
             this.cmdAlimento.Name = "cmdAlimento";
             this.cmdAlimento.Size = new System.Drawing.Size(113, 32);
             this.cmdAlimento.TabIndex = 23;

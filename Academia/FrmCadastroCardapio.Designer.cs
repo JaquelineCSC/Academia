@@ -40,6 +40,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.mbAdicionar = new MetroFramework.Controls.MetroButton();
+            this.cmdSalvarCadsCardapio = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // lblProfissional
@@ -128,6 +129,7 @@
             this.cmbNome.Size = new System.Drawing.Size(430, 29);
             this.cmbNome.TabIndex = 55;
             this.cmbNome.UseSelectable = true;
+            this.cmbNome.SelectedIndexChanged += new System.EventHandler(this.cmbNome_SelectedIndexChanged);
             // 
             // cmbAlimento
             // 
@@ -142,6 +144,7 @@
             this.cmbAlimento.Size = new System.Drawing.Size(430, 29);
             this.cmbAlimento.TabIndex = 56;
             this.cmbAlimento.UseSelectable = true;
+            this.cmbAlimento.SelectedIndexChanged += new System.EventHandler(this.cmbAlimento_SelectedIndexChanged);
             // 
             // cmbProfissional
             // 
@@ -156,6 +159,7 @@
             this.cmbProfissional.Size = new System.Drawing.Size(430, 29);
             this.cmbProfissional.TabIndex = 57;
             this.cmbProfissional.UseSelectable = true;
+            this.cmbProfissional.SelectedIndexChanged += new System.EventHandler(this.cmbProfissional_SelectedIndexChanged);
             // 
             // timer1
             // 
@@ -180,11 +184,22 @@
             this.mbAdicionar.UseSelectable = true;
             this.mbAdicionar.Click += new System.EventHandler(this.mbAdicionar_Click);
             // 
+            // cmdSalvarCadsCardapio
+            // 
+            this.cmdSalvarCadsCardapio.Location = new System.Drawing.Point(1001, 607);
+            this.cmdSalvarCadsCardapio.Name = "cmdSalvarCadsCardapio";
+            this.cmdSalvarCadsCardapio.Size = new System.Drawing.Size(75, 23);
+            this.cmdSalvarCadsCardapio.TabIndex = 60;
+            this.cmdSalvarCadsCardapio.Text = "SALVAR";
+            this.cmdSalvarCadsCardapio.UseSelectable = true;
+            this.cmdSalvarCadsCardapio.Click += new System.EventHandler(this.cmdSalvarCadsCardapio_Click);
+            // 
             // FrmCadastroCardapio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1131, 646);
+            this.Controls.Add(this.cmdSalvarCadsCardapio);
             this.Controls.Add(this.mbAdicionar);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.cmbProfissional);
@@ -216,5 +231,6 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ListBox listBox1;
         private MetroFramework.Controls.MetroButton mbAdicionar;
+        private MetroFramework.Controls.MetroButton cmdSalvarCadsCardapio;
     }
 }

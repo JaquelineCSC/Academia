@@ -16,6 +16,7 @@ namespace Academia
         {
             InitializeComponent();
         }
+        TListaTreino treinos = new TListaTreino();
         TExercicio exercicio = new TExercicio();
         TCliente cliente = new TCliente();
         TProfissional profissional = new TProfissional();
@@ -43,6 +44,26 @@ namespace Academia
         private void timer1_Tick(object sender, EventArgs e)
         {
             txtDataHora.Text = DateTime.Now.ToString();
+        }
+
+        private void cmbNome_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            treinos.IdCliente = int.Parse(cmbNome.SelectedValue.ToString());
+        }
+
+        private void cmbProfissional_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            treinos.IdProfissional = int.Parse(cmbProfissional.SelectedValue.ToString());
+        }
+
+        private void txtDataHora_Click(object sender, EventArgs e)
+        {
+            treinos.DataTreino = txtDataHora.Text;
+        }
+
+        private void cmbExercicios_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           //treinos
         }
     }
 }

@@ -55,6 +55,7 @@
             this.cmbProfissional.Size = new System.Drawing.Size(430, 29);
             this.cmbProfissional.TabIndex = 67;
             this.cmbProfissional.UseSelectable = true;
+            this.cmbProfissional.SelectedIndexChanged += new System.EventHandler(this.cmbProfissional_SelectedIndexChanged);
             // 
             // cmbExercicios
             // 
@@ -69,6 +70,7 @@
             this.cmbExercicios.Size = new System.Drawing.Size(430, 29);
             this.cmbExercicios.TabIndex = 66;
             this.cmbExercicios.UseSelectable = true;
+            this.cmbExercicios.SelectedIndexChanged += new System.EventHandler(this.cmbExercicios_SelectedIndexChanged);
             // 
             // cmbNome
             // 
@@ -83,6 +85,7 @@
             this.cmbNome.Size = new System.Drawing.Size(430, 29);
             this.cmbNome.TabIndex = 65;
             this.cmbNome.UseSelectable = true;
+            this.cmbNome.SelectedIndexChanged += new System.EventHandler(this.cmbNome_SelectedIndexChanged);
             // 
             // lblProfissional
             // 
@@ -156,6 +159,7 @@
             this.txtDataHora.UseSelectable = true;
             this.txtDataHora.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtDataHora.WaterMarkFont = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDataHora.Click += new System.EventHandler(this.txtDataHora_Click);
             // 
             // timer1
             // 
