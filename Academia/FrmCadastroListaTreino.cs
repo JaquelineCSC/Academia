@@ -16,33 +16,26 @@ namespace Academia
         {
             InitializeComponent();
         }
+        
         TListaTreino treinos = new TListaTreino();
         TExercicio exercicio = new TExercicio();
         TCliente cliente = new TCliente();
         TProfissional profissional = new TProfissional();
-        List<TListaTreino> ListTraining = new List<TListaTreino>();
+
         private void FrmListaTreino_Load(object sender, EventArgs e)
         {
-                cmbNome.DisplayMember = "NomeCliente";
-                cmbNome.ValueMember = "idCliente";
-                cmbNome.DataSource = cliente.ListarDados().Tables[0];
+            cmbNome.DisplayMember = "NomeCliente";
+            cmbNome.ValueMember = "idCliente";
+            cmbNome.DataSource = cliente.ListarDados().Tables[0];
 
-                cmbProfissional.DisplayMember = "NomeProfissional";
-                cmbProfissional.ValueMember = "idProfissional";
-                cmbProfissional.DataSource = profissional.ListarDados().Tables[0];
-
-        }
-
-        private void mbAdicionar_Click(object sender, EventArgs e)
-        {
-            treinos.DataTreino = txtDataHora.Text;
-            treinos.IncluirDados();
-            MessageBox.Show("Treinos Cadastrados com Sucesso !");
+            cmbProfissional.DisplayMember = "NomeProfissional";
+            cmbProfissional.ValueMember = "idProfissional";
+            cmbProfissional.DataSource = profissional.ListarDados().Tables[0];
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            txtDataHora.Text = DateTime.Now.ToString();
+            DateTime.Now.ToString();
         }
 
         private void cmbNome_SelectedIndexChanged(object sender, EventArgs e)
@@ -54,6 +47,29 @@ namespace Academia
         {
             treinos.IdProfissional = int.Parse(cmbProfissional.SelectedValue.ToString());
         }
+        private void cmdSalvar_Click(object sender, EventArgs e)
+        {
+            treinos.DataTreino = DateTime.Now.ToString();
+            treinos.IncluirDados();
 
+            cmdCriarTreino.Enabled = true;
+            MessageBox.Show("Treinos Cadastrados com Sucesso !");
+        }
+
+        private void cmdCriarTreino_Click(object sender, EventArgs e)
+        {
+            CadastroItensLista IL = new CadastroItensLista();
+            IL.Treino = treinos;
+            IL.ShowDialog();
+
+            //MessageBox.Show("Treinos Cadastrados com Sucesso !");
+        }
+
+        private void cmdVoltarMenu_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        
     }
 }

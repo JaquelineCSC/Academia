@@ -141,6 +141,7 @@
             this.cmdVoltarMenu.TabIndex = 21;
             this.cmdVoltarMenu.Text = "Voltar Menu";
             this.cmdVoltarMenu.UseVisualStyleBackColor = false;
+            this.cmdVoltarMenu.Click += new System.EventHandler(this.cmdVoltarMenu_Click);
             // 
             // cmdNovo
             // 
@@ -181,7 +182,7 @@
             // 
             // cmdPesquisar
             // 
-            this.cmdPesquisar.Location = new System.Drawing.Point(360, 108);
+            this.cmdPesquisar.Location = new System.Drawing.Point(360, 91);
             this.cmdPesquisar.Name = "cmdPesquisar";
             this.cmdPesquisar.Size = new System.Drawing.Size(161, 51);
             this.cmdPesquisar.TabIndex = 47;
@@ -221,7 +222,7 @@
             this.txtCaloriasx.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtCaloriasx.WaterMarkFont = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // FrmAlimento
+            // FrmCadastroAlimento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -232,9 +233,8 @@
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblNome);
-            this.Name = "FrmAlimento";
+            this.Name = "FrmCadastroAlimento";
             this.Text = "Cadastro Alimento";
-            this.Load += new System.EventHandler(this.FrmAlimento_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

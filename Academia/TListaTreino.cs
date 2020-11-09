@@ -7,7 +7,7 @@ using System.Data;
 
 namespace Academia
 {
-    class TListaTreino
+    public class TListaTreino
     {
         private int idLista;
         private int idCliente;
@@ -51,6 +51,21 @@ namespace Academia
             sql = "Select * from ListaTreino";
             return dados.Listar(sql);
         }
+
+        public DataSet ListarDadosNomeCliente()
+        {
+            string sql = "";
+            sql = "Select c.NomeCliente from Cliente c INNER JOIN ListaTreino l ON c.idCliente = l.idCliente";
+            return dados.Listar(sql);
+        }
+
+        public DataSet ListarDadosNomeProfissional()
+        {
+            string sql = "";
+            sql = "Select p.NomeProfissional from Profissional p INNER JOIN ListaTreino l ON p.idProfissional = l.idProfissional";
+            return dados.Listar(sql);
+        }
+
         public void ExcluirDados()
         {
             string sql = "";

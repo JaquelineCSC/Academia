@@ -22,7 +22,7 @@ namespace Academia
         TCliente cliente = new TCliente();
         TProfissional profissional = new TProfissional();
         TAlimento alimento = new TAlimento();
-        List<TAlimento> listaAlimento = new List<TAlimento>();
+
         public int contaralimentos = 0;
         public int[] vetoralimentos = new int[20];
         private void FrmCadastroCardapio_Load(object sender, EventArgs e)
@@ -38,8 +38,6 @@ namespace Academia
             cmbAlimento.DisplayMember = "NomeAlimento";
             cmbAlimento.ValueMember = "idAlimento";
             cmbAlimento.DataSource = alimento.ListarDados().Tables[0];
-
-            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -47,12 +45,8 @@ namespace Academia
             txtDataHora.Text = DateTime.Now.ToString();
         }
 
-
-        
-
         private void mbAdicionar_Click(object sender, EventArgs e)
         {
-            
             listBox1.Items.Add(cmbAlimento.Text);
             vetoralimentos[contaralimentos] = cardapio.IdAlimento;
             contaralimentos++;
@@ -60,10 +54,11 @@ namespace Academia
 
         private void cmdSalvarCadsCardapio_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < contaralimentos; i++) { 
-            cardapio.DataHora = txtDataHora.Text;
+            for (int i = 0; i < contaralimentos; i++) 
+            { 
+                cardapio.DataHora = txtDataHora.Text;
                 cardapio.IdAlimento = vetoralimentos[i];
-            cardapio.IncluirDados();
+                cardapio.IncluirDados();
             }
             MessageBox.Show(" Cardapio Realizado com Sucesso !");
         }

@@ -32,11 +32,13 @@
             this.cmbProfissional = new MetroFramework.Controls.MetroComboBox();
             this.cmbNome = new MetroFramework.Controls.MetroComboBox();
             this.lblProfissional = new MetroFramework.Controls.MetroLabel();
-            this.lblDataHora = new MetroFramework.Controls.MetroLabel();
             this.lblNome = new MetroFramework.Controls.MetroLabel();
-            this.txtDataHora = new MetroFramework.Controls.MetroTextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.mbAdicionar = new MetroFramework.Controls.MetroButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.cmdCriarTreino = new System.Windows.Forms.Button();
+            this.cmdVoltarMenu = new System.Windows.Forms.Button();
+            this.cmdSalvar = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // cmbProfissional
@@ -47,9 +49,9 @@
             "Iniciante",
             "Intermediário",
             "Avançado"});
-            this.cmbProfissional.Location = new System.Drawing.Point(418, 134);
+            this.cmbProfissional.Location = new System.Drawing.Point(178, 138);
             this.cmbProfissional.Name = "cmbProfissional";
-            this.cmbProfissional.Size = new System.Drawing.Size(430, 29);
+            this.cmbProfissional.Size = new System.Drawing.Size(327, 29);
             this.cmbProfissional.TabIndex = 67;
             this.cmbProfissional.UseSelectable = true;
             this.cmbProfissional.SelectedIndexChanged += new System.EventHandler(this.cmbProfissional_SelectedIndexChanged);
@@ -62,9 +64,9 @@
             "Iniciante",
             "Intermediário",
             "Avançado"});
-            this.cmbNome.Location = new System.Drawing.Point(418, 80);
+            this.cmbNome.Location = new System.Drawing.Point(178, 84);
             this.cmbNome.Name = "cmbNome";
-            this.cmbNome.Size = new System.Drawing.Size(430, 29);
+            this.cmbNome.Size = new System.Drawing.Size(327, 29);
             this.cmbNome.TabIndex = 65;
             this.cmbNome.UseSelectable = true;
             this.cmbNome.SelectedIndexChanged += new System.EventHandler(this.cmbNome_SelectedIndexChanged);
@@ -73,95 +75,107 @@
             // 
             this.lblProfissional.AutoSize = true;
             this.lblProfissional.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblProfissional.Location = new System.Drawing.Point(181, 134);
+            this.lblProfissional.Location = new System.Drawing.Point(30, 138);
             this.lblProfissional.Name = "lblProfissional";
             this.lblProfissional.Size = new System.Drawing.Size(98, 25);
             this.lblProfissional.TabIndex = 64;
             this.lblProfissional.Text = "Profissional";
             // 
-            // lblDataHora
-            // 
-            this.lblDataHora.AutoSize = true;
-            this.lblDataHora.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblDataHora.Location = new System.Drawing.Point(181, 196);
-            this.lblDataHora.Name = "lblDataHora";
-            this.lblDataHora.Size = new System.Drawing.Size(93, 25);
-            this.lblDataHora.TabIndex = 63;
-            this.lblDataHora.Text = "Data Hora:";
-            // 
             // lblNome
             // 
             this.lblNome.AutoSize = true;
             this.lblNome.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblNome.Location = new System.Drawing.Point(181, 84);
+            this.lblNome.Location = new System.Drawing.Point(30, 88);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(120, 25);
             this.lblNome.TabIndex = 61;
             this.lblNome.Text = "Nome Cliente:";
-            // 
-            // txtDataHora
-            // 
-            // 
-            // 
-            // 
-            this.txtDataHora.CustomButton.Image = null;
-            this.txtDataHora.CustomButton.Location = new System.Drawing.Point(402, 2);
-            this.txtDataHora.CustomButton.Name = "";
-            this.txtDataHora.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.txtDataHora.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtDataHora.CustomButton.TabIndex = 1;
-            this.txtDataHora.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtDataHora.CustomButton.UseSelectable = true;
-            this.txtDataHora.CustomButton.Visible = false;
-            this.txtDataHora.Enabled = false;
-            this.txtDataHora.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtDataHora.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
-            this.txtDataHora.Lines = new string[0];
-            this.txtDataHora.Location = new System.Drawing.Point(418, 196);
-            this.txtDataHora.MaxLength = 32767;
-            this.txtDataHora.Name = "txtDataHora";
-            this.txtDataHora.PasswordChar = '\0';
-            this.txtDataHora.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtDataHora.SelectedText = "";
-            this.txtDataHora.SelectionLength = 0;
-            this.txtDataHora.SelectionStart = 0;
-            this.txtDataHora.ShortcutsEnabled = true;
-            this.txtDataHora.Size = new System.Drawing.Size(430, 30);
-            this.txtDataHora.TabIndex = 60;
-            this.txtDataHora.UseSelectable = true;
-            this.txtDataHora.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtDataHora.WaterMarkFont = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // timer1
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // mbAdicionar
+            // panel1
             // 
-            this.mbAdicionar.Location = new System.Drawing.Point(757, 244);
-            this.mbAdicionar.Name = "mbAdicionar";
-            this.mbAdicionar.Size = new System.Drawing.Size(91, 29);
-            this.mbAdicionar.TabIndex = 69;
-            this.mbAdicionar.Text = "Adicionar";
-            this.mbAdicionar.UseSelectable = true;
-            this.mbAdicionar.Click += new System.EventHandler(this.mbAdicionar_Click);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.panel1.Controls.Add(this.cmdSalvar);
+            this.panel1.Controls.Add(this.cmdCriarTreino);
+            this.panel1.Controls.Add(this.cmdVoltarMenu);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(20, 219);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(503, 72);
+            this.panel1.TabIndex = 71;
+            // 
+            // cmdCriarTreino
+            // 
+            this.cmdCriarTreino.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.cmdCriarTreino.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.cmdCriarTreino.FlatAppearance.BorderSize = 0;
+            this.cmdCriarTreino.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.cmdCriarTreino.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
+            this.cmdCriarTreino.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdCriarTreino.Font = new System.Drawing.Font("Lucida Fax", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdCriarTreino.ForeColor = System.Drawing.Color.White;
+            this.cmdCriarTreino.Location = new System.Drawing.Point(166, 0);
+            this.cmdCriarTreino.Name = "cmdCriarTreino";
+            this.cmdCriarTreino.Size = new System.Drawing.Size(157, 72);
+            this.cmdCriarTreino.TabIndex = 22;
+            this.cmdCriarTreino.Text = "Criar Treino";
+            this.cmdCriarTreino.UseVisualStyleBackColor = false;
+            this.cmdCriarTreino.Click += new System.EventHandler(this.cmdCriarTreino_Click);
+            // 
+            // cmdVoltarMenu
+            // 
+            this.cmdVoltarMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.cmdVoltarMenu.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.cmdVoltarMenu.FlatAppearance.BorderSize = 0;
+            this.cmdVoltarMenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.cmdVoltarMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
+            this.cmdVoltarMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdVoltarMenu.Font = new System.Drawing.Font("Lucida Fax", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdVoltarMenu.ForeColor = System.Drawing.Color.White;
+            this.cmdVoltarMenu.Location = new System.Drawing.Point(343, 0);
+            this.cmdVoltarMenu.Name = "cmdVoltarMenu";
+            this.cmdVoltarMenu.Size = new System.Drawing.Size(157, 72);
+            this.cmdVoltarMenu.TabIndex = 21;
+            this.cmdVoltarMenu.Text = "Voltar Menu";
+            this.cmdVoltarMenu.UseVisualStyleBackColor = false;
+            this.cmdVoltarMenu.Click += new System.EventHandler(this.cmdVoltarMenu_Click);
+            // 
+            // cmdSalvar
+            // 
+            this.cmdSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.cmdSalvar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.cmdSalvar.FlatAppearance.BorderSize = 0;
+            this.cmdSalvar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.cmdSalvar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
+            this.cmdSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdSalvar.Font = new System.Drawing.Font("Lucida Fax", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdSalvar.ForeColor = System.Drawing.Color.White;
+            this.cmdSalvar.Location = new System.Drawing.Point(3, 0);
+            this.cmdSalvar.Name = "cmdSalvar";
+            this.cmdSalvar.Size = new System.Drawing.Size(157, 72);
+            this.cmdSalvar.TabIndex = 23;
+            this.cmdSalvar.Text = "Salvar";
+            this.cmdSalvar.UseVisualStyleBackColor = false;
+            this.cmdSalvar.Click += new System.EventHandler(this.cmdSalvar_Click);
             // 
             // FrmCadastroListaTreino
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1131, 322);
+            this.ClientSize = new System.Drawing.Size(543, 311);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.cmbProfissional);
             this.Controls.Add(this.cmbNome);
             this.Controls.Add(this.lblProfissional);
-            this.Controls.Add(this.lblDataHora);
             this.Controls.Add(this.lblNome);
-            this.Controls.Add(this.txtDataHora);
-            this.Controls.Add(this.mbAdicionar);
             this.Name = "FrmCadastroListaTreino";
             this.Text = "Lista Treino";
             this.Load += new System.EventHandler(this.FrmListaTreino_Load);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,10 +186,11 @@
         private MetroFramework.Controls.MetroComboBox cmbProfissional;
         private MetroFramework.Controls.MetroComboBox cmbNome;
         private MetroFramework.Controls.MetroLabel lblProfissional;
-        private MetroFramework.Controls.MetroLabel lblDataHora;
         private MetroFramework.Controls.MetroLabel lblNome;
-        private MetroFramework.Controls.MetroTextBox txtDataHora;
         private System.Windows.Forms.Timer timer1;
-        private MetroFramework.Controls.MetroButton mbAdicionar;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button cmdCriarTreino;
+        private System.Windows.Forms.Button cmdVoltarMenu;
+        private System.Windows.Forms.Button cmdSalvar;
     }
 }

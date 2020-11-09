@@ -19,9 +19,9 @@ namespace Academia
         private void Conectar()
         {
             string s = "";
-            //s = @"Server=.\SQLEXPRESS;Database=Academia;UID=sa;PWD=123;";         // Conectar Jeander
-            // s = @"Server=LAPTOP-PIS5CB3U;Database=Academia;UID=sa;PWD=123;";        //Conectar Leônidas 
-            s = @"Server=.\SQLEXPRESS;Database=Academia;UID=sa;PWD=edmar;"; // bd edmar
+            s = @"Server=.\SQLEXPRESS;Database=Academia;UID=sa;PWD=123;";         // Conectar Jeander
+            //s = @"Server=LAPTOP-PIS5CB3U;Database=Academia;UID=sa;PWD=123;";        //Conectar Leônidas 
+            //s = @"Server=.\SQLEXPRESS;Database=Academia;UID=sa;PWD=edmar;"; // bd edmar
             cn.ConnectionString = s;
             cn.Open();
         }

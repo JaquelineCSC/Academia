@@ -19,9 +19,30 @@ namespace Academia
         }
         TAlimento Alimento = new TAlimento();
         private string status = "Navegando";
-        private void FrmAlimento_Load(object sender, EventArgs e)
-        {
 
+        private void LimpaControle()
+        {
+            txtNome.Text = "";
+            txtCaloriasx.Text = "";
+        }
+
+        private void HabilitaControle()
+        {
+            if (status == "Inserindo")
+            {
+                cmdInserir.Enabled = true;
+            }
+            else if (status == "Editando")
+            {
+                cmdInserir.Enabled = true;
+                cmdExcluir.Enabled = true;
+            }
+            else if (status == "Navegando")
+            {
+                cmdNovo.Enabled = true;
+                cmdInserir.Enabled = false;
+                cmdExcluir.Enabled = false;
+            }
         }
 
         private void Novo_Click(object sender, EventArgs e)
@@ -43,7 +64,10 @@ namespace Academia
             if(status == "Editando")
             {
                 Alimento.AlterarDados();
+                MessageBox.Show("Alimento Alterado com Sucesso!");
             }
+            status = "Navegando";
+            HabilitaControle();
         }
 
         private void cmdPesquisar_Click(object sender, EventArgs e)
@@ -58,50 +82,7 @@ namespace Academia
             status = "Editando";
             HabilitaControle();
         }
-        private void HabilitaControle()
-        {
-            cmdNovo.Enabled = (status == "Navegando");
-            cmdPesquisar.Enabled = (status == "Navegando");
-            cmdInserir.Enabled = (status == "Editando" || status == "Inserindo");
-            cmdExcluir.Enabled = (status == "Editando");
 
-            if (status == "Inserindo" || status == "Editando")
-            {
-                foreach (Control ctr in this.Controls)
-                {
-                    if (ctr is TextBox)
-                        ctr.Enabled = true;
-
-                    if (ctr is ComboBox)
-                        ctr.Enabled = true;
-
-                    if (ctr is DateTimePicker)
-                        ctr.Enabled = true;
-                }
-            }
-            else
-            {
-                foreach (Control ctr in this.Controls)
-                {
-                    if (ctr is TextBox)
-                        ctr.Enabled = false;
-                    if (ctr is ComboBox)
-                        ctr.Enabled = false;
-                    if (ctr is DateTimePicker)
-                        ctr.Enabled = false;
-                }
-            }
-        }
-        private void LimpaControle()
-        {
-            foreach (Control ctr in this.Controls)
-            {
-                if(ctr is TextBox)
-                {
-                    ctr.Text = "";
-                }
-            }
-        }
         private void cmdExcluir_Click(object sender, EventArgs e)
         {
             if (DialogResult.Yes == MessageBox.Show("Deseja excluir esse registro?", "Alerta", MessageBoxButtons.YesNo))
@@ -115,6 +96,11 @@ namespace Academia
                     HabilitaControle();
                 }
             }
+        }
+
+        private void cmdVoltarMenu_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
