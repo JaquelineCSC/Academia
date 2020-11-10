@@ -52,24 +52,18 @@ namespace Academia
             treinos.DataTreino = DateTime.Now.ToString();
             treinos.IncluirDados();
 
-            cmdCriarTreino.Enabled = true;
             MessageBox.Show("Treinos Cadastrados com Sucesso !");
         }
 
         private void cmdCriarTreino_Click(object sender, EventArgs e)
         {
-            CadastroItensLista IL = new CadastroItensLista();
-            IL.Treino = treinos;
-            IL.ShowDialog();
-
-            //MessageBox.Show("Treinos Cadastrados com Sucesso !");
+            FrmSelecaoLista frmSelecao = new FrmSelecaoLista();
+            frmSelecao.ShowDialog();
         }
 
         private void cmdVoltarMenu_Click(object sender, EventArgs e)
         {
             Close();
         }
-
-        
     }
 }

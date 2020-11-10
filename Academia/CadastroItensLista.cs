@@ -12,11 +12,19 @@ namespace Academia
 {
     public partial class CadastroItensLista : MetroFramework.Forms.MetroForm
     {
-        public CadastroItensLista()
+        public int id;
+        public CadastroItensLista(int id)
         {
             InitializeComponent();
-            lblNomeCliente.Text = Convert.ToString(this.Treino.ListarDadosNomeCliente());
-            lblNomeProfissional.Text = Convert.ToString(this.Treino.ListarDadosNomeProfissional());
+            this.id = id;
+
+            treino.IdLista = this.id;
+            treino.ConsultarDados();
+
+            lblNomeCliente.Text = treino.NomeCliente;
+            lblNomeProfissional.Text = treino.NomeProfissional;
+
+            treino.ConsultarDadosSimples();
         }
 
         TItensLista itensLista = new TItensLista();
@@ -25,8 +33,6 @@ namespace Academia
 
         int[] vetor = new int[20];
         int cont = 0;
-
-        public TListaTreino Treino { get => treino; set => treino = value; }
 
         private void CadastroItensLista_Load(object sender, EventArgs e)
         {
@@ -44,9 +50,10 @@ namespace Academia
 
         private void cmdConcluir_Click(object sender, EventArgs e)
         {
+            treino.ConsultarDadosSimples();
             for (int i = 0; i < cont; i++)
             {
-                itensLista.IdLista = Treino.IdLista;
+                itensLista.IdLista = treino.IdLista;
                 itensLista.IdExercicio = vetor[i];
                 itensLista.IncluirDados();
             }

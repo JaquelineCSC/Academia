@@ -127,6 +127,12 @@
     <Compile Include="FrmLocalizarProfissional.Designer.cs">
       <DependentUpon>FrmLocalizarProfissional.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmSelecaoLista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSelecaoLista.Designer.cs">
+      <DependentUpon>FrmSelecaoLista.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSeleçãoConsulta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSelecaoLista.resx">
+      <DependentUpon>FrmSelecaoLista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSeleçãoConsulta.resx">
       <DependentUpon>FrmSeleçãoConsulta.cs</DependentUpon>
