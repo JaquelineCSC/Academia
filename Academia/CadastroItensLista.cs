@@ -44,13 +44,12 @@ namespace Academia
         private void cmbAdicionar_Click(object sender, EventArgs e)
         {
             listBox1.Items.Add(cmbNomeExercicio.Text);
-            vetor[cont] = exercicio.IdExercicio;
+            vetor[cont] = int.Parse(cmbNomeExercicio.SelectedValue.ToString());
             cont++;
         }
 
         private void cmdConcluir_Click(object sender, EventArgs e)
         {
-            treino.ConsultarDadosSimples();
             for (int i = 0; i < cont; i++)
             {
                 itensLista.IdLista = treino.IdLista;
