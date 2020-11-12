@@ -40,6 +40,7 @@
             this.cmdListaExercicio = new System.Windows.Forms.Button();
             this.cmdCardapio = new System.Windows.Forms.Button();
             this.cmdAlimento = new System.Windows.Forms.Button();
+            this.cmdSair = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -141,9 +142,9 @@
             // 
             this.panel1.BackgroundImage = global::Academia.Properties.Resources._0002;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Location = new System.Drawing.Point(-8, 4);
+            this.panel1.Location = new System.Drawing.Point(-8, 26);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1158, 225);
+            this.panel1.Size = new System.Drawing.Size(1158, 203);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -161,6 +162,7 @@
             // 
             this.panel3.BackgroundImage = global::Academia.Properties.Resources.panel3;
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Controls.Add(this.cmdSair);
             this.panel3.Controls.Add(this.cmdItensLista);
             this.panel3.Controls.Add(this.cmdListaExercicio);
             this.panel3.Controls.Add(this.cmdCardapio);
@@ -206,7 +208,7 @@
             this.cmdListaExercicio.Name = "cmdListaExercicio";
             this.cmdListaExercicio.Size = new System.Drawing.Size(162, 56);
             this.cmdListaExercicio.TabIndex = 25;
-            this.cmdListaExercicio.Text = "Cliente + Profissional";
+            this.cmdListaExercicio.Text = "Contratar Profissional";
             this.cmdListaExercicio.UseVisualStyleBackColor = false;
             this.cmdListaExercicio.Visible = false;
             this.cmdListaExercicio.Click += new System.EventHandler(this.cmdListaExercicio_Click);
@@ -249,6 +251,24 @@
             this.cmdAlimento.Visible = false;
             this.cmdAlimento.Click += new System.EventHandler(this.cmdAlimento_Click);
             // 
+            // cmdSair
+            // 
+            this.cmdSair.BackColor = System.Drawing.Color.Black;
+            this.cmdSair.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.cmdSair.FlatAppearance.BorderSize = 0;
+            this.cmdSair.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.cmdSair.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
+            this.cmdSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdSair.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdSair.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
+            this.cmdSair.Location = new System.Drawing.Point(964, 252);
+            this.cmdSair.Name = "cmdSair";
+            this.cmdSair.Size = new System.Drawing.Size(162, 56);
+            this.cmdSair.TabIndex = 27;
+            this.cmdSair.Text = "Sair";
+            this.cmdSair.UseVisualStyleBackColor = false;
+            this.cmdSair.Click += new System.EventHandler(this.cmdSair_Click);
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -280,6 +300,7 @@
         private System.Windows.Forms.Button cmdCardapio;
         private System.Windows.Forms.Button cmdAlimento;
         private System.Windows.Forms.Button cmdItensLista;
+        private System.Windows.Forms.Button cmdSair;
     }
 }
 

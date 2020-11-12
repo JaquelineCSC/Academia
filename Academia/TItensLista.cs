@@ -12,13 +12,10 @@ namespace Academia
         private int idItem;
         private int idLista;
         private int idExercicio;
-        private string aux;
-
 
         public int IdItem { get => idItem; set => idItem = value; }
         public int IdLista { get => idLista; set => idLista = value; }
         public int IdExercicio { get => idExercicio; set => idExercicio = value; }
-        public string Aux { get => aux; set => aux = value; }
 
         ConexaoDados dados = new ConexaoDados();
 
@@ -42,8 +39,8 @@ namespace Academia
             sql += "Select idLista from ItensLista where idItem = " + IdItem.ToString();
             dados.Consultar(sql);
             string[] auxiliar = dados.Campos.Split(';');
-            Aux = IdLista.ToString();
-            Aux = auxiliar[0];
+            idLista = int.Parse(auxiliar[1]);
+            IdExercicio = int.Parse(auxiliar[2]);
         }
 
         public DataSet ListarDados()

@@ -93,5 +93,10 @@ namespace Academia
             FrmSelecaoLista selecaoLista = new FrmSelecaoLista();
             selecaoLista.ShowDialog();
         }
+
+        private void cmdSair_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

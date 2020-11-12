@@ -59,5 +59,21 @@ namespace Academia
             MessageBox.Show("Lista de Treino criada com sucesso");
             Close();
         }
+
+        private void cmdExcluir_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Remove(listBox1.SelectedItem);
+        }
+
+        private void cmdLimpar_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
+        }
+
+        private void cmdPesquisar_Click(object sender, EventArgs e)
+        {
+            FrmLocalizarListaTreino listaTreino = new FrmLocalizarListaTreino();
+            listaTreino.ShowDialog();
+        }
     }
 }
