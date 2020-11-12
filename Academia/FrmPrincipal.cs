@@ -90,8 +90,8 @@ namespace Academia
 
         private void cmdItensLista_Click(object sender, EventArgs e)
         {
-            FrmCadastroItensLista f1 = new FrmCadastroItensLista();
-            f1.ShowDialog();
+            //FrmCadastroItensLista f1 = new FrmCadastroItensLista();
+            //f1.ShowDialog();
         }
     }
 }

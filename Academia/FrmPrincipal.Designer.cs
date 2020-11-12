@@ -111,7 +111,7 @@
             this.cmdExercicio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
             this.cmdExercicio.Location = new System.Drawing.Point(176, 17);
             this.cmdExercicio.Name = "cmdExercicio";
-            this.cmdExercicio.Size = new System.Drawing.Size(115, 56);
+            this.cmdExercicio.Size = new System.Drawing.Size(124, 56);
             this.cmdExercicio.TabIndex = 21;
             this.cmdExercicio.Text = "Exercicio";
             this.cmdExercicio.UseVisualStyleBackColor = false;
@@ -183,7 +183,7 @@
             this.cmdItensLista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdItensLista.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdItensLista.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
-            this.cmdItensLista.Location = new System.Drawing.Point(789, 17);
+            this.cmdItensLista.Location = new System.Drawing.Point(976, 17);
             this.cmdItensLista.Name = "cmdItensLista";
             this.cmdItensLista.Size = new System.Drawing.Size(162, 56);
             this.cmdItensLista.TabIndex = 26;
@@ -202,10 +202,11 @@
             this.cmdListaExercicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdListaExercicio.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdListaExercicio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
-            this.cmdListaExercicio.Location = new System.Drawing.Point(976, 17);
+            this.cmdListaExercicio.Location = new System.Drawing.Point(801, 17);
             this.cmdListaExercicio.Name = "cmdListaExercicio";
             this.cmdListaExercicio.Size = new System.Drawing.Size(162, 56);
             this.cmdListaExercicio.TabIndex = 25;
+            this.cmdListaExercicio.Text = "Cliente + Profissional";
             this.cmdListaExercicio.UseVisualStyleBackColor = false;
             this.cmdListaExercicio.Visible = false;
             this.cmdListaExercicio.Click += new System.EventHandler(this.cmdListaExercicio_Click);
