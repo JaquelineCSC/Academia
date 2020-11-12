@@ -21,6 +21,7 @@ namespace Academia
         public int IdCliente { get => idCliente; set => idCliente = value; }
         public int IdProfissional { get => idProfissional; set => idProfissional = value; }
         public string DataTreino { get => dataTreino; set => dataTreino = value; }
+        
         //teste
         public string NomeCliente { get => nomeCliente; set => nomeCliente = value; }
         public string NomeProfissional { get => nomeProfissional; set => nomeProfissional = value; }
