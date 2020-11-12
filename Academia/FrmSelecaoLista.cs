@@ -52,7 +52,7 @@ namespace Academia
         private void grid1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             Close();
-            CadastroItensLista itensLista = new CadastroItensLista(Id);
+            FrmCadastroItensLista itensLista = new FrmCadastroItensLista(Id);
             itensLista.ShowDialog();
         }
     }

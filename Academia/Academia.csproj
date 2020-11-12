@@ -55,11 +55,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CadastroItensLista.cs">
+    <Compile Include="FrmCadastroItensLista.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CadastroItensLista.Designer.cs">
-      <DependentUpon>CadastroItensLista.cs</DependentUpon>
+    <Compile Include="FrmCadastroItensLista.Designer.cs">
+      <DependentUpon>FrmCadastroItensLista.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmCadastroAlimento.cs">
       <SubType>Form</SubType>
@@ -96,12 +96,6 @@
     </Compile>
     <Compile Include="FrmCadastroListaTreino.Designer.cs">
       <DependentUpon>FrmCadastroListaTreino.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmCadastroItensLista.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmCadastroItensLista.Designer.cs">
-      <DependentUpon>FrmCadastroItensLista.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmLocalizarAlimento.cs">
       <SubType>Form</SubType>
@@ -156,8 +150,8 @@
     <Compile Include="TListaTreino.cs" />
     <Compile Include="TMensalidade.cs" />
     <Compile Include="TProfissional.cs" />
-    <EmbeddedResource Include="CadastroItensLista.resx">
-      <DependentUpon>CadastroItensLista.cs</DependentUpon>
+    <EmbeddedResource Include="FrmCadastroItensLista.resx">
+      <DependentUpon>FrmCadastroItensLista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCadastroAlimento.resx">
       <DependentUpon>FrmCadastroAlimento.cs</DependentUpon>
@@ -176,9 +170,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCadastroListaTreino.resx">
       <DependentUpon>FrmCadastroListaTreino.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmCadastroItensLista.resx">
-      <DependentUpon>FrmCadastroItensLista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLocalizarAlimento.resx">
       <DependentUpon>FrmLocalizarAlimento.cs</DependentUpon>

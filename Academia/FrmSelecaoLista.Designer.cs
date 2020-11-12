@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grid1 = new MetroFramework.Controls.MetroGrid();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.grid1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,7 +63,7 @@
             this.grid1.EnableHeadersVisualStyles = false;
             this.grid1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.grid1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.grid1.Location = new System.Drawing.Point(34, 84);
+            this.grid1.Location = new System.Drawing.Point(33, 148);
             this.grid1.Name = "grid1";
             this.grid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -81,22 +82,36 @@
             this.grid1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid1_CellDoubleClick);
             this.grid1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid1_CellEnter);
             // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel1.Location = new System.Drawing.Point(328, 109);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(578, 25);
+            this.metroLabel1.TabIndex = 2;
+            this.metroLabel1.Text = "Selecione o cliente com seu profissional para fazer a lista de treino";
+            // 
             // FrmSelecaoLista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1210, 474);
+            this.ClientSize = new System.Drawing.Size(1210, 522);
+            this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.grid1);
             this.Name = "FrmSelecaoLista";
-            this.Text = "FrmSelecaoLista";
+            this.Text = "Seleção de Lista";
             this.Load += new System.EventHandler(this.FrmSelecaoLista_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grid1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private MetroFramework.Controls.MetroGrid grid1;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
     }
 }

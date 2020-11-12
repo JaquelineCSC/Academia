@@ -12,59 +12,52 @@ namespace Academia
 {
     public partial class FrmCadastroItensLista : MetroFramework.Forms.MetroForm
     {
-        public FrmCadastroItensLista()
+        public int id;
+        public FrmCadastroItensLista(int id)
         {
             InitializeComponent();
-        }
-        public int aux = 0;
-        TItensLista itens = new TItensLista();
-        TExercicio exercicios = new TExercicio();
-        TCliente clientes = new TCliente();
-        TListaTreino listas = new TListaTreino();
-        private void FrmItensLista_Load(object sender, EventArgs e)
-        {
-           cmbExercicios.DisplayMember = "NomeExercicio";
-            cmbExercicios.ValueMember = "idExercicio";
-            cmbExercicios.DataSource = exercicios.ListarDados().Tables[0];
+            this.id = id;
 
-            cmbCliente.DisplayMember = "NomeCliente";
-            cmbCliente.ValueMember = "idCliente";
-            cmbCliente.DataSource = clientes.ListarDados().Tables[0];
+            treino.IdLista = this.id;
+            treino.ConsultarDados();
+
+            lblNomeCliente.Text = treino.NomeCliente;
+            lblNomeProfissional.Text = treino.NomeProfissional;
+
+            treino.ConsultarDadosSimples();
         }
 
-        private void mbAdicionar_Click(object sender, EventArgs e)
+        TItensLista itensLista = new TItensLista();
+        TExercicio exercicio = new TExercicio();
+        TListaTreino treino = new TListaTreino();
+
+        int[] vetor = new int[20];
+        int cont = 0;
+
+        private void CadastroItensLista_Load(object sender, EventArgs e)
         {
-            listBox1.Items.Add(cmbExercicios.Text);
+            cmbNomeExercicio.DisplayMember = "NomeExercicio";
+            cmbNomeExercicio.ValueMember = "idExercicio";
+            cmbNomeExercicio.DataSource = exercicio.ListarDados().Tables[0];
         }
 
-        private void cmbExercicios_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmbAdicionar_Click(object sender, EventArgs e)
         {
-            itens.IdExercicio = int.Parse(cmbExercicios.SelectedValue.ToString());
+            listBox1.Items.Add(cmbNomeExercicio.Text);
+            vetor[cont] = int.Parse(cmbNomeExercicio.SelectedValue.ToString());
+            cont++;
         }
 
-        private void cmbCliente_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmdConcluir_Click(object sender, EventArgs e)
         {
-            aux = int.Parse(cmbCliente.SelectedValue.ToString());
-        }
-
-        private void cmdSalvarItens_Click(object sender, EventArgs e)
-        {
-            // aqui devemos encontrar o ID do cliente "aux" dentro da tabela ListaTreinos no campo IDcliente
-            // com isso obter o campo idLista ligado ao respectivo id cliente
-
-
-            // aqui foi feito o teste para ver os valores que estavam sendo OBTIDOS.
-            //referente ao AUX, que no caso e IDcliente...esta funcionando, ja testamos.
-            // so falta receber o ID da lista, referente a tal CLIENTE.
-
-
-            //while (listas.IdCliente != aux)
-            //{
-            //    MessageBox.Show(listas.IdCliente.ToString() + "Listas id cliente");
-            //    MessageBox.Show(aux.ToString() + "vARIAVEL AUX");
-            //    MessageBox.Show("Encontrou !");
-            
-            // itens.IncluirDados();
+            for (int i = 0; i < cont; i++)
+            {
+                itensLista.IdLista = treino.IdLista;
+                itensLista.IdExercicio = vetor[i];
+                itensLista.IncluirDados();
+            }
+            MessageBox.Show("Lista de Treino criada com sucesso");
+            Close();
         }
     }
 }
