@@ -75,6 +75,8 @@ namespace Academia
 
         private void cmdPesquisar_Click(object sender, EventArgs e)
         {
+            txtCaloriasx.Text = "";
+            txtNome.Text = "";
             cmdNovo.Enabled = false;
             FrmLocalizarAlimento f = new FrmLocalizarAlimento();
             f.ShowDialog();
