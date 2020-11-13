@@ -66,6 +66,18 @@ namespace Academia
             return dados.Listar(sql);
         }
 
+        public DataSet ListarDadosListaTreino()
+        {
+            string sql = "";
+            sql = "SELECT i.idLista, c.NomeCliente, e.NomeExercicio From ItensLista i " +
+                  "INNER JOIN Exercicio e ON i.idExercicio = e.idExercicio " +
+                  "INNER JOIN ListaTreino l ON l.idLista = i.idLista " +
+                  "INNER JOIN Cliente c ON c.idCliente = l.idCliente " +
+                  "INNER JOIN Profissional p ON l.idProfissional = p.idProfissional WHERE c.NomeCliente LIKE '" + NomeCliente + "%'";
+            return dados.Listar(sql);
+        }
+
+        
         public void AlterarDados()
         {
             string sql = "";

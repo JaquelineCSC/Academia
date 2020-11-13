@@ -30,6 +30,7 @@ namespace Academia
         TItensLista itensLista = new TItensLista();
         TExercicio exercicio = new TExercicio();
         TListaTreino treino = new TListaTreino();
+        TCliente cliente = new TCliente();
 
         int[] vetor = new int[20];
         int cont = 0;
@@ -74,6 +75,8 @@ namespace Academia
         {
             FrmLocalizarListaTreino listaTreino = new FrmLocalizarListaTreino();
             listaTreino.ShowDialog();
+
+            itensLista.IdLista = listaTreino.Id;
         }
     }
 }

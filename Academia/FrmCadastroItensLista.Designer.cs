@@ -94,7 +94,7 @@
             // 
             // cmbAdicionar
             // 
-            this.cmbAdicionar.Location = new System.Drawing.Point(635, 212);
+            this.cmbAdicionar.Location = new System.Drawing.Point(635, 176);
             this.cmbAdicionar.Name = "cmbAdicionar";
             this.cmbAdicionar.Size = new System.Drawing.Size(110, 41);
             this.cmbAdicionar.TabIndex = 5;
@@ -114,7 +114,7 @@
             // 
             // cmdExcluir
             // 
-            this.cmdExcluir.Location = new System.Drawing.Point(635, 287);
+            this.cmdExcluir.Location = new System.Drawing.Point(635, 241);
             this.cmdExcluir.Name = "cmdExcluir";
             this.cmdExcluir.Size = new System.Drawing.Size(110, 40);
             this.cmdExcluir.TabIndex = 7;
@@ -154,7 +154,7 @@
             // 
             // cmdLimpar
             // 
-            this.cmdLimpar.Location = new System.Drawing.Point(635, 356);
+            this.cmdLimpar.Location = new System.Drawing.Point(635, 311);
             this.cmdLimpar.Name = "cmdLimpar";
             this.cmdLimpar.Size = new System.Drawing.Size(110, 40);
             this.cmdLimpar.TabIndex = 11;

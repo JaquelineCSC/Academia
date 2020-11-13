@@ -50,6 +50,29 @@ namespace Academia
             return dados.Listar(sql);
         }
 
+        public DataSet ListarDadosPorID()
+        {
+            string sql = "";
+            sql = "select i.idLista From ItensLista i INNER JOIN Exercicio e " +
+                  "ON i.idExercicio = e.idExercicio";
+            return dados.Listar(sql);
+        }
+
+        public DataSet ListarIdExercicio()
+        {
+            string sql = "";
+            sql = "SELECT e.idExercicio From ItensLista i " +
+                  "inner join Exercicio e on i.idExercicio = e.idExercicio WHERE idLista = " + IdLista;
+            return dados.Listar(sql);
+        }
+
+        public DataSet ListarQuantidadeListaTreino()
+        {
+            string sql = "";
+            sql = "SELECT count(i.idLista) From ItensLista i inner join Exercicio e on i.idExercicio = e.idExercicio inner join ListaTreino l on i.idLista = l.idLista inner join Cliente c on l.idCliente = c.idCliente where i.idLista = " + idLista;
+            return dados.Listar(sql);
+        }
+
         public void ExcluirDados()
         {
             string sql = "Delete from ItensLista Where idItem = " + IdItem.ToString();
