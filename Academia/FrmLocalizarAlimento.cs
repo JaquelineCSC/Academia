@@ -16,10 +16,10 @@ namespace Academia
         {
             InitializeComponent();
         }
-        private int id;
+        public int Id;
         TAlimento Alimento = new TAlimento();
 
-        public int Id { get => id; set => id = value; }
+        //public int Id { get => id; set => id = value; }
 
         private void FrmLocalizarAlimento_Load(object sender, EventArgs e)
         {

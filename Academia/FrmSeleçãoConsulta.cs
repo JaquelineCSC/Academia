@@ -27,23 +27,23 @@ namespace Academia
             switch (cmbPesquisa.Text)
             {
                 case "Alimento":
-                    FrmLocalizarAlimento FA = new FrmLocalizarAlimento();
-                    FA.ShowDialog();
+                    FrmLocalizarAlimento alimento = new FrmLocalizarAlimento();
+                    alimento.ShowDialog();
                     break;
 
                 case "Cliente":
-                    FrmLocalizarCliente FC = new FrmLocalizarCliente();
-                    FC.ShowDialog();
+                    FrmLocalizarCliente cliente = new FrmLocalizarCliente();
+                    cliente.ShowDialog();
                     break;
 
                 case "Exercicio":
-                    FrmLocalizarExercicio FE = new FrmLocalizarExercicio();
-                    FE.ShowDialog();
+                    FrmLocalizarExercicio exercicio = new FrmLocalizarExercicio();
+                    exercicio.ShowDialog();
                     break;
 
                 case "Profissional":
-                    FrmCadastroProfissional FP = new FrmCadastroProfissional();
-                    FP.ShowDialog();
+                    FrmLocalizarProfissional profissional = new FrmLocalizarProfissional();
+                    profissional.ShowDialog();
                     break;
 
                 default:
