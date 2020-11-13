@@ -55,6 +55,9 @@ namespace Academia
             }
             MessageBox.Show("Exercicio Adicionado com Sucesso!");
             LimpaControle();
+            cmdSalvar.Enabled = false;
+            cmdNovo.Enabled = true;
+            cmdLocalizar.Enabled = true;
         }
 
         private void cmdAlterar_Click(object sender, EventArgs e)
@@ -70,6 +73,9 @@ namespace Academia
                 exercicio.AlterarDadosSemFoto();
             MessageBox.Show("Alterado com Sucesso");
             LimpaControle();
+            cmdAlterar.Enabled = false;
+            cmdNovo.Enabled = true;
+            cmdLocalizar.Enabled = true;
         }
 
         private void cmdExcluir_Click(object sender, EventArgs e)
@@ -80,6 +86,9 @@ namespace Academia
                 MessageBox.Show("Excluido com sucesso!!!");
                 LimpaControle();
             }
+            cmdExcluir.Enabled = false;
+            cmdNovo.Enabled = true;
+            cmdLocalizar.Enabled = true;
         }
 
         private void Novo_Click(object sender, EventArgs e)

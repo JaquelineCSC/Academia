@@ -198,7 +198,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1131, 646);
+            this.ClientSize = new System.Drawing.Size(1131, 854);
             this.Controls.Add(this.cmdSalvarCadsCardapio);
             this.Controls.Add(this.mbAdicionar);
             this.Controls.Add(this.listBox1);

@@ -35,9 +35,9 @@
             this.lblNome = new MetroFramework.Controls.MetroLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cmdSalvar = new System.Windows.Forms.Button();
             this.cmdCriarTreino = new System.Windows.Forms.Button();
             this.cmdVoltarMenu = new System.Windows.Forms.Button();
-            this.cmdSalvar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -108,6 +108,24 @@
             this.panel1.Size = new System.Drawing.Size(503, 72);
             this.panel1.TabIndex = 71;
             // 
+            // cmdSalvar
+            // 
+            this.cmdSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.cmdSalvar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.cmdSalvar.FlatAppearance.BorderSize = 0;
+            this.cmdSalvar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.cmdSalvar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
+            this.cmdSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdSalvar.Font = new System.Drawing.Font("Lucida Fax", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdSalvar.ForeColor = System.Drawing.Color.White;
+            this.cmdSalvar.Location = new System.Drawing.Point(170, 3);
+            this.cmdSalvar.Name = "cmdSalvar";
+            this.cmdSalvar.Size = new System.Drawing.Size(157, 72);
+            this.cmdSalvar.TabIndex = 23;
+            this.cmdSalvar.Text = "Salvar";
+            this.cmdSalvar.UseVisualStyleBackColor = false;
+            this.cmdSalvar.Click += new System.EventHandler(this.cmdSalvar_Click);
+            // 
             // cmdCriarTreino
             // 
             this.cmdCriarTreino.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
@@ -118,7 +136,7 @@
             this.cmdCriarTreino.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdCriarTreino.Font = new System.Drawing.Font("Lucida Fax", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdCriarTreino.ForeColor = System.Drawing.Color.White;
-            this.cmdCriarTreino.Location = new System.Drawing.Point(166, 0);
+            this.cmdCriarTreino.Location = new System.Drawing.Point(7, 0);
             this.cmdCriarTreino.Name = "cmdCriarTreino";
             this.cmdCriarTreino.Size = new System.Drawing.Size(157, 72);
             this.cmdCriarTreino.TabIndex = 22;
@@ -143,24 +161,6 @@
             this.cmdVoltarMenu.Text = "Voltar Menu";
             this.cmdVoltarMenu.UseVisualStyleBackColor = false;
             this.cmdVoltarMenu.Click += new System.EventHandler(this.cmdVoltarMenu_Click);
-            // 
-            // cmdSalvar
-            // 
-            this.cmdSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.cmdSalvar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.cmdSalvar.FlatAppearance.BorderSize = 0;
-            this.cmdSalvar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.cmdSalvar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
-            this.cmdSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdSalvar.Font = new System.Drawing.Font("Lucida Fax", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdSalvar.ForeColor = System.Drawing.Color.White;
-            this.cmdSalvar.Location = new System.Drawing.Point(3, 0);
-            this.cmdSalvar.Name = "cmdSalvar";
-            this.cmdSalvar.Size = new System.Drawing.Size(157, 72);
-            this.cmdSalvar.TabIndex = 23;
-            this.cmdSalvar.Text = "Salvar";
-            this.cmdSalvar.UseVisualStyleBackColor = false;
-            this.cmdSalvar.Click += new System.EventHandler(this.cmdSalvar_Click);
             // 
             // FrmCadastroListaTreino
             // 

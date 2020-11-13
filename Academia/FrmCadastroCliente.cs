@@ -56,6 +56,10 @@ namespace Academia
             cliente.IncluirDados();
             MessageBox.Show("Incluido com Sucesso");
             LimpaControle();
+
+            cmdNovo.Enabled = true;
+            cmdInserir.Enabled = false;
+            cmdPesquisar.Enabled = true;
         }
 
         private void FrmCliente_Load(object sender, EventArgs e)
@@ -80,6 +84,10 @@ namespace Academia
 
             MessageBox.Show("Alterado com Sucesso");
             LimpaControle();
+
+            cmdAlterar.Enabled = false;
+            cmdNovo.Enabled = true;
+            cmdPesquisar.Enabled = true;
         }
 
         private void cmdExcluir_Click(object sender, EventArgs e)
@@ -89,11 +97,16 @@ namespace Academia
                 cliente.ExcluirDados();
             }
             LimpaControle();
+
+            cmdExcluir.Enabled = false;
+            cmdNovo.Enabled = true;
+            cmdPesquisar.Enabled = true;
         }
 
         private void cmdNovo_Click(object sender, EventArgs e)
         {
             LimpaControle();
+            cmdNovo.Enabled = false;
             cmdInserir.Enabled = true;
 
             cmdAlterar.Enabled = false;
@@ -107,6 +120,7 @@ namespace Academia
             cmdInserir.Enabled = false;
             cmdAlterar.Enabled = true;
             cmdExcluir.Enabled = true;
+            cmdNovo.Enabled = false;
 
             FrmLocalizarCliente F = new FrmLocalizarCliente();
             F.ShowDialog();

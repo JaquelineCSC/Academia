@@ -457,7 +457,7 @@
             this.cmdInserir.Name = "cmdInserir";
             this.cmdInserir.Size = new System.Drawing.Size(147, 72);
             this.cmdInserir.TabIndex = 18;
-            this.cmdInserir.Text = "Inserir";
+            this.cmdInserir.Text = "Salvar";
             this.cmdInserir.UseVisualStyleBackColor = false;
             this.cmdInserir.Click += new System.EventHandler(this.cmdInserir_Click);
             // 
