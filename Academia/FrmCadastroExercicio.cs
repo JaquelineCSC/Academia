@@ -95,6 +95,7 @@ namespace Academia
         {
             cmdNovo.Enabled = false;
             cmdSalvar.Enabled = true;
+            cmdLocalizar.Enabled = false;
             ON();
         }
 
@@ -131,6 +132,7 @@ namespace Academia
         private void cmdLocalizar_Click(object sender, EventArgs e)
         {
             ON();
+            cmdNovo.Enabled = false;
             cmdSalvar.Enabled = false;
             cmdAlterar.Enabled = true;
             cmdExcluir.Enabled = true;

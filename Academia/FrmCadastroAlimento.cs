@@ -35,11 +35,12 @@ namespace Academia
             else if (status == "Editando")
             {
                 cmdInserir.Enabled = true;
-                cmdExcluir.Enabled = true;
+                cmdExcluir.Enabled = true;              
             }
             else if (status == "Navegando")
             {
                 cmdNovo.Enabled = true;
+                cmdPesquisar.Enabled = true;
                 cmdInserir.Enabled = false;
                 cmdExcluir.Enabled = false;
             }
@@ -47,8 +48,10 @@ namespace Academia
 
         private void Novo_Click(object sender, EventArgs e)
         {
+            cmdPesquisar.Enabled = false;
             LimpaControle();
             status = "Inserindo";
+            cmdPesquisar.Enabled = false;
             HabilitaControle();
         }
 
@@ -72,6 +75,7 @@ namespace Academia
 
         private void cmdPesquisar_Click(object sender, EventArgs e)
         {
+            cmdNovo.Enabled = false;
             FrmLocalizarAlimento f = new FrmLocalizarAlimento();
             f.ShowDialog();
             Alimento.IdAlimento = f.Id;

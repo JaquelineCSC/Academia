@@ -106,6 +106,7 @@ namespace Academia
         private void cmdNovo_Click(object sender, EventArgs e)
         {
             LimpaControle();
+            cmdPesquisar.Enabled = false;
             cmdNovo.Enabled = false;
             cmdInserir.Enabled = true;
 
