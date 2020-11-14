@@ -145,6 +145,12 @@
     <Compile Include="FrmRelatorioCliente.Designer.cs">
       <DependentUpon>FrmRelatorioCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmRelatorioProfissional.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRelatorioProfissional.Designer.cs">
+      <DependentUpon>FrmRelatorioProfissional.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSelecaoLista.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -227,6 +233,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRelatorioCliente.resx">
       <DependentUpon>FrmRelatorioCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRelatorioProfissional.resx">
+      <DependentUpon>FrmRelatorioProfissional.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSelecaoLista.resx">
       <DependentUpon>FrmSelecaoLista.cs</DependentUpon>

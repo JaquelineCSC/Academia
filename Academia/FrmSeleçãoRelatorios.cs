@@ -30,6 +30,11 @@ namespace Academia
                     FrmRelatorioCliente cliente = new FrmRelatorioCliente();
                     cliente.ShowDialog();
                     break;
+
+                case "Relatorio Profissional":
+                    FrmRelatorioProfissional profissional = new FrmRelatorioProfissional();
+                    profissional.ShowDialog();
+                    break;
                 default:
                     break;
             }

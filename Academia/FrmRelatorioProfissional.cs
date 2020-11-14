@@ -11,16 +11,16 @@ using System.Drawing.Printing;
 
 namespace Academia
 {
-    public partial class FrmRelatorioCliente : MetroFramework.Forms.MetroForm
+    public partial class FrmRelatorioProfissional : MetroFramework.Forms.MetroForm
     {
-        public FrmRelatorioCliente()
+        public FrmRelatorioProfissional()
         {
             InitializeComponent();
         }
-        private int i;
-        TCliente cliente = new TCliente();
 
-        private void FrmRelatorioCliente_Load(object sender, EventArgs e)
+        private int i;
+        TProfissional profissional = new TProfissional();
+        private void FrmRelatorioProfissional_Load(object sender, EventArgs e)
         {
 
         }
@@ -57,31 +57,19 @@ namespace Academia
             linhaPorPagina = Convert.ToInt32(ev.MarginBounds.Height / alturaFonte);
 
             //Título
-            linha = "Lista de Clientes";
+            linha = "Lista de Profissionais";
             posicaoVertical = margemSuperior + contador * alturaFonte;
             ev.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda, posicaoVertical);
 
             contador += 4;
             //Subtítulo
-            linha = "idCliente";
+            linha = "Nome Profissional";
             posicaoVertical = margemSuperior + contador * alturaFonte;
             ev.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda, posicaoVertical);
 
-            linha = "NomeCliente";
+            linha = "Valor do Serviço";
             posicaoVertical = margemSuperior + contador * alturaFonte;
-            ev.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda + 100, posicaoVertical);
-
-            linha = "Rua";
-            posicaoVertical = margemSuperior + contador * alturaFonte;
-            ev.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda + 250, posicaoVertical);
-
-            linha = "Bairro";
-            posicaoVertical = margemSuperior + contador * alturaFonte;
-            ev.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda + 450, posicaoVertical);
-
-            linha = "NumCasa";
-            posicaoVertical = margemSuperior + contador * alturaFonte;
-            ev.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda + 550, posicaoVertical);
+            ev.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda + 300, posicaoVertical);
 
             contador += 1;
 
@@ -91,32 +79,20 @@ namespace Academia
 
             contador += 1;
 
-            DataSet ds = cliente.ListarDados();
+            DataSet ds = profissional.ListarDados();
             if (ds.Tables[0] != null)
             {
                 while (i < ds.Tables[0].Rows.Count && contador < linhaPorPagina)
                 {
                     DataRow item = ds.Tables[0].Rows[i];
 
-                    linha = item["idCliente"].ToString();
+                    linha = item["NomeProfissional"].ToString();
                     posicaoVertical = margemSuperior + contador * alturaFonte;
                     ev.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda, posicaoVertical);
 
-                    linha = item["NomeCliente"].ToString();
+                    linha = item["ValorServico"].ToString();
                     posicaoVertical = margemSuperior + contador * alturaFonte;
-                    ev.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda + 100, posicaoVertical);
-
-                    linha = item["Rua"].ToString();
-                    posicaoVertical = margemSuperior + contador * alturaFonte;
-                    ev.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda + 250, posicaoVertical);
-
-                    linha = item["Bairro"].ToString();
-                    posicaoVertical = margemSuperior + contador * alturaFonte;
-                    ev.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda + 450, posicaoVertical);
-
-                    linha = item["NumCasa"].ToString();
-                    posicaoVertical = margemSuperior + contador * alturaFonte;
-                    ev.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda + 550, posicaoVertical);
+                    ev.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda + 300, posicaoVertical);
 
                     contador += 2;
                     i++;
@@ -124,7 +100,7 @@ namespace Academia
 
                 if (contador < linhaPorPagina)
                 {
-                    linha = "Quantidade de Clientes da Academia: " + i.ToString();
+                    linha = "Quantidade de Profissionais da Academia: " + i.ToString();
                     posicaoVertical = margemSuperior + contador * alturaFonte;
                     ev.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda, posicaoVertical);
                 }
@@ -139,8 +115,6 @@ namespace Academia
             {
                 ev.HasMorePages = false;
             }
-
-
         }
     }
 }

@@ -47,7 +47,8 @@
             this.cmbPesquisa.FormattingEnabled = true;
             this.cmbPesquisa.ItemHeight = 23;
             this.cmbPesquisa.Items.AddRange(new object[] {
-            "Relatorio Cliente"});
+            "Relatorio Cliente",
+            "Relatorio Profissional"});
             this.cmbPesquisa.Location = new System.Drawing.Point(68, 134);
             this.cmbPesquisa.Name = "cmbPesquisa";
             this.cmbPesquisa.Size = new System.Drawing.Size(427, 29);

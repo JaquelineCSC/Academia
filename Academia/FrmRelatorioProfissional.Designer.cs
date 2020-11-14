@@ -1,6 +1,6 @@
 ﻿namespace Academia
 {
-    partial class FrmRelatorioCliente
+    partial class FrmRelatorioProfissional
     {
         /// <summary>
         /// Required designer variable.
@@ -33,23 +33,23 @@
             // 
             // cmdRelatorioCliente
             // 
-            this.cmdRelatorioCliente.Location = new System.Drawing.Point(23, 91);
+            this.cmdRelatorioCliente.Location = new System.Drawing.Point(23, 86);
             this.cmdRelatorioCliente.Name = "cmdRelatorioCliente";
             this.cmdRelatorioCliente.Size = new System.Drawing.Size(486, 108);
-            this.cmdRelatorioCliente.TabIndex = 0;
-            this.cmdRelatorioCliente.Text = "Relatorio Cliente";
+            this.cmdRelatorioCliente.TabIndex = 1;
+            this.cmdRelatorioCliente.Text = "Relatorio Profissional";
             this.cmdRelatorioCliente.UseSelectable = true;
             this.cmdRelatorioCliente.Click += new System.EventHandler(this.cmdRelatorioCliente_Click);
             // 
-            // FrmRelatorioCliente
+            // FrmRelatorioProfissional
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(535, 248);
+            this.ClientSize = new System.Drawing.Size(537, 240);
             this.Controls.Add(this.cmdRelatorioCliente);
-            this.Name = "FrmRelatorioCliente";
-            this.Text = "Relatorio Cliente";
-            this.Load += new System.EventHandler(this.FrmRelatorioCliente_Load);
+            this.Name = "FrmRelatorioProfissional";
+            this.Text = "Relatorio Profissional";
+            this.Load += new System.EventHandler(this.FrmRelatorioProfissional_Load);
             this.ResumeLayout(false);
 
         }
