@@ -27,7 +27,7 @@ namespace Academia
         public void IncluirDados()
         {
             string sql = "";
-            sql += "Insert into Mensalidade (DataPagamento, MesPagamento,idCliente) " + "values ('" + DataPagamento + "','" + MesPagamento + "','" + idCliente + "')";
+            sql += "Insert into Mensalidade (DataPagamento, MesPagamento,idCliente, Valor) " + "values ('" + DataPagamento + "','" + MesPagamento + "','" + idCliente + "','"+ Valor1+"')";
             dados.Executar(sql);
         }
 
@@ -51,6 +51,20 @@ namespace Academia
         {
             string sql = "";
             sql = "Select * from Mensalidade";
+            return dados.Listar(sql);
+        }
+
+        public DataSet ListarDadosDataPagamento()
+        {
+            string sql = "";
+            sql = "Select * from Mensalidade Where DataPagamento LIKE '" + DataPagamento + "%'";
+            return dados.Listar(sql);
+        }
+
+        public DataSet ListarDadosMes()
+        {
+            string sql = "";
+            sql = "Select * from Mensalidade Where MesPagamento LIKE '" + MesPagamento + "%'";
             return dados.Listar(sql);
         }
 

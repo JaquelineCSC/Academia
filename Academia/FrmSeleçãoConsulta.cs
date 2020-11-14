@@ -45,7 +45,10 @@ namespace Academia
                     FrmLocalizarProfissional profissional = new FrmLocalizarProfissional();
                     profissional.ShowDialog();
                     break;
-
+                case "Mensalidade":
+                    FrmLocalizarMensalidade mensalidade = new FrmLocalizarMensalidade();
+                    mensalidade.ShowDialog();
+                    break;
                 default:
                     break;
             }

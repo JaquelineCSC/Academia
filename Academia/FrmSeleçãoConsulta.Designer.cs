@@ -40,6 +40,7 @@
             "Alimento",
             "Cliente",
             "Exercicio",
+            "Mensalidade",
             "Profissional"});
             this.cmbPesquisa.Location = new System.Drawing.Point(104, 103);
             this.cmbPesquisa.Name = "cmbPesquisa";

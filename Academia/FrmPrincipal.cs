@@ -34,6 +34,7 @@ namespace Academia
             cmdCardapio.Visible = true;
             cmdListaExercicio.Visible = true;
             cmdItensLista.Visible = true;
+            cmdMensalidade.Visible = true;
         }
 
         private void cmdConsulta_Click(object sender, EventArgs e)
@@ -97,6 +98,12 @@ namespace Academia
         private void cmdSair_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void cmdMensalidade_Click(object sender, EventArgs e)
+        {
+            FrmCadastroMensalidade mensalidade = new FrmCadastroMensalidade();
+            mensalidade.ShowDialog();
         }
     }
 }

@@ -85,6 +85,12 @@
     <Compile Include="FrmCadastroExercicio.Designer.cs">
       <DependentUpon>FrmCadastroExercicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCadastroMensalidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCadastroMensalidade.Designer.cs">
+      <DependentUpon>FrmCadastroMensalidade.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCadastroProfissional.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,12 @@
     </Compile>
     <Compile Include="FrmLocalizarListaTreino.Designer.cs">
       <DependentUpon>FrmLocalizarListaTreino.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLocalizarMensalidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLocalizarMensalidade.Designer.cs">
+      <DependentUpon>FrmLocalizarMensalidade.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmLocalizarProfissional.cs">
       <SubType>Form</SubType>
@@ -171,6 +183,9 @@
     <EmbeddedResource Include="FrmCadastroExercicio.resx">
       <DependentUpon>FrmCadastroExercicio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmCadastroMensalidade.resx">
+      <DependentUpon>FrmCadastroMensalidade.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmCadastroProfissional.resx">
       <DependentUpon>FrmCadastroProfissional.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLocalizarListaTreino.resx">
       <DependentUpon>FrmLocalizarListaTreino.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLocalizarMensalidade.resx">
+      <DependentUpon>FrmLocalizarMensalidade.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLocalizarProfissional.resx">
       <DependentUpon>FrmLocalizarProfissional.cs</DependentUpon>
