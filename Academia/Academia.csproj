@@ -139,6 +139,12 @@
     <Compile Include="FrmLocalizarProfissional.Designer.cs">
       <DependentUpon>FrmLocalizarProfissional.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmRelatorioCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRelatorioCliente.Designer.cs">
+      <DependentUpon>FrmRelatorioCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSelecaoLista.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,12 @@
     </Compile>
     <Compile Include="FrmSeleçãoConsulta.Designer.cs">
       <DependentUpon>FrmSeleçãoConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSeleçãoRelatorios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSeleçãoRelatorios.Designer.cs">
+      <DependentUpon>FrmSeleçãoRelatorios.cs</DependentUpon>
     </Compile>
     <Compile Include="TAlimento.cs" />
     <Compile Include="TCardapio.cs" />
@@ -213,11 +225,17 @@
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmRelatorioCliente.resx">
+      <DependentUpon>FrmRelatorioCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmSelecaoLista.resx">
       <DependentUpon>FrmSelecaoLista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSeleçãoConsulta.resx">
       <DependentUpon>FrmSeleçãoConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSeleçãoRelatorios.resx">
+      <DependentUpon>FrmSeleçãoRelatorios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

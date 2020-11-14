@@ -19,7 +19,7 @@ namespace Academia
 
         private void cmbPesquisa_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cmdEntrar.Enabled = true;
+            cmdConsultar.Enabled = true;
         }
 
         private void cmdEntrar_Click(object sender, EventArgs e)

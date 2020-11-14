@@ -105,5 +105,11 @@ namespace Academia
             FrmCadastroMensalidade mensalidade = new FrmCadastroMensalidade();
             mensalidade.ShowDialog();
         }
+
+        private void cmdRelatorios_Click(object sender, EventArgs e)
+        {
+            FrmSeleçãoRelatorios relatorios = new FrmSeleçãoRelatorios();
+            relatorios.ShowDialog();
+        }
     }
 }

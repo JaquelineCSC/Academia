@@ -36,12 +36,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cmdMensalidade = new System.Windows.Forms.Button();
             this.cmdSair = new System.Windows.Forms.Button();
             this.cmdItensLista = new System.Windows.Forms.Button();
             this.cmdListaExercicio = new System.Windows.Forms.Button();
             this.cmdCardapio = new System.Windows.Forms.Button();
             this.cmdAlimento = new System.Windows.Forms.Button();
-            this.cmdMensalidade = new System.Windows.Forms.Button();
+            this.cmdRelatorios = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -152,6 +153,7 @@
             // 
             this.panel2.BackgroundImage = global::Academia.Properties.Resources.panel2;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Controls.Add(this.cmdRelatorios);
             this.panel2.Controls.Add(this.cmdConsulta);
             this.panel2.Controls.Add(this.cmdCadastro);
             this.panel2.Location = new System.Drawing.Point(-8, 217);
@@ -176,6 +178,25 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1161, 331);
             this.panel3.TabIndex = 2;
+            // 
+            // cmdMensalidade
+            // 
+            this.cmdMensalidade.BackColor = System.Drawing.Color.Black;
+            this.cmdMensalidade.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.cmdMensalidade.FlatAppearance.BorderSize = 0;
+            this.cmdMensalidade.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.cmdMensalidade.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
+            this.cmdMensalidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdMensalidade.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdMensalidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
+            this.cmdMensalidade.Location = new System.Drawing.Point(17, 97);
+            this.cmdMensalidade.Name = "cmdMensalidade";
+            this.cmdMensalidade.Size = new System.Drawing.Size(143, 56);
+            this.cmdMensalidade.TabIndex = 28;
+            this.cmdMensalidade.Text = "Mensalidade";
+            this.cmdMensalidade.UseVisualStyleBackColor = false;
+            this.cmdMensalidade.Visible = false;
+            this.cmdMensalidade.Click += new System.EventHandler(this.cmdMensalidade_Click);
             // 
             // cmdSair
             // 
@@ -271,24 +292,23 @@
             this.cmdAlimento.Visible = false;
             this.cmdAlimento.Click += new System.EventHandler(this.cmdAlimento_Click);
             // 
-            // cmdMensalidade
+            // cmdRelatorios
             // 
-            this.cmdMensalidade.BackColor = System.Drawing.Color.Black;
-            this.cmdMensalidade.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.cmdMensalidade.FlatAppearance.BorderSize = 0;
-            this.cmdMensalidade.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.cmdMensalidade.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
-            this.cmdMensalidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdMensalidade.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdMensalidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
-            this.cmdMensalidade.Location = new System.Drawing.Point(17, 97);
-            this.cmdMensalidade.Name = "cmdMensalidade";
-            this.cmdMensalidade.Size = new System.Drawing.Size(143, 56);
-            this.cmdMensalidade.TabIndex = 28;
-            this.cmdMensalidade.Text = "Mensalidade";
-            this.cmdMensalidade.UseVisualStyleBackColor = false;
-            this.cmdMensalidade.Visible = false;
-            this.cmdMensalidade.Click += new System.EventHandler(this.cmdMensalidade_Click);
+            this.cmdRelatorios.BackColor = System.Drawing.Color.Black;
+            this.cmdRelatorios.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.cmdRelatorios.FlatAppearance.BorderSize = 0;
+            this.cmdRelatorios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.cmdRelatorios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
+            this.cmdRelatorios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdRelatorios.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdRelatorios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
+            this.cmdRelatorios.Location = new System.Drawing.Point(617, 18);
+            this.cmdRelatorios.Name = "cmdRelatorios";
+            this.cmdRelatorios.Size = new System.Drawing.Size(168, 56);
+            this.cmdRelatorios.TabIndex = 21;
+            this.cmdRelatorios.Text = "Relatorios";
+            this.cmdRelatorios.UseVisualStyleBackColor = false;
+            this.cmdRelatorios.Click += new System.EventHandler(this.cmdRelatorios_Click);
             // 
             // FrmPrincipal
             // 
@@ -323,6 +343,7 @@
         private System.Windows.Forms.Button cmdItensLista;
         private System.Windows.Forms.Button cmdSair;
         private System.Windows.Forms.Button cmdMensalidade;
+        private System.Windows.Forms.Button cmdRelatorios;
     }
 }
 
