@@ -43,7 +43,7 @@
             "Cardapio",
             "Cliente",
             "Exercicio",
-            "Lista De Treino",
+            "Lista de Treino",
             "Mensalidade",
             "Profissional"});
             this.cmbPesquisa.Location = new System.Drawing.Point(104, 103);

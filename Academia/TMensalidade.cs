@@ -34,7 +34,7 @@ namespace Academia
         public void AlterarDados()
         {
             string sql = "";
-            sql += "Update Mensalidade SET DataPamento = '" + DataPagamento + "',  MesPagamento = '" + MesPagamento + "' Where idMensalidade = " + IdMensalidade.ToString();
+            sql += "Update Mensalidade SET DataPagamento = '" + DataPagamento + "',  MesPagamento = '" + MesPagamento + "' Where idMensalidade = " + IdMensalidade.ToString();
             dados.Executar(sql);
         }
 
