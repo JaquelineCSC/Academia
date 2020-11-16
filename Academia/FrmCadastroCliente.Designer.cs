@@ -51,6 +51,7 @@
             this.cmdNovo = new System.Windows.Forms.Button();
             this.cmdInserir = new System.Windows.Forms.Button();
             this.cmdPesquisar = new MetroFramework.Controls.MetroButton();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -356,7 +357,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
             this.panel1.Controls.Add(this.cmdExcluir);
             this.panel1.Controls.Add(this.cmdAlterar);
             this.panel1.Controls.Add(this.cmdVoltarMenu);
@@ -370,7 +371,7 @@
             // 
             // cmdExcluir
             // 
-            this.cmdExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.cmdExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
             this.cmdExcluir.Enabled = false;
             this.cmdExcluir.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.cmdExcluir.FlatAppearance.BorderSize = 0;
@@ -389,7 +390,7 @@
             // 
             // cmdAlterar
             // 
-            this.cmdAlterar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.cmdAlterar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
             this.cmdAlterar.Enabled = false;
             this.cmdAlterar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.cmdAlterar.FlatAppearance.BorderSize = 0;
@@ -408,7 +409,7 @@
             // 
             // cmdVoltarMenu
             // 
-            this.cmdVoltarMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.cmdVoltarMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
             this.cmdVoltarMenu.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.cmdVoltarMenu.FlatAppearance.BorderSize = 0;
             this.cmdVoltarMenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
@@ -426,7 +427,7 @@
             // 
             // cmdNovo
             // 
-            this.cmdNovo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.cmdNovo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
             this.cmdNovo.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.cmdNovo.FlatAppearance.BorderSize = 0;
             this.cmdNovo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
@@ -444,7 +445,7 @@
             // 
             // cmdInserir
             // 
-            this.cmdInserir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.cmdInserir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
             this.cmdInserir.Enabled = false;
             this.cmdInserir.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.cmdInserir.FlatAppearance.BorderSize = 0;
@@ -471,6 +472,14 @@
             this.cmdPesquisar.UseSelectable = true;
             this.cmdPesquisar.Click += new System.EventHandler(this.cmdPesquisar_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(231)))), ((int)(((byte)(158)))));
+            this.panel2.Location = new System.Drawing.Point(2, 66);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1201, 627);
+            this.panel2.TabIndex = 52;
+            // 
             // FrmCadastroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -494,6 +503,7 @@
             this.Controls.Add(this.txtBairro);
             this.Controls.Add(this.txtRua);
             this.Controls.Add(this.txtNome);
+            this.Controls.Add(this.panel2);
             this.Name = "FrmCadastroCliente";
             this.Text = "Cliente";
             this.Load += new System.EventHandler(this.FrmCliente_Load);
@@ -528,5 +538,6 @@
         private System.Windows.Forms.Button cmdNovo;
         private System.Windows.Forms.Button cmdInserir;
         private MetroFramework.Controls.MetroButton cmdPesquisar;
+        private System.Windows.Forms.Panel panel2;
     }
 }

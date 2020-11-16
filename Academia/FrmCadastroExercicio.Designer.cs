@@ -46,13 +46,14 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cmdLocalizar = new MetroFramework.Controls.MetroButton();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
             this.panel1.Controls.Add(this.cmdExcluir);
             this.panel1.Controls.Add(this.cmdAlterar);
             this.panel1.Controls.Add(this.cmdVoltarMenu);
@@ -66,7 +67,7 @@
             // 
             // cmdExcluir
             // 
-            this.cmdExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.cmdExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
             this.cmdExcluir.Enabled = false;
             this.cmdExcluir.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.cmdExcluir.FlatAppearance.BorderSize = 0;
@@ -85,7 +86,7 @@
             // 
             // cmdAlterar
             // 
-            this.cmdAlterar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.cmdAlterar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
             this.cmdAlterar.Enabled = false;
             this.cmdAlterar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.cmdAlterar.FlatAppearance.BorderSize = 0;
@@ -104,7 +105,7 @@
             // 
             // cmdVoltarMenu
             // 
-            this.cmdVoltarMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.cmdVoltarMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
             this.cmdVoltarMenu.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.cmdVoltarMenu.FlatAppearance.BorderSize = 0;
             this.cmdVoltarMenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
@@ -122,7 +123,7 @@
             // 
             // cmdNovo
             // 
-            this.cmdNovo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.cmdNovo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
             this.cmdNovo.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.cmdNovo.FlatAppearance.BorderSize = 0;
             this.cmdNovo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
@@ -140,7 +141,7 @@
             // 
             // cmdSalvar
             // 
-            this.cmdSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.cmdSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
             this.cmdSalvar.Enabled = false;
             this.cmdSalvar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.cmdSalvar.FlatAppearance.BorderSize = 0;
@@ -329,6 +330,14 @@
             this.cmdLocalizar.UseSelectable = true;
             this.cmdLocalizar.Click += new System.EventHandler(this.cmdLocalizar_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(231)))), ((int)(((byte)(158)))));
+            this.panel2.Location = new System.Drawing.Point(1, 63);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1281, 586);
+            this.panel2.TabIndex = 42;
+            // 
             // FrmCadastroExercicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -346,6 +355,7 @@
             this.Controls.Add(this.lblDescricao);
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.Name = "FrmCadastroExercicio";
             this.Text = "Cadastro Exercicio";
             this.panel1.ResumeLayout(false);
@@ -375,5 +385,6 @@
         private System.Windows.Forms.Button cmdExcluir;
         private System.Windows.Forms.Button cmdAlterar;
         private MetroFramework.Controls.MetroButton cmdLocalizar;
+        private System.Windows.Forms.Panel panel2;
     }
 }

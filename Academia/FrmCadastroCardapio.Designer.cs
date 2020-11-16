@@ -41,6 +41,8 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.mbAdicionar = new MetroFramework.Controls.MetroButton();
             this.cmdSalvarCadsCardapio = new MetroFramework.Controls.MetroButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblProfissional
@@ -176,9 +178,9 @@
             // 
             // mbAdicionar
             // 
-            this.mbAdicionar.Location = new System.Drawing.Point(878, 170);
+            this.mbAdicionar.Location = new System.Drawing.Point(878, 207);
             this.mbAdicionar.Name = "mbAdicionar";
-            this.mbAdicionar.Size = new System.Drawing.Size(91, 29);
+            this.mbAdicionar.Size = new System.Drawing.Size(175, 50);
             this.mbAdicionar.TabIndex = 59;
             this.mbAdicionar.Text = "Adicionar";
             this.mbAdicionar.UseSelectable = true;
@@ -186,21 +188,29 @@
             // 
             // cmdSalvarCadsCardapio
             // 
-            this.cmdSalvarCadsCardapio.Location = new System.Drawing.Point(1001, 607);
+            this.cmdSalvarCadsCardapio.Location = new System.Drawing.Point(878, 560);
             this.cmdSalvarCadsCardapio.Name = "cmdSalvarCadsCardapio";
-            this.cmdSalvarCadsCardapio.Size = new System.Drawing.Size(75, 23);
+            this.cmdSalvarCadsCardapio.Size = new System.Drawing.Size(198, 48);
             this.cmdSalvarCadsCardapio.TabIndex = 60;
             this.cmdSalvarCadsCardapio.Text = "SALVAR";
             this.cmdSalvarCadsCardapio.UseSelectable = true;
             this.cmdSalvarCadsCardapio.Click += new System.EventHandler(this.cmdSalvarCadsCardapio_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(231)))), ((int)(((byte)(158)))));
+            this.panel1.Controls.Add(this.mbAdicionar);
+            this.panel1.Controls.Add(this.cmdSalvarCadsCardapio);
+            this.panel1.Location = new System.Drawing.Point(0, 63);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1131, 731);
+            this.panel1.TabIndex = 61;
             // 
             // FrmCadastroCardapio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1131, 854);
-            this.Controls.Add(this.cmdSalvarCadsCardapio);
-            this.Controls.Add(this.mbAdicionar);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.cmbProfissional);
             this.Controls.Add(this.cmbAlimento);
@@ -210,9 +220,11 @@
             this.Controls.Add(this.lblAlimento);
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.txtDataHora);
+            this.Controls.Add(this.panel1);
             this.Name = "FrmCadastroCardapio";
             this.Text = "Cardapio de alimentação";
             this.Load += new System.EventHandler(this.FrmCadastroCardapio_Load);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,5 +244,6 @@
         private System.Windows.Forms.ListBox listBox1;
         private MetroFramework.Controls.MetroButton mbAdicionar;
         private MetroFramework.Controls.MetroButton cmdSalvarCadsCardapio;
+        private System.Windows.Forms.Panel panel1;
     }
 }

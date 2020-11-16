@@ -40,6 +40,7 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.cmdLimpar = new MetroFramework.Controls.MetroButton();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // lblNomeCliente
@@ -124,9 +125,9 @@
             // 
             // cmdPesquisar
             // 
-            this.cmdPesquisar.Location = new System.Drawing.Point(624, 41);
+            this.cmdPesquisar.Location = new System.Drawing.Point(734, 17);
             this.cmdPesquisar.Name = "cmdPesquisar";
-            this.cmdPesquisar.Size = new System.Drawing.Size(149, 64);
+            this.cmdPesquisar.Size = new System.Drawing.Size(157, 40);
             this.cmdPesquisar.TabIndex = 8;
             this.cmdPesquisar.Text = "Modificar um Treino";
             this.cmdPesquisar.UseSelectable = true;
@@ -162,15 +163,23 @@
             this.cmdLimpar.UseSelectable = true;
             this.cmdLimpar.Click += new System.EventHandler(this.cmdLimpar_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(231)))), ((int)(((byte)(158)))));
+            this.panel1.Location = new System.Drawing.Point(0, 63);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(915, 537);
+            this.panel1.TabIndex = 12;
+            // 
             // FrmCadastroItensLista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(805, 600);
+            this.ClientSize = new System.Drawing.Size(914, 600);
+            this.Controls.Add(this.cmdPesquisar);
             this.Controls.Add(this.cmdLimpar);
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.metroLabel2);
-            this.Controls.Add(this.cmdPesquisar);
             this.Controls.Add(this.cmdExcluir);
             this.Controls.Add(this.cmdConcluir);
             this.Controls.Add(this.cmbAdicionar);
@@ -179,6 +188,7 @@
             this.Controls.Add(this.cmbNomeExercicio);
             this.Controls.Add(this.lblNomeProfissional);
             this.Controls.Add(this.lblNomeCliente);
+            this.Controls.Add(this.panel1);
             this.Name = "FrmCadastroItensLista";
             this.Text = "Criação Lista de Treino";
             this.Load += new System.EventHandler(this.CadastroItensLista_Load);
@@ -201,5 +211,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroButton cmdLimpar;
+        private System.Windows.Forms.Panel panel1;
     }
 }

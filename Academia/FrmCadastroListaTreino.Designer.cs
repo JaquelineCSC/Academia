@@ -38,6 +38,7 @@
             this.cmdSalvar = new System.Windows.Forms.Button();
             this.cmdCriarTreino = new System.Windows.Forms.Button();
             this.cmdVoltarMenu = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -98,7 +99,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
             this.panel1.Controls.Add(this.cmdSalvar);
             this.panel1.Controls.Add(this.cmdCriarTreino);
             this.panel1.Controls.Add(this.cmdVoltarMenu);
@@ -110,7 +111,7 @@
             // 
             // cmdSalvar
             // 
-            this.cmdSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.cmdSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
             this.cmdSalvar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.cmdSalvar.FlatAppearance.BorderSize = 0;
             this.cmdSalvar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
@@ -118,7 +119,7 @@
             this.cmdSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdSalvar.Font = new System.Drawing.Font("Lucida Fax", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdSalvar.ForeColor = System.Drawing.Color.White;
-            this.cmdSalvar.Location = new System.Drawing.Point(170, 3);
+            this.cmdSalvar.Location = new System.Drawing.Point(180, 0);
             this.cmdSalvar.Name = "cmdSalvar";
             this.cmdSalvar.Size = new System.Drawing.Size(157, 72);
             this.cmdSalvar.TabIndex = 23;
@@ -128,7 +129,7 @@
             // 
             // cmdCriarTreino
             // 
-            this.cmdCriarTreino.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.cmdCriarTreino.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
             this.cmdCriarTreino.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.cmdCriarTreino.FlatAppearance.BorderSize = 0;
             this.cmdCriarTreino.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
@@ -146,7 +147,7 @@
             // 
             // cmdVoltarMenu
             // 
-            this.cmdVoltarMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.cmdVoltarMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
             this.cmdVoltarMenu.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.cmdVoltarMenu.FlatAppearance.BorderSize = 0;
             this.cmdVoltarMenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
@@ -162,6 +163,14 @@
             this.cmdVoltarMenu.UseVisualStyleBackColor = false;
             this.cmdVoltarMenu.Click += new System.EventHandler(this.cmdVoltarMenu_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(231)))), ((int)(((byte)(158)))));
+            this.panel2.Location = new System.Drawing.Point(0, 63);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(552, 254);
+            this.panel2.TabIndex = 72;
+            // 
             // FrmCadastroListaTreino
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -172,6 +181,7 @@
             this.Controls.Add(this.cmbNome);
             this.Controls.Add(this.lblProfissional);
             this.Controls.Add(this.lblNome);
+            this.Controls.Add(this.panel2);
             this.Name = "FrmCadastroListaTreino";
             this.Text = "Lista Treino";
             this.Load += new System.EventHandler(this.FrmListaTreino_Load);
@@ -192,5 +202,6 @@
         private System.Windows.Forms.Button cmdCriarTreino;
         private System.Windows.Forms.Button cmdVoltarMenu;
         private System.Windows.Forms.Button cmdSalvar;
+        private System.Windows.Forms.Panel panel2;
     }
 }

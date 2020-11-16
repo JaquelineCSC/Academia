@@ -1,6 +1,6 @@
 ﻿namespace Academia
 {
-    partial class FrmLocalizarCliente
+    partial class FrmLocalizarCardapio
     {
         /// <summary>
         /// Required designer variable.
@@ -41,10 +41,10 @@
             // 
             // cmdPesquisar
             // 
-            this.cmdPesquisar.Location = new System.Drawing.Point(307, 13);
+            this.cmdPesquisar.Location = new System.Drawing.Point(301, 13);
             this.cmdPesquisar.Name = "cmdPesquisar";
             this.cmdPesquisar.Size = new System.Drawing.Size(195, 56);
-            this.cmdPesquisar.TabIndex = 48;
+            this.cmdPesquisar.TabIndex = 51;
             this.cmdPesquisar.Text = "Localizar Cliente";
             this.cmdPesquisar.UseSelectable = true;
             this.cmdPesquisar.Click += new System.EventHandler(this.cmdPesquisar_Click);
@@ -66,7 +66,7 @@
             this.txtNome.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.txtNome.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
             this.txtNome.Lines = new string[0];
-            this.txtNome.Location = new System.Drawing.Point(549, 25);
+            this.txtNome.Location = new System.Drawing.Point(544, 26);
             this.txtNome.MaxLength = 32767;
             this.txtNome.Name = "txtNome";
             this.txtNome.PasswordChar = '\0';
@@ -76,7 +76,7 @@
             this.txtNome.SelectionStart = 0;
             this.txtNome.ShortcutsEnabled = true;
             this.txtNome.Size = new System.Drawing.Size(330, 30);
-            this.txtNome.TabIndex = 47;
+            this.txtNome.TabIndex = 50;
             this.txtNome.UseSelectable = true;
             this.txtNome.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtNome.WaterMarkFont = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -108,7 +108,7 @@
             this.grid1.EnableHeadersVisualStyles = false;
             this.grid1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.grid1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.grid1.Location = new System.Drawing.Point(23, 146);
+            this.grid1.Location = new System.Drawing.Point(24, 146);
             this.grid1.Name = "grid1";
             this.grid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -123,30 +123,28 @@
             this.grid1.RowTemplate.Height = 30;
             this.grid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grid1.Size = new System.Drawing.Size(1289, 557);
-            this.grid1.TabIndex = 46;
-            this.grid1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid1_CellEnter);
-            this.grid1.DoubleClick += new System.EventHandler(this.grid1_DoubleClick);
+            this.grid1.TabIndex = 49;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(231)))), ((int)(((byte)(158)))));
             this.panel1.Controls.Add(this.txtNome);
             this.panel1.Controls.Add(this.cmdPesquisar);
-            this.panel1.Location = new System.Drawing.Point(-5, 63);
+            this.panel1.Location = new System.Drawing.Point(0, 63);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1375, 675);
-            this.panel1.TabIndex = 49;
+            this.panel1.Size = new System.Drawing.Size(1359, 684);
+            this.panel1.TabIndex = 52;
             // 
-            // FrmLocalizarCliente
+            // FrmLocalizarCardapio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1360, 726);
+            this.ClientSize = new System.Drawing.Size(1352, 741);
             this.Controls.Add(this.grid1);
             this.Controls.Add(this.panel1);
-            this.Name = "FrmLocalizarCliente";
-            this.Text = "Pesquisar Cliente";
-            this.Load += new System.EventHandler(this.FrmLocalizarCliente_Load);
+            this.Name = "FrmLocalizarCardapio";
+            this.Text = "Pesquisar Cardapio";
+            this.Load += new System.EventHandler(this.FrmLocalizarCardapio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grid1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

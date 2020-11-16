@@ -48,6 +48,8 @@ namespace Academia
             cmdAlimento.Visible = false;
             cmdCardapio.Visible = false;
             cmdListaExercicio.Visible = false;
+            cmdItensLista.Visible = false;
+            cmdMensalidade.Visible = false;
 
             FrmSeleçãoConsulta F = new FrmSeleçãoConsulta();
             F.ShowDialog();

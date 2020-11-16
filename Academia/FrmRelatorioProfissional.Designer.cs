@@ -49,6 +49,7 @@
             this.Controls.Add(this.cmdRelatorioCliente);
             this.Name = "FrmRelatorioProfissional";
             this.Text = "Relatorio Profissional";
+            this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.Load += new System.EventHandler(this.FrmRelatorioProfissional_Load);
             this.ResumeLayout(false);
 

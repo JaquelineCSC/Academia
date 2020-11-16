@@ -30,16 +30,20 @@
         {
             this.cmbPesquisa = new MetroFramework.Controls.MetroComboBox();
             this.cmdConsultar = new MetroFramework.Controls.MetroButton();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // cmbPesquisa
             // 
+            this.cmbPesquisa.BackColor = System.Drawing.Color.White;
             this.cmbPesquisa.FormattingEnabled = true;
             this.cmbPesquisa.ItemHeight = 23;
             this.cmbPesquisa.Items.AddRange(new object[] {
             "Alimento",
+            "Cardapio",
             "Cliente",
             "Exercicio",
+            "Lista De Treino",
             "Mensalidade",
             "Profissional"});
             this.cmbPesquisa.Location = new System.Drawing.Point(104, 103);
@@ -60,6 +64,14 @@
             this.cmdConsultar.UseSelectable = true;
             this.cmdConsultar.Click += new System.EventHandler(this.cmdEntrar_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(231)))), ((int)(((byte)(158)))));
+            this.panel1.Location = new System.Drawing.Point(-5, 54);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(813, 199);
+            this.panel1.TabIndex = 13;
+            // 
             // FrmSeleçãoConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -67,8 +79,10 @@
             this.ClientSize = new System.Drawing.Size(800, 242);
             this.Controls.Add(this.cmdConsultar);
             this.Controls.Add(this.cmbPesquisa);
+            this.Controls.Add(this.panel1);
             this.Name = "FrmSeleçãoConsulta";
             this.Text = "Seleção de Consulta";
+            this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.ResumeLayout(false);
 
         }
@@ -77,5 +91,6 @@
 
         private MetroFramework.Controls.MetroComboBox cmbPesquisa;
         private MetroFramework.Controls.MetroButton cmdConsultar;
+        private System.Windows.Forms.Panel panel1;
     }
 }

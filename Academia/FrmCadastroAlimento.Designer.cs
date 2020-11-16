@@ -38,7 +38,9 @@
             this.cmdInserir = new System.Windows.Forms.Button();
             this.cmdPesquisar = new MetroFramework.Controls.MetroButton();
             this.txtCaloriasx = new MetroFramework.Controls.MetroTextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtNome
@@ -58,7 +60,7 @@
             this.txtNome.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.txtNome.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
             this.txtNome.Lines = new string[0];
-            this.txtNome.Location = new System.Drawing.Point(232, 177);
+            this.txtNome.Location = new System.Drawing.Point(263, 140);
             this.txtNome.MaxLength = 32767;
             this.txtNome.Name = "txtNome";
             this.txtNome.PasswordChar = '\0';
@@ -77,7 +79,7 @@
             // 
             this.lblNome.AutoSize = true;
             this.lblNome.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblNome.Location = new System.Drawing.Point(68, 177);
+            this.lblNome.Location = new System.Drawing.Point(99, 140);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(63, 25);
             this.lblNome.TabIndex = 39;
@@ -87,7 +89,7 @@
             // 
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel1.Location = new System.Drawing.Point(68, 256);
+            this.metroLabel1.Location = new System.Drawing.Point(99, 219);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(76, 25);
             this.metroLabel1.TabIndex = 44;
@@ -95,7 +97,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
             this.panel1.Controls.Add(this.cmdExcluir);
             this.panel1.Controls.Add(this.cmdVoltarMenu);
             this.panel1.Controls.Add(this.cmdNovo);
@@ -108,7 +110,7 @@
             // 
             // cmdExcluir
             // 
-            this.cmdExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.cmdExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
             this.cmdExcluir.Enabled = false;
             this.cmdExcluir.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.cmdExcluir.FlatAppearance.BorderSize = 0;
@@ -127,7 +129,7 @@
             // 
             // cmdVoltarMenu
             // 
-            this.cmdVoltarMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.cmdVoltarMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
             this.cmdVoltarMenu.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.cmdVoltarMenu.FlatAppearance.BorderSize = 0;
             this.cmdVoltarMenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
@@ -145,7 +147,7 @@
             // 
             // cmdNovo
             // 
-            this.cmdNovo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.cmdNovo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
             this.cmdNovo.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.cmdNovo.FlatAppearance.BorderSize = 0;
             this.cmdNovo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
@@ -153,7 +155,7 @@
             this.cmdNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdNovo.Font = new System.Drawing.Font("Lucida Fax", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdNovo.ForeColor = System.Drawing.Color.White;
-            this.cmdNovo.Location = new System.Drawing.Point(34, 0);
+            this.cmdNovo.Location = new System.Drawing.Point(44, 3);
             this.cmdNovo.Name = "cmdNovo";
             this.cmdNovo.Size = new System.Drawing.Size(112, 72);
             this.cmdNovo.TabIndex = 19;
@@ -163,7 +165,7 @@
             // 
             // cmdInserir
             // 
-            this.cmdInserir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.cmdInserir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
             this.cmdInserir.Enabled = false;
             this.cmdInserir.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.cmdInserir.FlatAppearance.BorderSize = 0;
@@ -182,7 +184,7 @@
             // 
             // cmdPesquisar
             // 
-            this.cmdPesquisar.Location = new System.Drawing.Point(360, 91);
+            this.cmdPesquisar.Location = new System.Drawing.Point(339, 55);
             this.cmdPesquisar.Name = "cmdPesquisar";
             this.cmdPesquisar.Size = new System.Drawing.Size(161, 51);
             this.cmdPesquisar.TabIndex = 47;
@@ -207,7 +209,7 @@
             this.txtCaloriasx.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.txtCaloriasx.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
             this.txtCaloriasx.Lines = new string[0];
-            this.txtCaloriasx.Location = new System.Drawing.Point(232, 256);
+            this.txtCaloriasx.Location = new System.Drawing.Point(263, 219);
             this.txtCaloriasx.MaxLength = 32767;
             this.txtCaloriasx.Name = "txtCaloriasx";
             this.txtCaloriasx.PasswordChar = '\0';
@@ -222,22 +224,33 @@
             this.txtCaloriasx.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtCaloriasx.WaterMarkFont = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(240)))), ((int)(((byte)(199)))));
+            this.panel2.Controls.Add(this.cmdPesquisar);
+            this.panel2.Controls.Add(this.txtNome);
+            this.panel2.Controls.Add(this.txtCaloriasx);
+            this.panel2.Controls.Add(this.lblNome);
+            this.panel2.Controls.Add(this.metroLabel1);
+            this.panel2.Location = new System.Drawing.Point(1, 63);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(821, 487);
+            this.panel2.TabIndex = 48;
+            // 
             // FrmCadastroAlimento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(823, 550);
-            this.Controls.Add(this.cmdPesquisar);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.txtCaloriasx);
-            this.Controls.Add(this.metroLabel1);
-            this.Controls.Add(this.txtNome);
-            this.Controls.Add(this.lblNome);
+            this.Controls.Add(this.panel2);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(231)))), ((int)(((byte)(158)))));
             this.Name = "FrmCadastroAlimento";
             this.Text = "Cadastro Alimento";
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -253,5 +266,6 @@
         private System.Windows.Forms.Button cmdInserir;
         private MetroFramework.Controls.MetroButton cmdPesquisar;
         private MetroFramework.Controls.MetroTextBox txtCaloriasx;
+        private System.Windows.Forms.Panel panel2;
     }
 }

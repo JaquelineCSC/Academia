@@ -31,6 +31,11 @@ namespace Academia
                     alimento.ShowDialog();
                     break;
 
+                case "Cardapio":
+                    FrmLocalizarCardapio cardapio = new FrmLocalizarCardapio();
+                    cardapio.ShowDialog();
+                    break;
+
                 case "Cliente":
                     FrmLocalizarCliente cliente = new FrmLocalizarCliente();
                     cliente.ShowDialog();
@@ -39,6 +44,11 @@ namespace Academia
                 case "Exercicio":
                     FrmLocalizarExercicio exercicio = new FrmLocalizarExercicio();
                     exercicio.ShowDialog();
+                    break;
+
+                case "Lista de Treino":
+                    FrmLocalizarListaTreino listaTreino = new FrmLocalizarListaTreino();
+                    listaTreino.ShowDialog();
                     break;
 
                 case "Profissional":

@@ -39,6 +39,7 @@
             this.cmdVoltarMenu = new System.Windows.Forms.Button();
             this.cmdPagar = new System.Windows.Forms.Button();
             this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -153,7 +154,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
             this.panel1.Controls.Add(this.cmdVoltarMenu);
             this.panel1.Controls.Add(this.cmdPagar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -164,7 +165,7 @@
             // 
             // cmdVoltarMenu
             // 
-            this.cmdVoltarMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.cmdVoltarMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
             this.cmdVoltarMenu.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.cmdVoltarMenu.FlatAppearance.BorderSize = 0;
             this.cmdVoltarMenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
@@ -182,7 +183,7 @@
             // 
             // cmdPagar
             // 
-            this.cmdPagar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.cmdPagar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
             this.cmdPagar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.cmdPagar.FlatAppearance.BorderSize = 0;
             this.cmdPagar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
@@ -206,6 +207,14 @@
             this.metroDateTime1.Size = new System.Drawing.Size(245, 29);
             this.metroDateTime1.TabIndex = 66;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(231)))), ((int)(((byte)(158)))));
+            this.panel2.Location = new System.Drawing.Point(1, 63);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(668, 442);
+            this.panel2.TabIndex = 67;
+            // 
             // FrmCadastroMensalidade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -220,8 +229,9 @@
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.cmbNome);
             this.Controls.Add(this.lblNome);
+            this.Controls.Add(this.panel2);
             this.Name = "FrmCadastroMensalidade";
-            this.Text = "FrmCadastroMensalidade";
+            this.Text = "Cadastro de Mensalidade";
             this.Load += new System.EventHandler(this.FrmCadastroMensalidade_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -242,5 +252,6 @@
         private System.Windows.Forms.Button cmdVoltarMenu;
         private System.Windows.Forms.Button cmdPagar;
         private MetroFramework.Controls.MetroDateTime metroDateTime1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

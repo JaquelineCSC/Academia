@@ -34,6 +34,7 @@
             this.cmdPesquisar = new MetroFramework.Controls.MetroButton();
             this.txtNome = new MetroFramework.Controls.MetroTextBox();
             this.grid1 = new MetroFramework.Controls.MetroGrid();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.grid1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -125,6 +126,14 @@
             this.grid1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid1_CellContentClick);
             this.grid1.DoubleClick += new System.EventHandler(this.grid1_DoubleClick);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(231)))), ((int)(((byte)(158)))));
+            this.panel1.Location = new System.Drawing.Point(-4, 63);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(812, 393);
+            this.panel1.TabIndex = 46;
+            // 
             // FrmLocalizarAlimento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -133,6 +142,7 @@
             this.Controls.Add(this.cmdPesquisar);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.grid1);
+            this.Controls.Add(this.panel1);
             this.Name = "FrmLocalizarAlimento";
             this.Text = "Pesquisar Alimento";
             this.Load += new System.EventHandler(this.FrmLocalizarAlimento_Load);
@@ -146,5 +156,6 @@
         private MetroFramework.Controls.MetroButton cmdPesquisar;
         private MetroFramework.Controls.MetroTextBox txtNome;
         private MetroFramework.Controls.MetroGrid grid1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -33,11 +33,12 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.lblNome = new MetroFramework.Controls.MetroLabel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cmdExcluir = new System.Windows.Forms.Button();
             this.cmdVoltarMenu = new System.Windows.Forms.Button();
             this.cmdNovo = new System.Windows.Forms.Button();
             this.cmdSalvar = new System.Windows.Forms.Button();
-            this.cmdExcluir = new System.Windows.Forms.Button();
             this.cmdPesquisar = new MetroFramework.Controls.MetroButton();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -127,7 +128,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
             this.panel1.Controls.Add(this.cmdExcluir);
             this.panel1.Controls.Add(this.cmdVoltarMenu);
             this.panel1.Controls.Add(this.cmdNovo);
@@ -138,9 +139,27 @@
             this.panel1.Size = new System.Drawing.Size(774, 72);
             this.panel1.TabIndex = 21;
             // 
+            // cmdExcluir
+            // 
+            this.cmdExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
+            this.cmdExcluir.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.cmdExcluir.FlatAppearance.BorderSize = 0;
+            this.cmdExcluir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.cmdExcluir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
+            this.cmdExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdExcluir.Font = new System.Drawing.Font("Lucida Fax", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdExcluir.ForeColor = System.Drawing.Color.White;
+            this.cmdExcluir.Location = new System.Drawing.Point(431, 0);
+            this.cmdExcluir.Name = "cmdExcluir";
+            this.cmdExcluir.Size = new System.Drawing.Size(147, 72);
+            this.cmdExcluir.TabIndex = 22;
+            this.cmdExcluir.Text = "Excluir";
+            this.cmdExcluir.UseVisualStyleBackColor = false;
+            this.cmdExcluir.Click += new System.EventHandler(this.cmdExcluir_Click);
+            // 
             // cmdVoltarMenu
             // 
-            this.cmdVoltarMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.cmdVoltarMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
             this.cmdVoltarMenu.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.cmdVoltarMenu.FlatAppearance.BorderSize = 0;
             this.cmdVoltarMenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
@@ -158,7 +177,7 @@
             // 
             // cmdNovo
             // 
-            this.cmdNovo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.cmdNovo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
             this.cmdNovo.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.cmdNovo.FlatAppearance.BorderSize = 0;
             this.cmdNovo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
@@ -176,7 +195,7 @@
             // 
             // cmdSalvar
             // 
-            this.cmdSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.cmdSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(129)))), ((int)(((byte)(33)))));
             this.cmdSalvar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.cmdSalvar.FlatAppearance.BorderSize = 0;
             this.cmdSalvar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
@@ -192,24 +211,6 @@
             this.cmdSalvar.UseVisualStyleBackColor = false;
             this.cmdSalvar.Click += new System.EventHandler(this.cmdInserir_Click);
             // 
-            // cmdExcluir
-            // 
-            this.cmdExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.cmdExcluir.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.cmdExcluir.FlatAppearance.BorderSize = 0;
-            this.cmdExcluir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.cmdExcluir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
-            this.cmdExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdExcluir.Font = new System.Drawing.Font("Lucida Fax", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdExcluir.ForeColor = System.Drawing.Color.White;
-            this.cmdExcluir.Location = new System.Drawing.Point(431, 0);
-            this.cmdExcluir.Name = "cmdExcluir";
-            this.cmdExcluir.Size = new System.Drawing.Size(147, 72);
-            this.cmdExcluir.TabIndex = 22;
-            this.cmdExcluir.Text = "Excluir";
-            this.cmdExcluir.UseVisualStyleBackColor = false;
-            this.cmdExcluir.Click += new System.EventHandler(this.cmdExcluir_Click);
-            // 
             // cmdPesquisar
             // 
             this.cmdPesquisar.Location = new System.Drawing.Point(634, 119);
@@ -219,6 +220,14 @@
             this.cmdPesquisar.Text = "Localizar Profissional";
             this.cmdPesquisar.UseSelectable = true;
             this.cmdPesquisar.Click += new System.EventHandler(this.cmdPesquisar_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(231)))), ((int)(((byte)(158)))));
+            this.panel2.Location = new System.Drawing.Point(0, 63);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(814, 270);
+            this.panel2.TabIndex = 49;
             // 
             // FrmCadastroProfissional
             // 
@@ -231,6 +240,7 @@
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.lblNome);
+            this.Controls.Add(this.panel2);
             this.Name = "FrmCadastroProfissional";
             this.Text = "Cadastrar Profissional";
             this.Load += new System.EventHandler(this.FrmCadastroProfissional_Load);
@@ -252,5 +262,6 @@
         private System.Windows.Forms.Button cmdVoltarMenu;
         private System.Windows.Forms.Button cmdExcluir;
         private MetroFramework.Controls.MetroButton cmdPesquisar;
+        private System.Windows.Forms.Panel panel2;
     }
 }

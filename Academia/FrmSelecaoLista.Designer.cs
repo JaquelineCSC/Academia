@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grid1 = new MetroFramework.Controls.MetroGrid();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.grid1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,6 +94,14 @@
             this.metroLabel1.TabIndex = 2;
             this.metroLabel1.Text = "Selecione o cliente com seu profissional para fazer a lista de treino";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(231)))), ((int)(((byte)(158)))));
+            this.panel1.Location = new System.Drawing.Point(-7, 63);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1229, 481);
+            this.panel1.TabIndex = 13;
+            // 
             // FrmSelecaoLista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -100,8 +109,10 @@
             this.ClientSize = new System.Drawing.Size(1210, 522);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.grid1);
+            this.Controls.Add(this.panel1);
             this.Name = "FrmSelecaoLista";
             this.Text = "Seleção de Lista";
+            this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.Load += new System.EventHandler(this.FrmSelecaoLista_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grid1)).EndInit();
             this.ResumeLayout(false);
@@ -113,5 +124,6 @@
 
         private MetroFramework.Controls.MetroGrid grid1;
         private MetroFramework.Controls.MetroLabel metroLabel1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

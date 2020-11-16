@@ -14,6 +14,7 @@ namespace Academia
         private int idAlimento;
         private int idProfissional;
         private string dataHora;
+        private string nome;
         private string aux;
 
         public int IdCardapio { get => idCardapio; set => idCardapio = value; }
@@ -21,6 +22,7 @@ namespace Academia
         public int IdAlimento { get => idAlimento; set => idAlimento = value; }
         public int IdProfissional { get => idProfissional; set => idProfissional = value; }
         public string DataHora { get => dataHora; set => dataHora = value; }
+        public string Nome { get => nome; set => nome = value; }
         public string Aux { get => aux; set => aux = value; }
 
         ConexaoDados dados = new ConexaoDados();
@@ -53,7 +55,15 @@ namespace Academia
         public DataSet ListarDados()
         {
             string sql = "";
-            sql = "Select * from Cardapio";
+            sql = "Select c.NomeCliente, a.NomeAlimento, a.Calorias From Cardapio ca INNER JOIN Cliente c ON ca.idCliente = c.idCliente INNER JOIN Alimentos a ON ca.idAlimento = a.idAlimento";
+            return dados.Listar(sql);
+        }
+
+        public DataSet ListarDadosNomeCliente()
+        {
+            string sql = "";
+            sql = "Select a.NomeAlimento, a.Calorias From Cardapio ca INNER JOIN Cliente c ON ca.idCliente = c.idCliente " +
+                  "INNER JOIN Alimentos a ON ca.idAlimento = a.idAlimento Where c.NomeCliente = " + Nome;
             return dados.Listar(sql);
         }
 

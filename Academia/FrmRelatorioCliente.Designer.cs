@@ -49,6 +49,7 @@
             this.Controls.Add(this.cmdRelatorioCliente);
             this.Name = "FrmRelatorioCliente";
             this.Text = "Relatorio Cliente";
+            this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.Load += new System.EventHandler(this.FrmRelatorioCliente_Load);
             this.ResumeLayout(false);
 
