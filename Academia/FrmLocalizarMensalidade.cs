@@ -45,16 +45,8 @@ namespace Academia
 
         private void cmdPesquisar_Click(object sender, EventArgs e)
         {
-            if (rbDataPagamento.Checked == true)
-            {
-                mensalidade.DataPagamento = txtNome.Text;
-                grid1.DataSource = mensalidade.ListarDadosDataPagamento().Tables[0];
-            }
-            else if (rbMes.Checked == true)
-            {
                 mensalidade.MesPagamento = txtNome.Text;
                 grid1.DataSource = mensalidade.ListarDadosMes().Tables[0];
-            }
         }
     }
 }

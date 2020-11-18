@@ -49,6 +49,12 @@ namespace Academia
             sql = "Select * from Profissional";
             return dados.Listar(sql);
         }
+        public DataSet ListarDadosNome()
+        {
+            string sql = "";
+            sql = "Select * from Profissional Where NomeProfissional LIKE '" + NomeProfissional + "%'";
+            return dados.Listar(sql);
+        }
 
         public void ExcluirDados()
         {

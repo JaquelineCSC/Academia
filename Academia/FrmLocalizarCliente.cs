@@ -30,7 +30,7 @@ namespace Academia
         private void cmdPesquisar_Click(object sender, EventArgs e)
         {
             Cliente.NomeCliente = txtNome.Text;
-            grid1.DataSource = Cliente.ListarDados().Tables[0];
+            grid1.DataSource = Cliente.ListarDadosNome().Tables[0];
         }
 
         private void FrmLocalizarCliente_Load(object sender, EventArgs e)

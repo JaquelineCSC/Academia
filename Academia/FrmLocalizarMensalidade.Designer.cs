@@ -34,21 +34,18 @@
             this.cmdPesquisar = new MetroFramework.Controls.MetroButton();
             this.txtNome = new MetroFramework.Controls.MetroTextBox();
             this.grid1 = new MetroFramework.Controls.MetroGrid();
-            this.rbDataPagamento = new MetroFramework.Controls.MetroRadioButton();
-            this.rbMes = new MetroFramework.Controls.MetroRadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.grid1)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // cmdPesquisar
             // 
-            this.cmdPesquisar.Location = new System.Drawing.Point(582, 90);
+            this.cmdPesquisar.Location = new System.Drawing.Point(97, 37);
             this.cmdPesquisar.Name = "cmdPesquisar";
-            this.cmdPesquisar.Size = new System.Drawing.Size(145, 74);
+            this.cmdPesquisar.Size = new System.Drawing.Size(182, 74);
             this.cmdPesquisar.TabIndex = 46;
-            this.cmdPesquisar.Text = "Localizar Pagamentos";
+            this.cmdPesquisar.Text = "Localizar Pagamentos Por Mês";
             this.cmdPesquisar.UseSelectable = true;
             this.cmdPesquisar.Click += new System.EventHandler(this.cmdPesquisar_Click);
             // 
@@ -69,7 +66,7 @@
             this.txtNome.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.txtNome.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
             this.txtNome.Lines = new string[0];
-            this.txtNome.Location = new System.Drawing.Point(337, 116);
+            this.txtNome.Location = new System.Drawing.Point(323, 62);
             this.txtNome.MaxLength = 32767;
             this.txtNome.Name = "txtNome";
             this.txtNome.PasswordChar = '\0';
@@ -78,7 +75,7 @@
             this.txtNome.SelectionLength = 0;
             this.txtNome.SelectionStart = 0;
             this.txtNome.ShortcutsEnabled = true;
-            this.txtNome.Size = new System.Drawing.Size(230, 30);
+            this.txtNome.Size = new System.Drawing.Size(358, 30);
             this.txtNome.TabIndex = 45;
             this.txtNome.UseSelectable = true;
             this.txtNome.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -129,44 +126,11 @@
             this.grid1.TabIndex = 44;
             this.grid1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid1_CellContentClick);
             // 
-            // rbDataPagamento
-            // 
-            this.rbDataPagamento.AutoSize = true;
-            this.rbDataPagamento.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.rbDataPagamento.Location = new System.Drawing.Point(26, 35);
-            this.rbDataPagamento.Name = "rbDataPagamento";
-            this.rbDataPagamento.Size = new System.Drawing.Size(160, 25);
-            this.rbDataPagamento.TabIndex = 44;
-            this.rbDataPagamento.Text = "Data Pagamento";
-            this.rbDataPagamento.UseSelectable = true;
-            // 
-            // rbMes
-            // 
-            this.rbMes.AutoSize = true;
-            this.rbMes.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.rbMes.Location = new System.Drawing.Point(26, 66);
-            this.rbMes.Name = "rbMes";
-            this.rbMes.Size = new System.Drawing.Size(61, 25);
-            this.rbMes.TabIndex = 45;
-            this.rbMes.Text = "Mês";
-            this.rbMes.UseSelectable = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(231)))), ((int)(((byte)(158)))));
-            this.groupBox1.Controls.Add(this.rbMes);
-            this.groupBox1.Controls.Add(this.rbDataPagamento);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(10, 78);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(285, 109);
-            this.groupBox1.TabIndex = 47;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Pesquisar por:";
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(231)))), ((int)(((byte)(158)))));
+            this.panel1.Controls.Add(this.cmdPesquisar);
+            this.panel1.Controls.Add(this.txtNome);
             this.panel1.Location = new System.Drawing.Point(-12, 63);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(867, 400);
@@ -177,9 +141,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(850, 450);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.cmdPesquisar);
-            this.Controls.Add(this.txtNome);
             this.Controls.Add(this.grid1);
             this.Controls.Add(this.panel1);
             this.Name = "FrmLocalizarMensalidade";
@@ -187,8 +148,7 @@
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.Load += new System.EventHandler(this.FrmLocalizarMensalidade_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grid1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -197,9 +157,6 @@
         private MetroFramework.Controls.MetroButton cmdPesquisar;
         private MetroFramework.Controls.MetroTextBox txtNome;
         private MetroFramework.Controls.MetroGrid grid1;
-        private MetroFramework.Controls.MetroRadioButton rbDataPagamento;
-        private MetroFramework.Controls.MetroRadioButton rbMes;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel1;
     }
 }

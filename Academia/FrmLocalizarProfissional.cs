@@ -34,7 +34,7 @@ namespace Academia
         private void cmdPesquisar_Click(object sender, EventArgs e)
         {
             profissional.NomeProfissional = txtNome.Text;
-            grid1.DataSource = profissional.ListarDados().Tables[0];
+            grid1.DataSource = profissional.ListarDadosNome().Tables[0];
         }
 
         private void grid1_DoubleClick(object sender, EventArgs e)

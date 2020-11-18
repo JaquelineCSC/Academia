@@ -51,7 +51,7 @@ namespace Academia
         private void cmdPesquisar_Click(object sender, EventArgs e)
         {
             Alimento.NomeAlimento = txtNome.Text;
-            grid1.DataSource = Alimento.ListarDados().Tables[0];
+            grid1.DataSource = Alimento.ListarDadosNome().Tables[0];
         }
     }
 }

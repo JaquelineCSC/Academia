@@ -50,6 +50,12 @@ namespace Academia
             sql = "Select * from Alimentos";
             return dados.Listar(sql);
         }
+            public DataSet ListarDadosNome()
+            {
+                string sql = "";
+                sql = "Select * from Alimentos Where NomeAlimento LIKE '" + NomeAlimento + "%'";
+                return dados.Listar(sql);
+            }
 
         public void ExcluirDados()
         {

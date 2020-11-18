@@ -66,6 +66,13 @@ namespace Academia
             return dados.Listar(sql);
         }
 
+        public DataSet ListarDadosNome()
+        {
+            string sql = "";
+            sql = "Select * from Cliente Where NomeCliente LIKE '" + NomeCliente + "%'";
+            return dados.Listar(sql);
+        }
+
         public DataSet ListarDadosListaTreino()
         {
             string sql = "";
