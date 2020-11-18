@@ -14,6 +14,7 @@ namespace Academia
         private string mesPagamento;
         private int idCliente;
         private float Valor;
+        private string nomeCliente;
 
 
         public int IdMensalidade { get => idMensalidade; set => idMensalidade = value; }
@@ -21,6 +22,7 @@ namespace Academia
         public string MesPagamento { get => mesPagamento; set => mesPagamento = value; }
         public int IdCliente { get => idCliente; set => idCliente = value; }
         public float Valor1 { get => Valor; set => Valor = value; }
+        public string NomeCliente { get => nomeCliente; set => nomeCliente = value; }
 
         ConexaoDados dados = new ConexaoDados();
 
@@ -57,14 +59,21 @@ namespace Academia
         public DataSet ListarDadosDataPagamento()
         {
             string sql = "";
-            sql = "Select * from Mensalidade Where DataPagamento LIKE '" + DataPagamento + "%'";
+            sql = "Select c.NomeCliente, m.MesPagamento, m.DataPagamento, m.Valor from Mensalidade m inner join Cliente c on m.idCliente = c.idCliente Where DataPagamento LIKE '" + DataPagamento + "%'";
             return dados.Listar(sql);
         }
 
         public DataSet ListarDadosMes()
         {
             string sql = "";
-            sql = "Select * from Mensalidade Where MesPagamento LIKE '" + MesPagamento + "%'";
+            sql = "Select c.NomeCliente, m.MesPagamento, m.DataPagamento, m.Valor from Mensalidade m inner join Cliente c on m.idCliente = c.idCliente Where MesPagamento LIKE '" + MesPagamento + "%'";
+            return dados.Listar(sql);
+        }
+
+        public DataSet ListarDadosNomeCliente()
+        {
+            string sql = "";
+            sql = "Select c.NomeCliente, m.MesPagamento, m.DataPagamento, m.Valor from Mensalidade m inner join Cliente c on m.idCliente = c.idCliente where c.NomeCliente LIKE '" + NomeCliente + "%'";
             return dados.Listar(sql);
         }
 

@@ -29,6 +29,7 @@ namespace Academia
             {
                 profissional.IncluirDados();
                 MessageBox.Show("Profissional Adicionado com Sucesso!");
+                cmdNovo.Enabled = true;
             }
             if (status == "Editando")
             {

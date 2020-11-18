@@ -22,8 +22,8 @@ namespace Academia
 
         private void FrmLocalizarMensalidade_Load(object sender, EventArgs e)
         {
-           
-            grid1.DataSource = mensalidade.ListarDados().Tables[0];
+            mensalidade.NomeCliente = "";
+            grid1.DataSource = mensalidade.ListarDadosNomeCliente().Tables[0];
 
             grid1.Columns[0].Visible = false;
             grid1.Columns[3].Visible = false;
@@ -45,8 +45,16 @@ namespace Academia
 
         private void cmdPesquisar_Click(object sender, EventArgs e)
         {
+            if (rbMes.Checked == true)
+            {
                 mensalidade.MesPagamento = txtNome.Text;
                 grid1.DataSource = mensalidade.ListarDadosMes().Tables[0];
+            }
+            else if (rbNome.Checked == true)
+            {
+                mensalidade.NomeCliente = txtNome.Text;
+                grid1.DataSource = mensalidade.ListarDadosNomeCliente().Tables[0];
+            }
         }
     }
 }

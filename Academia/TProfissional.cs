@@ -23,14 +23,14 @@ namespace Academia
         public void IncluirDados()
         {
             string sql = "";
-            sql += "Insert into Profissional (NomeProfissional, ValorServico) " + "values ('" + NomeProfissional + "','" + ValorServico + "')";
+            sql += "Insert into Profissional (NomeProfissional, ValorServico) " + "values ('" + NomeProfissional + "','" + ValorServico.ToString("0.00").Replace(",",".") + "')";
             dados.Executar(sql);
         }
 
         public void AlterarDados()
         {
             string sql = "";
-            sql += "Update Profissional SET NomeProfissional = '" + NomeProfissional + "',  ValorServico = " + ValorServico.ToString().Replace(",", ".") + " Where idProfissional = " + IdProfissional.ToString();
+            sql += "Update Profissional SET NomeProfissional = '" + NomeProfissional + "',  ValorServico = " + ValorServico.ToString("0.00").Replace(",", ".") + " Where idProfissional = " + IdProfissional.ToString();
             dados.Executar(sql);
         }
 
@@ -40,7 +40,7 @@ namespace Academia
             sql += "Select NomeProfissional from Profissional where idProfissional = " + IdProfissional.ToString();
             dados.Consultar(sql);
             string[] auxiliar = dados.Campos.Split(';');
-            NomeProfissional = auxiliar[0];
+            NomeProfissional = auxiliar[1];
         }
 
         public DataSet ListarDados()

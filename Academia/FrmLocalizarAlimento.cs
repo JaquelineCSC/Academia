@@ -40,7 +40,10 @@ namespace Academia
 
         private void grid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            Id = int.Parse(grid1.Rows[e.RowIndex].Cells[0].Value.ToString());
+            if (grid1.Rows[e.RowIndex].Cells[0].Value.ToString() != "")
+            {
+                Id = int.Parse(grid1.Rows[e.RowIndex].Cells[0].Value.ToString());
+            }
         }
 
         private void grid1_DoubleClick(object sender, EventArgs e)

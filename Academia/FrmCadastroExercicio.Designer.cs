@@ -49,6 +49,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -164,11 +165,13 @@
             this.cmbRegiao.FormattingEnabled = true;
             this.cmbRegiao.ItemHeight = 23;
             this.cmbRegiao.Items.AddRange(new object[] {
+            "Abdominal",
+            "Biceps",
+            "Costas",
             "Peito",
             "Perna",
-            "Biceps",
             "Triceps",
-            "Abdominal"});
+            ""});
             this.cmbRegiao.Location = new System.Drawing.Point(314, 397);
             this.cmbRegiao.Name = "cmbRegiao";
             this.cmbRegiao.Size = new System.Drawing.Size(430, 29);
@@ -298,7 +301,7 @@
             // 
             // cmdImagem
             // 
-            this.cmdImagem.Location = new System.Drawing.Point(934, 439);
+            this.cmdImagem.Location = new System.Drawing.Point(935, 412);
             this.cmdImagem.Name = "cmdImagem";
             this.cmdImagem.Size = new System.Drawing.Size(161, 51);
             this.cmdImagem.TabIndex = 40;
@@ -313,10 +316,9 @@
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(821, 124);
+            this.pictureBox1.Location = new System.Drawing.Point(791, 48);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(373, 298);
+            this.pictureBox1.Size = new System.Drawing.Size(463, 358);
             this.pictureBox1.TabIndex = 39;
             this.pictureBox1.TabStop = false;
             // 
@@ -333,6 +335,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(231)))), ((int)(((byte)(158)))));
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.cmdImagem);
             this.panel2.Location = new System.Drawing.Point(1, 63);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1281, 586);
@@ -344,8 +348,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1278, 641);
             this.Controls.Add(this.cmdLocalizar);
-            this.Controls.Add(this.cmdImagem);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.cmbNivel);
             this.Controls.Add(this.cmbRegiao);
             this.Controls.Add(this.txtDescricao);
@@ -360,6 +362,7 @@
             this.Text = "Cadastro Exercicio";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

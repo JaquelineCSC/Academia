@@ -36,6 +36,7 @@ namespace Academia
             txtDescricao.Enabled = true;
             cmbNivel.Enabled = true;
             cmbRegiao.Enabled = true;
+            pictureBox1.Image = null;
         }
 
         private void cmdInserir_Click(object sender, EventArgs e)
