@@ -63,7 +63,7 @@ namespace Academia
         {
             string sql = "";
             sql = "Select a.NomeAlimento, a.Calorias From Cardapio ca INNER JOIN Cliente c ON ca.idCliente = c.idCliente " +
-                  "INNER JOIN Alimentos a ON ca.idAlimento = a.idAlimento Where c.NomeCliente = " + Nome;
+                  "INNER JOIN Alimentos a ON ca.idAlimento = a.idAlimento Where c.NomeCliente LIKE '" + Nome + "%'";
             return dados.Listar(sql);
         }
 
