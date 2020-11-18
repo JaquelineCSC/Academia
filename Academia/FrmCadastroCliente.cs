@@ -19,6 +19,7 @@ namespace Academia
         }
 
         TCliente cliente = new TCliente();
+        public int id;
 
         private void LimpaControle()
         {
@@ -94,6 +95,7 @@ namespace Academia
         {
             if (DialogResult.Yes == MessageBox.Show("Deseja realmente excluir ?", "Alerta", MessageBoxButtons.YesNo))
             {
+                cliente.IdCliente = id;
                 cliente.ExcluirDados();
             }
             LimpaControle();
